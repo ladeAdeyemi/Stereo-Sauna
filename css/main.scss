@@ -1,21 +1,39 @@
 /*** FONTS ***/
 
+@font-face {
+    src: url(../fonts/Inter-Black.ttf);
+    font-family: "Inter Black";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+    font-family: "Inter";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Light-Beta.ttf);
+    font-family: "Inter Light Beta";
+}
+
 // VARIABLES
 
     // Font Stacks
 
+    $blackFontStack: "Inter Black", "Arial Black";
+    $regularFontStack: "Inter", "Arial";
+
     // Colors
 
     $ghost: white;
+    $goblin: black;
+    $saunaOrange: #ffa224;
 
 // MIXINS
 
 @mixin navStyles {
     margin: 5px 15px;
     text-decoration: none;
-    font-weight: bold;
 }
-
 
 /*** MAIN CSS ***/
 
@@ -23,15 +41,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter";
+    font-family: $regularFontStack;
 }
 
 #navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 0;
     width: 100%;
-    border-bottom: 1px solid orange;
+    // border-bottom: 1px solid orange;
+    box-shadow: 2px 2px 6px lightgrey;
 }
 
 // .logo-container {
@@ -42,9 +62,19 @@
 
 // }
 
+// #navigation div.logo-container {
+//     margin-right: 400px;
+// }
+
 #navigation div.nav-links-container a {
     @include navStyles;
-    color: orange;
+    font-family: $blackFontStack;
+    color: $goblin;
+    transition: 0.3s ease-in-out;
+}
+
+#navigation div.nav-links-container a:hover {
+    color: $saunaOrange;
 }
 
 #navigation div.hamburger-hidden {
@@ -55,38 +85,251 @@
 
 #hero-image {
     margin: 0;
-    background-image: url(../assets/bright.jpg);
+    background-image: url(../assets/concert.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 700px;
+    position: relative;
+    // background-color: black;
 }
 
-.headline-container {
-    padding: 20px;
+#hero-image div.headline-container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
 }
 
-.headline-container h1 {
-    margin: 20px;
-    font-size: 90px;
-    width: 60%;
+#hero-image div.headline-container h1 {
+    // padding: 40px 0 0 80px;
+    // padding-top: 150px;
+    font-family: $blackFontStack;
+    font-size: 100px;
+    // text-align: center;
+    width: 100%;
+    letter-spacing: -3px;
+    line-height: 100px;
     color: $ghost;
+    margin: 0;
+    padding: 0;
+}
+
+#hero-image div.headline-container h2 {
+    margin: 0;
+    // margin-top: 265px;
+    padding-top: 0px;
+    padding-left: 100px;
+    font-family: $blackFontStack;
+    font-size: 70px;
+    // text-align: center;
+    width: 100%;
+    letter-spacing: -1px;
+    line-height: 60px;
+    color: $ghost;
+}
+
+// #hero-image div.headline-container span {
+//     display: block;
+//     margin: 10px auto;
+//     margin-top: 100px;
+//     background-color: $goblin;
+//     padding: 5px;
+//     border-radius: 4px;
+//     text-align: center;
+// }
+
+// #hero-image div.headline-container span a {
+//     font-family: $regularFontStack;
+//     font-weight: bold;
+//     font-size: 18px;
+//     text-decoration: none;
+//     text-align: center;
+//     letter-spacing: 0.1px;
+//     line-height: 60px;
+//     color: $ghost;
+//     padding: 0;
+
+// }
+
+.headline-3 {
+    margin: 40px 0 20px 0;
+    // margin-top: 265px;
+    padding-top: 0px;
+    padding-left: 30px;
+    font-family: $blackFontStack;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    letter-spacing: -1px;
+    line-height: 60px;
+    color: $goblin;
+}
+
+.temp {
+    margin: 20px 0 15px 0;
+    padding-left: 30px;
+    font-size: 20px;
+    width: 50%;color: $goblin;
+}
+
+.temp-span {
+    display: inline-block;
+    margin: 20px 0;
+    margin-top: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    font-family: $blackFontStack;
+    font-weight: bold;
+    font-size: 18px;
+    // width: 50%;
+    // background-color: $goblin;
+    // color: $ghost;
+    color: $saunaOrange;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+#footer {
+    background-color: $goblin;
+    padding: 50px 0 20px 0;
+}
+
+#footer p {
+    color: $ghost;
+    font-size: 10px;
+    padding-left: 60px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#footer hr {
+    border: solid 1px $ghost;
+    border-bottom:none;
+    display: block;
+    margin: 30px auto;
+    margin-bottom: 10px;
+    width: 100%;
+    opacity: 0.2;
+}
+
+#footer img {
+    width: 100px;
+    height: 50px;
+    margin-top:20px;
+    margin-left: 50px;
+}
+
+div.nav-column {
+    display: inline-block;
+    margin: 10px 80px;
+    // border-left: 1px solid $ghost;
+}
+
+div.nav-column h5{
+    display: block;
+    margin: 20px 0;
+    color: $saunaOrange;
+    // color: grey;
+    font-family: $blackFontStack;
+    // font-weight: bold;
+    font-size: 13px;
+    // text-align: center;
+}
+
+div.nav-column a{
+    display: block;
+    padding: 0;
+    margin: 20px 0;
+    color: $ghost;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    // text-align: center;
+}
+
+div.nav-column a:hover{
+    //color: $saunaOrange;
+    opacity: 0.3;
+}
+
+
+div.notice {
+    background-color: grey;
+    padding: 20px 0;
+    
+}
+
+div.notice p {
+    font-size: 11px;
+    font-family: consolas;
+    color: lightgrey;
+    text-align: center;
+
+}
+
+div.notice a {
+    color: lightgrey;
+    text-decoration: none;
+
 }
 
 /*** MEDIA QUERIES ***/
 
-@media screen and (max-width: 1000px) {
-
-
-#navigation div.nav-links-container {
-    display: none;
+@media screen and (max-width: 1125px) {
+    
+    #hero-image h1 {
+        font-size: 50px;
+    }
+    
+    // #hero-image h2 {
+    //     padding-top: 80px;
+    // }
+    
+    // #hero-image div.headline-container {
+    //     padding-top: 150px;
+    // }
+    
 }
 
-#navigation div.hamburger-hidden {
-    display: inline-block;
- }
+@media screen and (max-width: 1063px) {
+    
+    // #hero-image h1 {
+    //     padding-top: 150px;
+    // }
+    
+    // #hero-image h2 {
+    //     padding-top: 80px;
+    // }
+    
+    // #hero-image div.headline-container {
+    //     padding-top: 150px;
+    // }
+    
+}
 
+@media screen and (max-width: 1000px) {
+
+    #navigation {
+        justify-content: space-around;
+    }
+
+    #navigation div.nav-links-container {
+        display: none;
+    }
+
+    #navigation div.hamburger-hidden {
+        display: inline-block;
+    }
+
+    // #hero-image div.headline-container {
+    //     padding-top: 100px;
+    // }
 
 
 }
