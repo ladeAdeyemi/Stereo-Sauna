@@ -98,12 +98,21 @@
   color: black;
 }
 
+#tbc {
+  padding: 70px 0;
+}
+
+.tbc-2 {
+  margin-left: 70px;
+}
+
 .temp {
   margin: 20px 0 15px 0;
   padding-left: 30px;
-  font-size: 20px;
-  width: 50%;
+  font-size: 18px;
+  width: 42%;
   color: black;
+  line-height: 30px;
 }
 
 .temp-span {
@@ -112,12 +121,37 @@
   margin-top: 5px;
   padding: 10px;
   margin-left: 20px;
-  font-family: "Inter Black", "Arial Black";
+  font-family: "Inter", "Arial";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   color: #ffa224;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#newsletter {
+  padding: 40px 0;
+}
+
+#newsletter input {
+  padding: 15px 0;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 40%;
+  margin: 20px 40px;
+  margin-right: 10px;
+}
+
+#newsletter button {
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 #footer {
@@ -127,7 +161,7 @@
 
 #footer p {
   color: white;
-  font-size: 10px;
+  font-size: 13px;
   padding-left: 60px;
   font-weight: bold;
   margin-top: 10px;
@@ -140,7 +174,7 @@
   display: block;
   margin: 30px auto;
   margin-bottom: 10px;
-  width: 100%;
+  width: 90%;
   opacity: 0.2;
 }
 
@@ -161,16 +195,16 @@ div.nav-column h5 {
   margin: 20px 0;
   color: #ffa224;
   font-family: "Inter Black", "Arial Black";
-  font-size: 13px;
+  font-size: 14px;
 }
 
 div.nav-column a {
   display: block;
   padding: 0;
-  margin: 20px 0;
+  margin: 15px 0;
   color: white;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   transition: 0.3s ease-in-out;
 }
@@ -180,19 +214,20 @@ div.nav-column a:hover {
 }
 
 div.notice {
-  background-color: grey;
+  background-color: black;
   padding: 20px 0;
 }
 
 div.notice p {
-  font-size: 11px;
+  font-size: 8px;
   font-family: consolas;
-  color: lightgrey;
-  text-align: center;
+  color: white;
+  text-align: right;
+  padding-right: 70px;
 }
 
 div.notice a {
-  color: lightgrey;
+  color: #ffa224;
   text-decoration: none;
 }
 
