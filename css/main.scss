@@ -15,6 +15,9 @@
     font-family: "Inter Light Beta";
 }
 
+
+
+
 // VARIABLES
 
     // Font Stacks
@@ -26,6 +29,8 @@
 
     $ghost: #fff;
     $goblin: #000;
+    $ghoul: #1a1918;
+    // $ghoul: #282827;
     $saunaOrange: #ffa224;
 
 // MIXINS
@@ -36,7 +41,7 @@
 }
 
 @mixin headlineStyles {
-    font-family: $regularFontStack;
+    font-family: $blackFontStack;
     font-size: 50px;
     font-weight: bold;
     letter-spacing: -1px;
@@ -51,11 +56,14 @@
 @mixin paraStyles {
     margin: 20px 0 15px 0;
     padding-left: 30px;
-    font-size: 18.7px;
+    font-size: 18px;
     font-family: $regularFontStack;
-    line-height: 35px;
-    letter-spacing: 0.3px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
 }
+
+
+
 
 /****** MAIN CSS ******/
 
@@ -66,35 +74,38 @@
     font-family: $regularFontStack;
 }
 
+
+
+
 /* Navigation Bar */
+
+
+
 
 #navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     width: 100%;
-    box-shadow: 2px 2px 6px lightgrey;
-    // position: fixed;
-    // z-index: 1;
-    // background-color: $ghost;
+    box-shadow: 2px 2px 10px lightgrey;
+    position: fixed;
+    z-index: 1;
+    background-color: $ghost;
 }
 
-// .logo-container {
-//     flex-grow: 1;
-// }
+#navigation div.logo-container {
+    margin-left: 80px;
+}
 
-// .nav-links-container {
-
-// }
-
-// #navigation div.logo-container {
-//     margin-right: 400px;
-// }
+#navigation div.nav-links-container {
+    margin-right: 80px;
+}
 
 #navigation div.nav-links-container a {
     @include navStyles;
-    font-family: $blackFontStack;
+    font-family: $regularFontStack;
+    font-weight: bold;
     color: $goblin;
     transition: 0.3s ease-in-out;
 }
@@ -107,7 +118,13 @@
    display: none;
 }
 
+
+
+
 /* Hero Image Section */
+
+
+
 
 #hero-image {
     margin: 0;
@@ -115,6 +132,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 700px;
     position: relative;
@@ -123,8 +141,9 @@
 
 #hero-image div.headline-container {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 20%;
+    // margin: 40px auto;
 }
 
 #hero-image div.headline-container h1 {
@@ -132,9 +151,9 @@
     // padding-top: 150px;
     font-family: $blackFontStack;
     font-size: 100px;
-    // text-align: center;
+    text-align: center;
     width: 100%;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     line-height: 100px;
     color: $ghost;
     margin: 0;
@@ -146,15 +165,16 @@
     margin: 0;
     // margin-top: 265px;
     padding-top: 0px;
-    padding-left: 100px;
+    // padding-left: 150px;
     font-family: $blackFontStack;
     /* font-size: 70px; */
-    font-size: 150px;
+    font-size: 80px;
     width: 100%;
     letter-spacing: -4px;
     // letter-spacing: -1px;
     line-height: 60px;
     color: $ghost;
+    text-align: center;
 }
 
 // #hero-image div.headline-container span {
@@ -180,23 +200,30 @@
 
 // }
 
+
+
+
 /* Intro Section */
+
+
+
 
 #intro {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 120px 0;
+    padding: 200px 0;
+    // padding-bottom: 50px;
   }
   
 #intro div.intro-text-container {
     // margin-left: 30px;
-    padding-left: 70px;
+    margin-left: 20px;
     width: 50%;
   }
 
 #intro div.intro-image-container {
-    margin-left: 70px;
+    margin-left: 20px;
     width: 40%;
     max-width: 500px;
     max-height: 500px;
@@ -220,7 +247,7 @@
 
 #intro p.intro-para {
     @include paraStyles;
-   
+    color: $ghoul;
 }
 
 #intro span.intro-span a {
@@ -231,21 +258,75 @@
     margin-left: 20px;
     font-family: $regularFontStack;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     color: $saunaOrange;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
 }
 
+
+
+
 /* SVG Section */
 
+
+
+
 #svg-highlight {
+    // display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: $goblin;
-    padding: 30px 0;
+    padding: 60px 0;
+}
+
+#svg-highlight h3 {
+    @include headlineStyles;
+    color: $ghost;
+    margin: 50px 0 0 100px;
+}
+
+#svg-highlight span.svg-span a {
+    display: block;
+    color: $saunaOrange;
+    text-decoration: none;
+    font-family: $regularFontStack;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 80px;
+}
+
+#svg-card-collection {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-top: 40px;
+}
+
+#svg-card-collection div.svg-card {
+    
+    padding: 10px;
+    margin: 40px 10px;
+    // min-height: 200px;
+    // min-width: 70%;
+    // max-width: 70%;
+    // background-color: $ghost;
+    // border-radius: 6px;
+}
+
+#svg-card-collection div.svg-card p {
+    color: $ghost;
+    // color: $goblin;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* SVG ICONS */
+
 .svg-icon {
     display: inline-block;
     padding-left: 100px;
@@ -264,10 +345,17 @@
     stroke-width: 1;
   }
 
+
+
+
 /* Tri-card Section */
+
+
+
 
 #tri-card {
     padding: 40px 0;
+    padding-bottom: 100px;
 }
 
 #tri-card h3.tri-card-headline {
@@ -279,25 +367,25 @@
 
 #tri-card p.tri-card-para {
     @include paraStyles;
-    color: $goblin;
+    color: $ghoul;
     text-align: center;
     // font-size: 16px;
 }
 
 #tri-card .tri-card-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-#tri-card .tri-card-container .card {
-    width: 30%;
+#tri-card .tri-card-container div.card {
+    max-width: 25%;
     padding: 10px;
     margin: 10px 5px;
-    
+    // box-shadow: 1px 1px 15px $ghoul;
 }
 
-#tri-card .tri-card-container .card img {
+#tri-card .tri-card-container .card img.main-img {
     width: 100%;
     border-radius: 6px;
 }
@@ -310,18 +398,44 @@
     text-align: center;
 }
 
+
+#tri-card p.tri-card-para-min {
+    // @include paraStyles;
+    margin: 20px 0;
+    color: $ghoul;
+    // text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+#tri-card hr.tri-card-rule {
+   border: 1px solid $ghoul;
+   border-bottom:none;
+   opacity: 0.2;
+}
+
 #tri-card span.tri-card-span a {
+    display: block;
+    margin-top: 16.5px;
     color: $saunaOrange;
     text-decoration: none;
-    font-size: 16px;
+    font-family: $regularFontStack;
+    font-size: 20px;
     font-weight: bold;
+    text-align: right;
 }
+
+
+
 
 /* Newsletter Section */
 
+
+
+
 #newsletter {
     // background-color: $saunaOrange;
-    padding: 150px 0;
+    padding: 300px 0;
     background-image: url(../assets/guitar1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -329,20 +443,21 @@
 }
 
 #sign-up-container {
-    margin-left: 80px;
-    padding: 20px 0;
+    margin-left: 20px;
+    padding: 0;
 }
 
 #sign-up-container h3.sign-up-headline {
     @include headlineStyles;
     margin: 10px 0 20px 0;
     padding-top: 0px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 #sign-up-container p.sign-up-para {
     @include paraStyles;
-    color: $goblin;
+    color: $ghoul;
+    width: 42%;
 }
 
 #newsletter input {
@@ -350,8 +465,8 @@
     padding-left: 10px;
     border-radius: 4px;
     border: 1px solid $goblin;
-    width: 40%;
-    margin: 15px 30px;
+    width: 35%;
+    margin: 10px 30px;
     margin-right: 10px;
     font-size: 16px;
 }
@@ -365,9 +480,21 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
+    transition: 0.3s ease-in-out;
 }
 
+// #newsletter button:hover {
+//     background-color: $saunaOrange;
+//     color: $ghost;
+// }
+
+
+
+
 /* Footer Section */
+
+
+
 
 #footer {
     background-color: $goblin;
@@ -440,8 +567,9 @@
 }
 
 #footer div.notice p {
-    font-size: 10px;
-    font-family: consolas;
+    font-size: 8px;
+    font-family: $regularFontStack;
+    font-weight: normal;
     color: $ghost;
     text-align: right;
     padding-right: 70px;
@@ -453,7 +581,13 @@
     text-decoration: none;
 }
 
+
+
+
 /****** MEDIA QUERIES ******/
+
+
+
 
 @media screen and (max-width: 1125px) {
     
@@ -505,5 +639,60 @@
     //     padding-top: 100px;
     // }
 
+
+}
+
+
+@media screen and (max-width: 770px) {
+
+    #intro {
+        display: block;
+    }
+
+    #intro div.intro-text-container {
+        padding-left: 5px;
+        width: 100%;
+      }
+    
+    #intro div.intro-image-container {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+      }
+    
+    #intro div.intro-image-container img {
+        width: 100%;
+      }
+    
+    #intro h3.intro-headline {
+        @include headlineStyles;
+        margin: 40px 0 20px 0;
+        // margin-top: 265px;
+        padding-top: 0px;
+        padding-left: 30px;
+        color: $goblin;
+        // line-height: 50px;
+    }
+    
+    #intro p.intro-para {
+        @include paraStyles;
+        color: $ghoul;
+    }
+    
+    #intro span.intro-span a {
+        display: inline-block;
+        margin: 20px 0;
+        margin-top: 5px;
+        padding-left: 10px;
+        margin-left: 20px;
+        font-family: $regularFontStack;
+        font-weight: bold;
+        font-size: 20px;
+        color: $saunaOrange;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
 }
