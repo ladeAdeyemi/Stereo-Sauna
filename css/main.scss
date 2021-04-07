@@ -6,23 +6,21 @@
 }
 
 @font-face {
-    src: url(../fonts/Inter-Regular.ttf);
-    font-family: "Inter";
+    src: url(../fonts/Inter-Bold.ttf);
+    font-family: "Inter Bold";
 }
 
 @font-face {
-    src: url(../fonts/Inter-Light-Beta.ttf);
-    font-family: "Inter Light Beta";
+    src: url(../fonts/Inter-Regular.ttf);
+    font-family: "Inter";
 }
-
-
-
 
 // VARIABLES
 
     // Font Stacks
 
     $blackFontStack: "Inter Black", "Arial Black";
+    $boldFontStack: "Inter Bold", "Arial Black";
     $regularFontStack: "Inter", "Arial";
 
     // Colors
@@ -43,14 +41,12 @@
 @mixin headlineStyles {
     font-family: $blackFontStack;
     font-size: 50px;
-    font-weight: bold;
     letter-spacing: -1px;
     line-height: 60px; 
 }
 
 @mixin miniheadlineStyles {
-    font-family: $regularFontStack;
-    font-weight: bold;
+    font-family: $boldFontStack;
 }
 
 @mixin paraStyles {
@@ -62,25 +58,15 @@
     letter-spacing: 0.1px;
 }
 
-
-
-
 /****** MAIN CSS ******/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $regularFontStack;
 }
 
-
-
-
 /* Navigation Bar */
-
-
-
 
 #navigation {
     display: flex;
@@ -104,8 +90,7 @@
 
 #navigation div.nav-links-container a {
     @include navStyles;
-    font-family: $regularFontStack;
-    font-weight: bold;
+    font-family: $boldFontStack;
     color: $goblin;
     transition: 0.3s ease-in-out;
 }
@@ -118,13 +103,7 @@
    display: none;
 }
 
-
-
-
 /* Hero Image Section */
-
-
-
 
 #hero-image {
     margin: 0;
@@ -200,20 +179,15 @@
 
 // }
 
-
-
-
 /* Intro Section */
-
-
-
 
 #intro {
     display: flex;
+    //flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 200px 0;
-    // padding-bottom: 50px;
+    padding-bottom: 100px;
   }
   
 #intro div.intro-text-container {
@@ -240,7 +214,7 @@
     margin: 40px 0 20px 0;
     // margin-top: 265px;
     padding-top: 0px;
-    padding-left: 30px;
+    padding-left: 10px;
     color: $goblin;
     // line-height: 50px;
 }
@@ -248,6 +222,7 @@
 #intro p.intro-para {
     @include paraStyles;
     color: $ghoul;
+    padding-left: 10px;
 }
 
 #intro span.intro-span a {
@@ -255,9 +230,8 @@
     margin: 20px 0;
     margin-top: 5px;
     padding-left: 10px;
-    margin-left: 20px;
-    font-family: $regularFontStack;
-    font-weight: bold;
+    // margin-left: 20px;
+    font-family: $boldFontStack;
     font-size: 20px;
     color: $saunaOrange;
     border-radius: 4px;
@@ -265,93 +239,7 @@
     text-decoration: none;
 }
 
-
-
-
-/* SVG Section */
-
-
-
-
-#svg-highlight {
-    // display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: $goblin;
-    padding: 60px 0;
-}
-
-#svg-highlight h3 {
-    @include headlineStyles;
-    color: $ghost;
-    margin: 50px 0 0 100px;
-}
-
-#svg-highlight span.svg-span a {
-    display: block;
-    color: $saunaOrange;
-    text-decoration: none;
-    font-family: $regularFontStack;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: right;
-    margin-right: 80px;
-}
-
-#svg-card-collection {
-    display: flex;
-    // flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    margin-top: 40px;
-}
-
-#svg-card-collection div.svg-card {
-    
-    padding: 10px;
-    margin: 40px 10px;
-    // min-height: 200px;
-    // min-width: 70%;
-    // max-width: 70%;
-    // background-color: $ghost;
-    // border-radius: 6px;
-}
-
-#svg-card-collection div.svg-card p {
-    color: $ghost;
-    // color: $goblin;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* SVG ICONS */
-
-.svg-icon {
-    display: inline-block;
-    padding-left: 100px;
-    width: 4em;
-    height: 4em;
-  }
-  
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
-    fill: $ghost;
-  }
-  
-  .svg-icon circle {
-    stroke: $ghost;
-    stroke-width: 1;
-  }
-
-
-
-
 /* Tri-card Section */
-
-
-
 
 #tri-card {
     padding: 40px 0;
@@ -374,6 +262,7 @@
 
 #tri-card .tri-card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -382,6 +271,12 @@
     max-width: 25%;
     padding: 10px;
     margin: 10px 5px;
+    // border-radius: 6px;
+    // box-shadow: 1px 1px 15px lightgrey;
+}
+
+#tri-card .tri-card-container div.card:nth-child(1) {
+  flex-grow: 1;
     // box-shadow: 1px 1px 15px $ghoul;
 }
 
@@ -398,13 +293,13 @@
     text-align: center;
 }
 
-
 #tri-card p.tri-card-para-min {
     // @include paraStyles;
     margin: 20px 0;
     color: $ghoul;
     // text-align: center;
     line-height: 25px;
+    font-family: $regularFontStack;
     font-size: 16px;
 }
 
@@ -419,19 +314,87 @@
     margin-top: 16.5px;
     color: $saunaOrange;
     text-decoration: none;
-    font-family: $regularFontStack;
+    font-family: $boldFontStack;
     font-size: 20px;
-    font-weight: bold;
     text-align: right;
 }
 
+/* SVG Section */
 
+#svg-highlight {
+    // display: flex;
+    //flex-wrap: wrap;
+    // justify-content: space-evenly;
+    // align-items: center;
+    background-color: $goblin;
+    padding: 60px 0;
+}
 
+#svg-highlight h3 {
+    @include headlineStyles;
+    color: $ghost;
+    margin: 50px 0 0 100px;
+}
+
+#svg-highlight span.svg-span a {
+    display: block;
+    color: $saunaOrange;
+    text-decoration: none;
+    font-family: $boldFontStack;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 80px;
+}
+
+#svg-card-collection {
+    display: flex;
+    //flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#svg-card-collection div.svg-card {
+    
+    padding: 10px;
+    margin: 40px 10px;
+    // min-height: 200px;
+    // min-width: 70%;
+    // max-width: 70%;
+    // background-color: $ghost;
+    // border-radius: 6px;
+}
+
+#svg-card-collection div.svg-card p {
+    color: $ghost;
+    // color: $goblin;
+    text-align: center;
+    font-family: $boldFontStack;
+}
+
+/* SVG ICONS */
+
+.svg-icon {
+    display: inline-block;
+    padding-left: 100px;
+    width: 4em;
+    height: 4em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: $ghost;
+  }
+  
+  .svg-icon circle {
+    stroke: $ghost;
+    stroke-width: 1;
+  }
 
 /* Newsletter Section */
-
-
-
 
 #newsletter {
     // background-color: $saunaOrange;
@@ -477,7 +440,7 @@
     border: none;
     background-color: $goblin;
     color: $ghost;
-    font-weight: bold;
+    font-family: $boldFontStack;
     cursor: pointer;
     font-size: 15px;
     transition: 0.3s ease-in-out;
@@ -488,22 +451,29 @@
 //     color: $ghost;
 // }
 
-
-
-
 /* Footer Section */
-
-
-
 
 #footer {
     background-color: $goblin;
     padding: 50px 0 20px 0;
 }
 
+#footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-nav div.nav-column-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-right: 50px;
+}
+
 #footer-nav div.nav-column {
     display: inline-block;
-    margin: 10px 80px;
+    margin: 10px 40px;
     // border-left: 1px solid $ghost;
 }
 
@@ -514,19 +484,20 @@
     // color: grey;
     font-family: $blackFontStack;
     // font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     // text-align: center;
 }
 
 #footer-nav div.nav-column a{
     display: block;
     padding: 0;
-    margin: 15px 0;
+    margin: 20px 0;
     color: $ghost;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: $boldFontStack;
+    font-size: 13.5px;
     transition: 0.3s ease-in-out;
+    letter-spacing: 0.5px;
     // text-align: center;
 }
 
@@ -539,26 +510,27 @@
     color: $ghost;
     font-size: 13px;
     padding-left: 60px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    font-family: $boldFontStack;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 #footer hr {
     border: solid 1px $ghost;
     border-bottom:none;
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     margin-bottom: 10px;
     width: 90%;
     opacity: 0.2;
 }
 
 #footer img {
-    width: 100px;
-    height: 50px;
     margin-top:20px;
     margin-left: 50px;
+    // padding: 50px;
+    width: 200px;
+    height: 100px;
 }
 
 #footer div.notice {
@@ -581,13 +553,7 @@
     text-decoration: none;
 }
 
-
-
-
 /****** MEDIA QUERIES ******/
-
-
-
 
 @media screen and (max-width: 1125px) {
     
@@ -639,9 +605,7 @@
     //     padding-top: 100px;
     // }
 
-
 }
-
 
 @media screen and (max-width: 770px) {
 
@@ -686,8 +650,7 @@
         margin-top: 5px;
         padding-left: 10px;
         margin-left: 20px;
-        font-family: $regularFontStack;
-        font-weight: bold;
+        font-family: $boldFontStack;
         font-size: 20px;
         color: $saunaOrange;
         border-radius: 4px;
@@ -695,4 +658,4 @@
         text-decoration: none;
     }
 
-}
+} /* END OF ALL MEDIA QUERIES */
