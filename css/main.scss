@@ -40,7 +40,7 @@
 
 @mixin headlineStyles {
     font-family: $blackFontStack;
-    font-size: 50px;
+    font-size: 70px;
     letter-spacing: -1px;
     line-height: 60px; 
 }
@@ -75,8 +75,8 @@
     padding: 10px 0;
     width: 100%;
     box-shadow: 2px 2px 10px lightgrey;
-    position: fixed;
-    z-index: 1;
+    // position: fixed;
+    // z-index: 1;
     background-color: $ghost;
 }
 
@@ -121,23 +121,24 @@
 #hero-image div.headline-container {
     position: absolute;
     top: 30%;
-    left: 20%;
-    // margin: 40px auto;
+    left: 15%;
+    margin: 40px auto;
 }
 
 #hero-image div.headline-container h1 {
     // padding: 40px 0 0 80px;
     // padding-top: 150px;
     font-family: $blackFontStack;
-    font-size: 100px;
+    font-size: 120px;
     text-align: center;
     width: 100%;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     line-height: 100px;
     color: $ghost;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     padding: 0;
+    // opacity: 0.7;
 }
 
 #hero-image div.headline-container h2 {
@@ -147,13 +148,17 @@
     // padding-left: 150px;
     font-family: $blackFontStack;
     /* font-size: 70px; */
-    font-size: 80px;
+    font-size: 40px;
     width: 100%;
-    letter-spacing: -4px;
+    letter-spacing: -1px;
     // letter-spacing: -1px;
     line-height: 60px;
     color: $ghost;
     text-align: center;
+}
+
+#hero-image div.headline-container h2 sup {
+    font-size: 20px;
 }
 
 // #hero-image div.headline-container span {
@@ -186,8 +191,8 @@
     //flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 200px 0;
-    padding-bottom: 100px;
+    padding: 40px 0;
+    padding-bottom: 150px;
   }
   
 #intro div.intro-text-container {
@@ -200,13 +205,16 @@
     margin-left: 20px;
     width: 40%;
     max-width: 500px;
-    max-height: 500px;
+    // max-height: 500px;
     overflow: hidden;
     border-radius: 6px;
   }
 
 #intro div.intro-image-container img {
+    display: block;
     width: 100%;
+    margin: 15px 0;
+    border-radius: 6px;
   }
 
 #intro h3.intro-headline {
@@ -275,10 +283,10 @@
     // box-shadow: 1px 1px 15px lightgrey;
 }
 
-#tri-card .tri-card-container div.card:nth-child(1) {
-  flex-grow: 1;
-    // box-shadow: 1px 1px 15px $ghoul;
-}
+// #tri-card .tri-card-container div.card:nth-child(1) {
+//   flex-grow: 1;
+//     // box-shadow: 1px 1px 15px $ghoul;
+// }
 
 #tri-card .tri-card-container .card img.main-img {
     width: 100%;
@@ -291,6 +299,7 @@
     font-size: 22px;
     color: $goblin;
     text-align: center;
+    letter-spacing: 0.2px;
 }
 
 #tri-card p.tri-card-para-min {
@@ -311,7 +320,8 @@
 
 #tri-card span.tri-card-span a {
     display: block;
-    margin-top: 16.5px;
+    margin-top: 10px;
+    padding-right: 200px;
     color: $saunaOrange;
     text-decoration: none;
     font-family: $boldFontStack;
@@ -332,8 +342,12 @@
 
 #svg-highlight h3 {
     @include headlineStyles;
+    line-height: 55px;
     color: $ghost;
-    margin: 50px 0 0 100px;
+    margin: 50px 0;
+    margin-bottom: 0;
+    // max-width: 35%;
+    text-align: center;
 }
 
 #svg-highlight span.svg-span a {
@@ -341,7 +355,6 @@
     color: $saunaOrange;
     text-decoration: none;
     font-family: $boldFontStack;
-    font-weight: bold;
     font-size: 20px;
     text-align: right;
     margin-right: 80px;
@@ -369,9 +382,9 @@
 
 #svg-card-collection div.svg-card p {
     color: $ghost;
-    // color: $goblin;
     text-align: center;
     font-family: $boldFontStack;
+    font-size: 15px;
 }
 
 /* SVG ICONS */
@@ -431,6 +444,7 @@
     width: 35%;
     margin: 10px 30px;
     margin-right: 10px;
+    font-family: $regularFontStack;
     font-size: 16px;
 }
 
@@ -460,8 +474,13 @@
 
 #footer-nav {
     display: flex;
+    // flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+#footer-nav div.footer-img-column {
+    margin-left: 80px;
 }
 
 #footer-nav div.nav-column-container {
@@ -473,13 +492,13 @@
 
 #footer-nav div.nav-column {
     display: inline-block;
-    margin: 10px 40px;
+    margin: 10px 70px;
     // border-left: 1px solid $ghost;
 }
 
 #footer-nav div.nav-column h5{
     display: block;
-    margin: 20px 0;
+    margin: 18.5px 0;
     color: $saunaOrange;
     // color: grey;
     font-family: $blackFontStack;
@@ -491,7 +510,7 @@
 #footer-nav div.nav-column a{
     display: block;
     padding: 0;
-    margin: 20px 0;
+    margin: 15px 0;
     color: $ghost;
     text-decoration: none;
     font-family: $boldFontStack;
@@ -527,7 +546,7 @@
 
 #footer img {
     margin-top:20px;
-    margin-left: 50px;
+    // margin-left: 50px;
     // padding: 50px;
     width: 200px;
     height: 100px;
