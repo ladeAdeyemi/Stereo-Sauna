@@ -40,7 +40,7 @@
 
 @mixin headlineStyles {
     font-family: $blackFontStack;
-    font-size: 70px;
+    font-size: 65px;
     letter-spacing: -1px;
     line-height: 60px; 
 }
@@ -64,6 +64,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $ghost;
 }
 
 /* Navigation Bar */
@@ -114,46 +118,51 @@
     background-attachment: fixed;
     width: 100%;
     height: 700px;
-    position: relative;
+    // position: relative;
     // background-color: black;
 }
 
 #hero-image div.headline-container {
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    margin: 40px auto;
+    // position: absolute;
+    // top: 30%;
+    // left: 15%;
+    margin: 0 auto;
+    padding-top: 26%;
 }
 
 #hero-image div.headline-container h1 {
     // padding: 40px 0 0 80px;
     // padding-top: 150px;
     font-family: $blackFontStack;
-    font-size: 120px;
+    font-size: 110px;
     text-align: center;
     width: 100%;
     letter-spacing: -2px;
-    line-height: 100px;
+    line-height: 80px;
     color: $ghost;
     margin: 0;
-    margin-bottom: 2px;
     padding: 0;
+    // padding-left: 150px;
+    margin-bottom: 5px;
+    
     // opacity: 0.7;
 }
 
 #hero-image div.headline-container h2 {
+    display: inline-block;
     margin: 0;
-    // margin-top: 265px;
+    margin-top: 7px;
     padding-top: 0px;
-    // padding-left: 150px;
-    font-family: $blackFontStack;
-    /* font-size: 70px; */
-    font-size: 40px;
+    // padding-right: 150px;
+    font-family: $boldFontStack;
+    font-size: 35px;
+    // Font-size above formerly 40px
     width: 100%;
     letter-spacing: -1px;
     // letter-spacing: -1px;
-    line-height: 60px;
+    // line-height: 60px;
     color: $ghost;
+    // text-align: right;
     text-align: center;
 }
 
@@ -192,7 +201,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 40px 0;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
   }
   
 #intro div.intro-text-container {
@@ -219,7 +228,8 @@
 
 #intro h3.intro-headline {
     @include headlineStyles;
-    margin: 40px 0 20px 0;
+    // text-align: center;
+    margin: 40px 0;
     // margin-top: 265px;
     padding-top: 0px;
     padding-left: 10px;
@@ -251,7 +261,7 @@
 
 #tri-card {
     padding: 40px 0;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 #tri-card h3.tri-card-headline {
@@ -336,15 +346,16 @@
     //flex-wrap: wrap;
     // justify-content: space-evenly;
     // align-items: center;
-    background-color: $goblin;
-    padding: 60px 0;
+    background-color: $ghost;
+    padding: 40px 0;
+    padding-bottom: 120px;
 }
 
 #svg-highlight h3 {
     @include headlineStyles;
-    line-height: 55px;
-    color: $ghost;
-    margin: 50px 0;
+    // line-height: 55px;
+    color: $goblin;
+    margin: 30px 0;
     margin-bottom: 0;
     // max-width: 35%;
     text-align: center;
@@ -357,6 +368,7 @@
     font-family: $boldFontStack;
     font-size: 20px;
     text-align: right;
+    margin: 30px 0;
     margin-right: 80px;
 }
 
@@ -367,6 +379,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 40px;
+    background-color: $goblin;
 }
 
 #svg-card-collection div.svg-card {
@@ -411,17 +424,18 @@
 
 #newsletter {
     // background-color: $saunaOrange;
-    padding: 300px 0;
+    padding: 350px 0;
     background-image: url(../assets/guitar1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    // background-attachment: fixed;
 }
 
 #sign-up-container {
     margin-left: 20px;
     padding: 0;
-}
+}   
 
 #sign-up-container h3.sign-up-headline {
     @include headlineStyles;
@@ -441,7 +455,7 @@
     padding-left: 10px;
     border-radius: 4px;
     border: 1px solid $goblin;
-    width: 35%;
+    width: 39%;
     margin: 10px 30px;
     margin-right: 10px;
     font-family: $regularFontStack;

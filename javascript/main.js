@@ -1,6 +1,6 @@
 /* DOM SELECTIONS */
 
-
+const navBar = document.querySelector('#navigation');
 
 /* FUNCTIONS */
 
