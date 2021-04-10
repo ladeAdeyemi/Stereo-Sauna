@@ -79,11 +79,25 @@ body {
     align-items: center;
     padding: 10px 0;
     width: 100%;
-    box-shadow: 2px 2px 10px lightgrey;
+    // box-shadow: 2px 2px 10px lightgrey;
     // position: fixed;
     // z-index: 1;
-    background-color: $ghost;
+    // background-color: $ghost;
 }
+
+// Use JavaScript and CSS positioning to get the navBar to change color upon scroll down
+
+// #navigationWhite {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px 0;
+//     width: 100%;
+//     box-shadow: 2px 2px 10px lightgrey;
+//     position: fixed;
+//     z-index: 1;
+//     background-color: $ghost;
+// }
 
 #navigation div.logo-container {
     margin-left: 80px;
@@ -97,8 +111,17 @@ body {
     @include navStyles;
     font-family: $boldFontStack;
     color: $goblin;
+    // color: $ghost;
     transition: 0.3s ease-in-out;
 }
+
+// #navigation div.nav-links-container a {
+//     @include navStyles;
+//     font-family: $boldFontStack;
+//     color: $goblin;
+//     // color: $ghost;
+//     transition: 0.3s ease-in-out;
+// }
 
 #navigation div.nav-links-container a:hover {
     color: $saunaOrange;
@@ -108,9 +131,11 @@ body {
    display: none;
 }
 
+
 /* Hero Image Section */
 
-#hero-image {
+
+div#hero-image {
     margin: 0;
     background-image: url(../assets/concert.jpg);
     background-repeat: no-repeat;
@@ -123,7 +148,7 @@ body {
     // background-color: black;
 }
 
-#hero-image div.headline-container {
+div#hero-image div.headline-container {
     // position: absolute;
     // top: 30%;
     // left: 15%;
@@ -131,7 +156,7 @@ body {
     padding-top: 26%;
 }
 
-#hero-image div.headline-container h1 {
+div#hero-image div.headline-container h1 {
     // padding: 40px 0 0 80px;
     // padding-top: 150px;
     font-family: $blackFontStack;
@@ -149,78 +174,54 @@ body {
     // opacity: 0.7;
 }
 
-#hero-image div.headline-container h2 {
+div#hero-image div.headline-container h2 {
     display: inline-block;
     margin: 0;
     margin-top: 7px;
-    padding-top: 0px;
-    // padding-right: 150px;
+    // padding-top: 0px;
     font-family: $boldFontStack;
-    // font-size: 25px;
     font-size: 30px;
-    // Font-size above formerly 40px
     width: 100%;
     letter-spacing: -1px;
     color: $ghost;
     text-align: center;
 }
 
-#hero-image div.headline-container h2 sup {
+div#hero-image div.headline-container h2 sup {
     font-size: 20px;
 }
 
-// #hero-image div.headline-container span {
-//     display: block;
-//     margin: 10px auto;
-//     margin-top: 100px;
-//     background-color: $goblin;
-//     padding: 5px;
-//     border-radius: 4px;
-//     text-align: center;
-// }
-
-// #hero-image div.headline-container span a {
-//     font-family: $regularFontStack;
-//     font-weight: bold;
-//     font-size: 18px;
-//     text-decoration: none;
-//     text-align: center;
-//     letter-spacing: 0.1px;
-//     line-height: 60px;
-//     color: $ghost;
-//     padding: 0;
-
-// }
 
 /* Guitar Tri-card Section */
 
-#tri-card {
+
+section#tri-card {
     padding: 40px 0;
     padding-bottom: 60px;
 }
 
-#tri-card h3.tri-card-headline {
+section#tri-card h3.tri-card-headline {
     @include headlineStyles;
     margin: 40px 0 20px 0;
     color: $goblin;
     text-align: center;
 }
 
-#tri-card p.tri-card-para {
+section#tri-card p.tri-card-para {
     @include paraStyles;
     color: $ghoul;
     text-align: center;
     // font-size: 16px;
 }
 
-#tri-card .tri-card-container {
+section#tri-card div.tri-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
 }
 
-#tri-card .tri-card-container div.card {
+section#tri-card div.tri-card-container div.card {
     max-width: 25%;
     padding: 10px;
     margin: 10px 15px;
@@ -241,12 +242,12 @@ body {
 //     // box-shadow: 1px 1px 15px $ghoul;
 // }
 
-#tri-card .tri-card-container .card img.main-img {
+section#tri-card div.tri-card-container div.card img.main-img {
     width: 100%;
     border-radius: 6px;
 }
 
-#tri-card h4.tri-card-headline-mini {
+section#tri-card h4.tri-card-headline-mini {
     @include miniheadlineStyles;
     margin: 10px 0;
     font-size: 20px;
@@ -255,7 +256,7 @@ body {
     letter-spacing: 0.1px;
 }
 
-#tri-card p.tri-card-para-min {
+section#tri-card p.tri-card-para-min {
     // @include paraStyles;
     margin: 20px 0;
     color: $ghoul;
@@ -265,13 +266,13 @@ body {
     font-size: 16px;
 }
 
-#tri-card hr.tri-card-rule {
+section#tri-card hr.tri-card-rule {
    border: 1px solid $ghoul;
    border-bottom:none;
    opacity: 0.2;
 }
 
-#tri-card span.tri-card-span a {
+section#tri-card span.tri-card-span a {
     display: block;
     margin-top: 40px;
     padding-right: 200px;
@@ -282,9 +283,9 @@ body {
     text-align: right;
 }
 
-/* Intro Section */
+/* Amp Section */
 
-#intro {
+section#amp {
     display: flex;
     //flex-wrap: wrap;
     // flex-direction: row-reverse;
@@ -295,13 +296,13 @@ body {
     // padding-bottom: 80px;
   }
   
-#intro div.intro-text-container {
+section#amp div.amp-text-container {
     // margin-left: 30px;
     margin-left: 20px;
     width: 40%;
   }
 
-#intro div.intro-image-container {
+section#amp div.amp-image-container {
     margin-left: 20px;
     width: 40%;
     max-width: 500px;
@@ -310,14 +311,14 @@ body {
     border-radius: 6px;
   }
 
-#intro div.intro-image-container img {
+section#amp div.amp-image-container img {
     display: block;
     width: 100%;
     margin: 15px 0;
     border-radius: 6px;
   }
 
-#intro h3.intro-headline {
+section#amp h3.amp-headline {
     @include headlineStyles;
     // text-align: center;
     margin: 40px 0;
@@ -328,13 +329,13 @@ body {
     line-height: 60px;
 }
 
-#intro p.intro-para {
+section#amp p.amp-para {
     @include paraStyles;
     color: $ghoul;
     padding-left: 10px;
 }
 
-#intro span.intro-span a {
+section#amp span.amp-span a {
     display: inline-block;
     margin: 20px 0;
     margin-top: 15px;
@@ -350,7 +351,7 @@ body {
 
 /* MICS SECTION */
 
-#mic {
+section#mic {
     display: flex;
     //flex-wrap: wrap;
     flex-direction: row-reverse;
@@ -361,13 +362,13 @@ body {
     // padding-bottom: 80px;
   }
   
-#mic div.intro-text-container {
+section#mic div.mic-text-container {
     // margin-left: 30px;
     margin-left: 20px;
     width: 40%;
   }
 
-#mic div.intro-image-container {
+section#mic div.mic-image-container {
     margin-left: 20px;
     width: 40%;
     max-width: 500px;
@@ -376,14 +377,14 @@ body {
     border-radius: 6px;
   }
 
-#mic div.intro-image-container img {
+section#mic div.mic-image-container img {
     display: block;
     width: 100%;
     margin: 15px 0;
     border-radius: 6px;
   }
 
-#mic h3.intro-headline {
+section#mic h3.mic-headline {
     @include headlineStyles;
     // text-align: center;
     margin: 40px 0;
@@ -394,13 +395,13 @@ body {
     line-height: 60px;
 }
 
-#mic p.intro-para {
+section#mic p.mic-para {
     @include paraStyles;
     color: $ghoul;
     padding-left: 10px;
 }
 
-#mic span.intro-span a {
+section#mic span.mic-span a {
     display: inline-block;
     margin: 20px 0;
     margin-top: 15px;
@@ -416,7 +417,7 @@ body {
 
 /* SVG Section */
 
-#svg-highlight {
+section#svg-highlight {
     // display: flex;
     // flex-wrap: wrap;
     // justify-content: space-evenly;
@@ -426,7 +427,7 @@ body {
     // padding-bottom: 120px;
 }
 
-#svg-highlight h3 {
+section#svg-highlight h3 {
     @include headlineStyles;
     // line-height: 55px;
     color: $goblin;
@@ -436,7 +437,7 @@ body {
     text-align: center;
 }
 
-#svg-highlight p {
+section#svg-highlight p {
     @include paraStyles;
     // line-height: 55px;
     color: $goblin;
@@ -446,7 +447,7 @@ body {
     text-align: center;
 }
 
-#svg-highlight span.svg-span a {
+section#svg-highlight span.svg-span a {
     display: block;
     color: $saunaOrange;
     text-decoration: none;
@@ -457,7 +458,7 @@ body {
     margin-right: 80px;
 }
 
-#svg-card-collection {
+div#svg-card-collection {
     display: flex;
     //flex-wrap: wrap;
     // flex-direction: column;
@@ -467,7 +468,7 @@ body {
     // background-color: $goblin;
 }
 
-#svg-card-collection div.svg-card {
+div#svg-card-collection div.svg-card {
     padding: 20px;
     margin: 40px 10px;
     // min-height: 200px;
@@ -478,7 +479,7 @@ body {
     // border: 3px solid $saunaOrange;
 }
 
-#svg-card-collection div.svg-card img {
+div#svg-card-collection div.svg-card img {
     display: block;
     margin: 0 auto;
    width: 80px;
@@ -491,7 +492,7 @@ body {
     // border-radius: 6px;
 }
 
-#svg-card-collection div.svg-card p {
+div#svg-card-collection div.svg-card p {
     padding: 0;
     color: $goblin;
     text-align: center;
@@ -501,7 +502,7 @@ body {
 
 /* Newsletter Section */
 
-#newsletter {
+section#newsletter {
     // background-color: $saunaOrange;
     padding: 350px 0;
     background-image: url(../assets/guitar1.jpg);
@@ -511,25 +512,25 @@ body {
     // background-attachment: fixed;
 }
 
-#sign-up-container {
+div#sign-up-container {
     margin-left: 20px;
     padding: 0;
 }   
 
-#sign-up-container h3.sign-up-headline {
+div#sign-up-container h3.sign-up-headline {
     @include headlineStyles;
     margin: 10px 0 20px 0;
     padding-top: 0px;
     padding-left: 30px;
 }
 
-#sign-up-container p.sign-up-para {
+div#sign-up-container p.sign-up-para {
     @include paraStyles;
     color: $ghoul;
     width: 42%;
 }
 
-#newsletter input {
+section#newsletter input {
     padding: 15px 0;
     padding-left: 10px;
     border-radius: 4px;
@@ -541,7 +542,7 @@ body {
     font-size: 16px;
 }
 
-#newsletter button {
+section#newsletter button {
     padding: 15px;
     border-radius: 4px;
     border: none;
@@ -684,6 +685,20 @@ body {
     // #hero-image div.headline-container {
     //     padding-top: 150px;
     // }
+
+    section#amp div.amp-text-container {
+        // margin-left: 30px;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 50%;
+      }
+
+    section#mic div.mic-text-container {
+        // margin-left: 30px;
+        margin-left: 0;
+        width: 50%;
+      }
+
     
 }
 
@@ -715,63 +730,140 @@ body {
 
     #navigation div.hamburger-hidden {
         display: inline-block;
+        margin-right: 80px;
+        cursor: pointer;
     }
+
+    div#hero-image div.headline-container h1 {
+        font-size: 90px;
+        letter-spacing: -2px;
+        line-height: 90px;
+    }
+    
+    // div#hero-image div.headline-container h2 {
+    //     font-size: 30px;
+    // }
+    
+    // div#hero-image div.headline-container h2 sup {
+    //     font-size: 20px;
+    // }
+
 
     // #hero-image div.headline-container {
     //     padding-top: 100px;
     // }
 
+    section#tri-card div.tri-card-container div.card {
+        max-width: 35%;
+    }
+
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 916px) {
 
-    #intro {
+ 
+    section#amp h3.amp-headline {
+        font-size: 58px;
+    }
+
+
+}
+
+@media screen and (max-width: 786px) {
+
+    section#tri-card div.tri-card-container div.card {
+        max-width: 50%;
+    }
+
+    section#amp {
         display: block;
+      }
+
+    section#amp div.amp-text-container {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 80%;
+      }
+
+      section#amp div.amp-image-container {
+        margin: 0 auto;
+        width: 100%;
     }
 
-    #intro div.intro-text-container {
-        padding-left: 5px;
-        width: 100%;
-      }
-    
-    #intro div.intro-image-container {
-        margin-left: 0;
-        width: 100%;
-        max-width: 100%;
-        border-radius: 0;
-      }
-    
-    #intro div.intro-image-container img {
-        width: 100%;
-      }
-    
-    #intro h3.intro-headline {
-        @include headlineStyles;
-        margin: 40px 0 20px 0;
-        // margin-top: 265px;
-        padding-top: 0px;
-        padding-left: 30px;
-        color: $goblin;
-        // line-height: 50px;
-    }
-    
-    #intro p.intro-para {
-        @include paraStyles;
-        color: $ghoul;
-    }
-    
-    #intro span.intro-span a {
-        display: inline-block;
-        margin: 20px 0;
-        margin-top: 5px;
-        padding-left: 10px;
-        margin-left: 20px;
-        font-family: $boldFontStack;
-        font-size: 20px;
-        color: $saunaOrange;
-        border-radius: 4px;
-        cursor: pointer;
-        text-decoration: none;
+    // section#amp h3.amp-headline {
+    //     text-align: center;
+    // }
+
+    section#mic {
+          display: block;
     }
 
-} /* END OF ALL MEDIA QUERIES */
+    section#mic div.mic-text-container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      section#mic div.mic-image-container {
+        margin: 0 auto;
+        width: 100%;
+      }
+
+    // section#mic h3.mic-headline {
+    //     text-align: left;
+    // }
+
+}
+
+// @media screen and (max-width: 770px) {
+
+//     #intro {
+//         display: block;
+//     }
+
+//     #intro div.intro-text-container {
+//         padding-left: 5px;
+//         width: 100%;
+//       }
+    
+//     #intro div.intro-image-container {
+//         margin-left: 0;
+//         width: 100%;
+//         max-width: 100%;
+//         border-radius: 0;
+//       }
+    
+//     #intro div.intro-image-container img {
+//         width: 100%;
+//       }
+    
+//     #intro h3.intro-headline {
+//         @include headlineStyles;
+//         margin: 40px 0 20px 0;
+//         // margin-top: 265px;
+//         padding-top: 0px;
+//         padding-left: 30px;
+//         color: $goblin;
+//         // line-height: 50px;
+//     }
+    
+//     #intro p.intro-para {
+//         @include paraStyles;
+//         color: $ghoul;
+//     }
+    
+//     #intro span.intro-span a {
+//         display: inline-block;
+//         margin: 20px 0;
+//         margin-top: 5px;
+//         padding-left: 10px;
+//         margin-left: 20px;
+//         font-family: $boldFontStack;
+//         font-size: 20px;
+//         color: $saunaOrange;
+//         border-radius: 4px;
+//         cursor: pointer;
+//         text-decoration: none;
+//     }
+
+// } 
+/* END OF ALL MEDIA QUERIES */

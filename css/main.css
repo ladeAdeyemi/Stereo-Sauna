@@ -29,8 +29,6 @@ body {
   align-items: center;
   padding: 10px 0;
   width: 100%;
-  box-shadow: 2px 2px 10px lightgrey;
-  background-color: #fff;
 }
 
 #navigation div.logo-container {
@@ -58,7 +56,7 @@ body {
 }
 
 /* Hero Image Section */
-#hero-image {
+div#hero-image {
   margin: 0;
   background-image: url(../assets/concert.jpg);
   background-repeat: no-repeat;
@@ -69,12 +67,12 @@ body {
   height: 700px;
 }
 
-#hero-image div.headline-container {
+div#hero-image div.headline-container {
   margin: 0 auto;
   padding-top: 26%;
 }
 
-#hero-image div.headline-container h1 {
+div#hero-image div.headline-container h1 {
   font-family: "Inter Black", "Arial Black";
   font-size: 110px;
   text-align: center;
@@ -87,11 +85,10 @@ body {
   margin-bottom: 5px;
 }
 
-#hero-image div.headline-container h2 {
+div#hero-image div.headline-container h2 {
   display: inline-block;
   margin: 0;
   margin-top: 7px;
-  padding-top: 0px;
   font-family: "Inter Bold", "Arial Black";
   font-size: 30px;
   width: 100%;
@@ -100,17 +97,17 @@ body {
   text-align: center;
 }
 
-#hero-image div.headline-container h2 sup {
+div#hero-image div.headline-container h2 sup {
   font-size: 20px;
 }
 
 /* Guitar Tri-card Section */
-#tri-card {
+section#tri-card {
   padding: 40px 0;
   padding-bottom: 60px;
 }
 
-#tri-card h3.tri-card-headline {
+section#tri-card h3.tri-card-headline {
   font-family: "Inter Black", "Arial Black";
   font-size: 60px;
   letter-spacing: -1px;
@@ -120,7 +117,7 @@ body {
   text-align: center;
 }
 
-#tri-card p.tri-card-para {
+section#tri-card p.tri-card-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17.5px;
@@ -131,26 +128,26 @@ body {
   text-align: center;
 }
 
-#tri-card .tri-card-container {
+section#tri-card div.tri-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
 }
 
-#tri-card .tri-card-container div.card {
+section#tri-card div.tri-card-container div.card {
   max-width: 25%;
   padding: 10px;
   margin: 10px 15px;
   border-radius: 6px;
 }
 
-#tri-card .tri-card-container .card img.main-img {
+section#tri-card div.tri-card-container div.card img.main-img {
   width: 100%;
   border-radius: 6px;
 }
 
-#tri-card h4.tri-card-headline-mini {
+section#tri-card h4.tri-card-headline-mini {
   font-family: "Inter Bold", "Arial Black";
   margin: 10px 0;
   font-size: 20px;
@@ -159,7 +156,7 @@ body {
   letter-spacing: 0.1px;
 }
 
-#tri-card p.tri-card-para-min {
+section#tri-card p.tri-card-para-min {
   margin: 20px 0;
   color: #1a1918;
   line-height: 25px;
@@ -167,13 +164,13 @@ body {
   font-size: 16px;
 }
 
-#tri-card hr.tri-card-rule {
+section#tri-card hr.tri-card-rule {
   border: 1px solid #1a1918;
   border-bottom: none;
   opacity: 0.2;
 }
 
-#tri-card span.tri-card-span a {
+section#tri-card span.tri-card-span a {
   display: block;
   margin-top: 40px;
   padding-right: 200px;
@@ -184,20 +181,20 @@ body {
   text-align: right;
 }
 
-/* Intro Section */
-#intro {
+/* Amp Section */
+section#amp {
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
   padding: 80px 0;
 }
 
-#intro div.intro-text-container {
+section#amp div.amp-text-container {
   margin-left: 20px;
   width: 40%;
 }
 
-#intro div.intro-image-container {
+section#amp div.amp-image-container {
   margin-left: 20px;
   width: 40%;
   max-width: 500px;
@@ -205,14 +202,14 @@ body {
   border-radius: 6px;
 }
 
-#intro div.intro-image-container img {
+section#amp div.amp-image-container img {
   display: block;
   width: 100%;
   margin: 15px 0;
   border-radius: 6px;
 }
 
-#intro h3.intro-headline {
+section#amp h3.amp-headline {
   font-family: "Inter Black", "Arial Black";
   font-size: 60px;
   letter-spacing: -1px;
@@ -225,7 +222,7 @@ body {
   line-height: 60px;
 }
 
-#intro p.intro-para {
+section#amp p.amp-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17.5px;
@@ -236,7 +233,7 @@ body {
   padding-left: 10px;
 }
 
-#intro span.intro-span a {
+section#amp span.amp-span a {
   display: inline-block;
   margin: 20px 0;
   margin-top: 15px;
@@ -250,7 +247,7 @@ body {
 }
 
 /* MICS SECTION */
-#mic {
+section#mic {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
@@ -258,12 +255,12 @@ body {
   padding: 80px 0;
 }
 
-#mic div.intro-text-container {
+section#mic div.mic-text-container {
   margin-left: 20px;
   width: 40%;
 }
 
-#mic div.intro-image-container {
+section#mic div.mic-image-container {
   margin-left: 20px;
   width: 40%;
   max-width: 500px;
@@ -271,14 +268,14 @@ body {
   border-radius: 6px;
 }
 
-#mic div.intro-image-container img {
+section#mic div.mic-image-container img {
   display: block;
   width: 100%;
   margin: 15px 0;
   border-radius: 6px;
 }
 
-#mic h3.intro-headline {
+section#mic h3.mic-headline {
   font-family: "Inter Black", "Arial Black";
   font-size: 60px;
   letter-spacing: -1px;
@@ -291,7 +288,7 @@ body {
   line-height: 60px;
 }
 
-#mic p.intro-para {
+section#mic p.mic-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17.5px;
@@ -302,7 +299,7 @@ body {
   padding-left: 10px;
 }
 
-#mic span.intro-span a {
+section#mic span.mic-span a {
   display: inline-block;
   margin: 20px 0;
   margin-top: 15px;
@@ -316,12 +313,12 @@ body {
 }
 
 /* SVG Section */
-#svg-highlight {
+section#svg-highlight {
   background-color: #fff;
   padding: 40px 0;
 }
 
-#svg-highlight h3 {
+section#svg-highlight h3 {
   font-family: "Inter Black", "Arial Black";
   font-size: 60px;
   letter-spacing: -1px;
@@ -331,7 +328,7 @@ body {
   text-align: center;
 }
 
-#svg-highlight p {
+section#svg-highlight p {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17.5px;
@@ -344,7 +341,7 @@ body {
   text-align: center;
 }
 
-#svg-highlight span.svg-span a {
+section#svg-highlight span.svg-span a {
   display: block;
   color: #ffa224;
   text-decoration: none;
@@ -355,18 +352,18 @@ body {
   margin-right: 80px;
 }
 
-#svg-card-collection {
+div#svg-card-collection {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#svg-card-collection div.svg-card {
+div#svg-card-collection div.svg-card {
   padding: 20px;
   margin: 40px 10px;
 }
 
-#svg-card-collection div.svg-card img {
+div#svg-card-collection div.svg-card img {
   display: block;
   margin: 0 auto;
   width: 80px;
@@ -374,7 +371,7 @@ body {
   text-align: center;
 }
 
-#svg-card-collection div.svg-card p {
+div#svg-card-collection div.svg-card p {
   padding: 0;
   color: #000;
   text-align: center;
@@ -383,7 +380,7 @@ body {
 }
 
 /* Newsletter Section */
-#newsletter {
+section#newsletter {
   padding: 350px 0;
   background-image: url(../assets/guitar1.jpg);
   background-repeat: no-repeat;
@@ -391,12 +388,12 @@ body {
   background-position: center;
 }
 
-#sign-up-container {
+div#sign-up-container {
   margin-left: 20px;
   padding: 0;
 }
 
-#sign-up-container h3.sign-up-headline {
+div#sign-up-container h3.sign-up-headline {
   font-family: "Inter Black", "Arial Black";
   font-size: 60px;
   letter-spacing: -1px;
@@ -406,7 +403,7 @@ body {
   padding-left: 30px;
 }
 
-#sign-up-container p.sign-up-para {
+div#sign-up-container p.sign-up-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17.5px;
@@ -417,7 +414,7 @@ body {
   width: 42%;
 }
 
-#newsletter input {
+section#newsletter input {
   padding: 15px 0;
   padding-left: 10px;
   border-radius: 4px;
@@ -429,7 +426,7 @@ body {
   font-size: 16px;
 }
 
-#newsletter button {
+section#newsletter button {
   padding: 15px;
   border-radius: 4px;
   border: none;
@@ -546,6 +543,17 @@ body {
   #hero-image h1 {
     font-size: 50px;
   }
+
+  section#amp div.amp-text-container {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50%;
+  }
+
+  section#mic div.mic-text-container {
+    margin-left: 0;
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1000px) {
   #navigation {
@@ -558,62 +566,57 @@ body {
 
   #navigation div.hamburger-hidden {
     display: inline-block;
+    margin-right: 80px;
+    cursor: pointer;
+  }
+
+  div#hero-image div.headline-container h1 {
+    font-size: 90px;
+    letter-spacing: -2px;
+    line-height: 90px;
+  }
+
+  section#tri-card div.tri-card-container div.card {
+    max-width: 35%;
   }
 }
-@media screen and (max-width: 770px) {
-  #intro {
+@media screen and (max-width: 916px) {
+  section#amp h3.amp-headline {
+    font-size: 58px;
+  }
+}
+@media screen and (max-width: 786px) {
+  section#tri-card div.tri-card-container div.card {
+    max-width: 50%;
+  }
+
+  section#amp {
     display: block;
   }
 
-  #intro div.intro-text-container {
-    padding-left: 5px;
+  section#amp div.amp-text-container {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  section#amp div.amp-image-container {
+    margin: 0 auto;
     width: 100%;
   }
 
-  #intro div.intro-image-container {
-    margin-left: 0;
+  section#mic {
+    display: block;
+  }
+
+  section#mic div.mic-text-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  section#mic div.mic-image-container {
+    margin: 0 auto;
     width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-  }
-
-  #intro div.intro-image-container img {
-    width: 100%;
-  }
-
-  #intro h3.intro-headline {
-    font-family: "Inter Black", "Arial Black";
-    font-size: 60px;
-    letter-spacing: -1px;
-    line-height: 60px;
-    margin: 40px 0 20px 0;
-    padding-top: 0px;
-    padding-left: 30px;
-    color: #000;
-  }
-
-  #intro p.intro-para {
-    margin: 20px 0 15px 0;
-    padding-left: 30px;
-    font-size: 17.5px;
-    font-family: "Inter", "Arial";
-    line-height: 32px;
-    letter-spacing: 0.3px;
-    color: #1a1918;
-  }
-
-  #intro span.intro-span a {
-    display: inline-block;
-    margin: 20px 0;
-    margin-top: 5px;
-    padding-left: 10px;
-    margin-left: 20px;
-    font-family: "Inter Bold", "Arial Black";
-    font-size: 20px;
-    color: #ffa224;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
   }
 }
 /* END OF ALL MEDIA QUERIES */
