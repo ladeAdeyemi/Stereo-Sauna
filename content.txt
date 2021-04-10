@@ -1,6 +1,45 @@
-STEREO SAUNA
+                                                STEREO SAUNA - WEBSITE TO-DO CHECKLIST
+ 
+# Routing / Folder structure
+
+# Meta tags / SEO
+
+# Accessibilty / Aria Labels
+
+# Picture tags (where approriate)
+
+# Responsiveness
+
+# JavaScript
+
+# Code cleanup / DRY Code
+
+# Favicon
+
+# Cross-browser compatibility / testing / Vendor prefixes and polyfils
+
+# Domain registration (done)
+
+# Github / code push to remote repository
+
+# Hosting (free on Netlify and Github pages)
+
+# SSL certificate (if not included with above)
 
 
+                                                            LIST OF PAGES
+
+# Home page (80% complete)
+
+# Product Category Page (Same template)
+
+# About Us
+
+# Privacy Policy
+
+# Terms of Service
+
+# Contact Us
 
 
 TERMS OF SERVICE
