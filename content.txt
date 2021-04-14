@@ -1,4 +1,30 @@
-                                                STEREO SAUNA - WEBSITE TO-DO CHECKLIST
+
+
+display
+margin
+padding
+width
+height
+
+border
+border-bottom
+border-radius
+////
+
+
+font-family
+font-size
+letter-spacing
+line-height
+text-decoration
+
+background-color
+color
+opacity
+
+
+
+                                                WEBSITE TO-DO CHECKLIST
  
 # Routing / Folder structure
 

@@ -3,8 +3,6 @@
 const navBar = document.querySelector('#navigation');
 const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
 
-
-
 /* FUNCTIONS */
 
 function changeNavBarColor () {
@@ -13,7 +11,8 @@ function changeNavBarColor () {
 
         // navBar.id = "navigationWhite";
         // navBarLinks.id = "";
-            console.log("Window's inner height is 625");
+        console.log("Window's inner height is 625");
+        
     } else {
 
         navBar.id = "navigation";
@@ -22,6 +21,8 @@ function changeNavBarColor () {
     }
     
 }
+
+// Create a function that changes the guitar images from black and white to color (use a transition effect)
 
 /* EVENT LISTENERS */
 
