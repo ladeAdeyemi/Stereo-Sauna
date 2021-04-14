@@ -109,14 +109,12 @@ section#tri-card {
 
 section#tri-card h3.tri-card-headline {
   font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
-  letter-spacing: -1.8px;
-  line-height: 75px;
   margin: 40px auto;
   max-width: 53%;
   color: #fff;
   text-align: center;
   font-size: 70px;
+  letter-spacing: -1.8px;
 }
 
 section#tri-card p.tri-card-para {
@@ -182,44 +180,52 @@ section#tri-card span.tri-card-span a {
   text-align: right;
 }
 
-/* Amp Section */
-section#amp {
+/* Amp & Mic Section */
+section#amp, section#mic {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 80px 0;
 }
 
-section#amp div.amp-text-container {
+section#mic {
+  flex-direction: row-reverse;
+}
+
+section#amp div.text-container,
+section#mic div.text-container {
   padding: 20px;
   width: 40%;
 }
 
-section#amp div.amp-image-container {
+section#amp div.image-container,
+section#mic div.image-container {
   width: 40%;
   overflow: hidden;
 }
 
-section#amp div.amp-image-container img {
+section#amp div.image-container img,
+section#mic div.image-container img {
   display: block;
   width: 100%;
   margin: 15px 0;
 }
 
-section#amp h3.amp-headline {
-  font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
-  letter-spacing: -1.8px;
-  line-height: 75px;
+section#amp h3.container-headline,
+section#mic h3.container-headline {
   margin: 20px 0;
   margin-top: 30px;
   padding-top: 0px;
   padding-left: 10px;
   color: #000;
+  font-family: "Inter Black", "Arial Black";
+  font-size: 50px;
+  letter-spacing: -1.8px;
   line-height: 60px;
 }
 
-section#amp p.amp-para {
+section#amp p.container-para,
+section#mic p.container-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17px;
@@ -230,70 +236,8 @@ section#amp p.amp-para {
   padding-left: 10px;
 }
 
-section#amp span.amp-span a {
-  display: inline-block;
-  margin: 20px 0;
-  margin-top: 15px;
-  padding-left: 10px;
-  font-family: "Inter Bold", "Arial Black";
-  font-size: 20px;
-  color: #ffa224;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* MICS SECTION */
-section#mic {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 80px 0;
-}
-
-section#mic div.mic-text-container {
-  margin-left: 20px;
-  width: 40%;
-}
-
-section#mic div.mic-image-container {
-  margin-left: 20px;
-  width: 40%;
-  overflow: hidden;
-}
-
-section#mic div.mic-image-container img {
-  display: block;
-  width: 100%;
-  margin: 15px 0;
-}
-
-section#mic h3.mic-headline {
-  font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
-  letter-spacing: -1.8px;
-  line-height: 75px;
-  margin: 20px 0;
-  margin-top: 30px;
-  padding-top: 0px;
-  padding-left: 10px;
-  color: #000;
-  line-height: 60px;
-}
-
-section#mic p.mic-para {
-  margin: 20px 0 15px 0;
-  padding-left: 30px;
-  font-size: 17px;
-  font-family: "Inter", "Arial";
-  line-height: 32px;
-  letter-spacing: 0.3px;
-  color: #1a1918;
-  padding-left: 10px;
-}
-
-section#mic span.mic-span a {
+section#amp span.span a,
+section#mic span.span a {
   display: inline-block;
   margin: 20px 0;
   margin-top: 15px;
@@ -314,9 +258,6 @@ section#svg-highlight {
 
 section#svg-highlight h3 {
   font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
-  letter-spacing: -1.8px;
-  line-height: 75px;
   color: #000;
   margin-bottom: 0;
   text-align: center;
@@ -390,13 +331,12 @@ div#sign-up-container {
 }
 
 div#sign-up-container h3.sign-up-headline {
-  font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
-  letter-spacing: -1.8px;
-  line-height: 75px;
   margin: 10px 0 20px 0;
   padding-top: 0px;
   padding-left: 30px;
+  font-family: "Inter Black", "Arial Black";
+  font-size: 50px;
+  letter-spacing: -1.8px;
 }
 
 div#sign-up-container p.sign-up-para {
@@ -432,6 +372,11 @@ section#newsletter button {
   cursor: pointer;
   font-size: 15px;
   transition: 0.3s ease-in-out;
+}
+
+#newsletter button:hover {
+  background-color: #ffa224;
+  color: #fff;
 }
 
 /* Footer Section */
@@ -537,18 +482,10 @@ section#newsletter button {
 
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
-  #hero-image h1 {
-    font-size: 50px;
-  }
-
-  section#amp div.amp-text-container {
+  section#amp div.text-container,
+section#mic div.text-container {
     margin-left: 20px;
     margin-top: 20px;
-    width: 50%;
-  }
-
-  section#mic div.mic-text-container {
-    margin-left: 0;
     width: 50%;
   }
 
@@ -571,10 +508,27 @@ section#newsletter button {
     cursor: pointer;
   }
 
+  div#hero-image div.headline-container {
+    padding-top: 32%;
+  }
+
   div#hero-image div.headline-container h1 {
     font-size: 90px;
     letter-spacing: -2px;
-    line-height: 90px;
+    line-height: 80px;
+  }
+
+  section#amp,
+section#mic {
+    padding: 40px 0;
+  }
+
+  div#sign-up-container p.sign-up-para {
+    width: 39%;
+  }
+
+  section#newsletter input {
+    width: 50%;
   }
 
   #footer-nav {
@@ -607,45 +561,114 @@ section#newsletter button {
     max-width: 35%;
   }
 }
+@media screen and (max-width: 916px) {
+  section#amp,
+section#mic {
+    display: block;
+  }
+
+  section#amp div.text-container,
+section#mic div.text-container {
+    margin: 0 auto;
+    margin-top: 0;
+    width: 65%;
+    box-shadow: 3px 6px 20px lightgrey;
+    border-radius: 4px;
+  }
+
+  section#amp div.text-container h3.container-headline,
+section#mic div.text-container h3.container-headline {
+    margin-top: 0;
+  }
+
+  section#amp div.image-container,
+section#mic div.image-container {
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  section#amp div.image-container img,
+section#mic div.image-container img {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 789px) {
+  div#hero-image div.headline-container {
+    padding-top: 45%;
+  }
+
   div#hero-image div.headline-container h1 {
     font-size: 80px;
+    line-height: 60px;
   }
 
   section#tri-card div.tri-card-container div.card {
     max-width: 70%;
   }
 
-  section#amp {
-    display: block;
+  section#newsletter input {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  div#hero-image div.headline-container h1 {
+    font-size: 75px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 654px) {
+  div#hero-image div.headline-container {
+    padding-top: 53%;
   }
 
-  section#amp div.amp-text-container {
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 80%;
+  div#hero-image div.headline-container h1 {
+    font-size: 65px;
+    line-height: 50px;
   }
 
-  section#amp div.amp-image-container {
-    margin: 0 auto;
+  section#amp div.text-container,
+section#mic div.text-container {
     width: 100%;
+    box-shadow: 3px 6px 20px lightgrey;
+    border-radius: none;
   }
 
-  section#mic {
-    display: block;
-  }
-
-  section#mic div.mic-text-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  section#mic div.mic-image-container {
-    margin: 0 auto;
+  section#amp div.image-container,
+section#mic div.image-container {
     width: 100%;
   }
 }
 @media screen and (max-width: 533px) {
+  section#newsletter {
+    background-position: right;
+  }
+
+  div#sign-up-container {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  div#sign-up-container p.sign-up-para {
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    color: #000;
+  }
+
+  section#newsletter input {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  section#newsletter button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
   #footer-nav div.nav-column {
     display: block;
     width: 100%;
