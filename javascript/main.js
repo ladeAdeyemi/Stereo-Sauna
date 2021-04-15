@@ -5,40 +5,42 @@ const navBarLinks = document.querySelectorAll('#navigation div.nav-links-contain
 
 /* FUNCTIONS */
 
-window.onscroll = function () { 
-    "use strict";
-    if (document.body.scrollTop >= 200 ) {
-        navBar.classList.add("navigation-scroll");
-        // myNav.classList.remove("nav-transparent");
-    } 
-    else {
-        navBar.classList.remove("navigation-scroll");
-        // myNav.classList.remove("nav-colored");
+function changeNavBarColor () {
+
+    if (window.scrollY >= 200 ) {
+
+        navBar.classList.add("navigationWhite");
+      
+    } else {
+
+        navBar.classList.remove("navigationWhite");
+
     }
+
 };
 
+function changeNavLinksColor () {
 
+    navBarLinks.forEach((link) => {
 
-// function changeNavBarColor () {
+        if (window.scrollY >= 200) {
 
-//     if (window.scrollY > 300) {
+            link.classList.remove('navbar-transparent');
+            link.classList.add('navbar-opaque');
 
-//         navBar.id = "navigationWhite";
-//         navBarLinks.classList.remove("navbar-transparent");
-//         navBarLinks.classList.add("navbar-white");
-        
-//     } else {
+        } else {
 
-//         navBar.id = "navigation";
-//         navBarLinks.classList.remove("navbar-white");
-//         navBarLinks.classList.add("navbar-transparent");;
+            link.classList.remove('navbar-opaque');
+            link.classList.add('navbar-transparent');
 
-//     }
-    
-// }
+        }
 
-// Create a function that changes the guitar images from black and white to color (use a transition effect)
+    });
+}
+
+// Make sure to use the above functions for the burger nav menu as well
 
 /* EVENT LISTENERS */
 
-window.addEventListener('onScroll', changeNavBarColor);
+window.addEventListener('scroll', changeNavBarColor);
+window.addEventListener('scroll', changeNavLinksColor);

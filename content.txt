@@ -1,4 +1,39 @@
+/* DOM SELECTIONS */
 
+const navBar = document.querySelector('#navigation');
+const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
+
+/* FUNCTIONS */
+
+function changeNavBarColors () {
+
+        if (window.scrollY >= 200) {
+
+                navBar.classList.add('navigationWhite');
+
+                navBarLinks.forEach((link) => {
+
+                    link.classList.remove('navbar-transparent'); 
+                    link.classList.add('navbar-opaque');
+
+                });
+
+        } else {
+
+            navBar.classList.remove('navigationWhite');
+            navBarLinks.forEach((link) => {
+
+                link.classList.remove('navbar-opaque'); 
+                link.classList.add('navbar-transparent');
+        });
+
+}
+
+// Create a function that changes the guitar images from black and white to color (use a transition effect)
+
+/* EVENT LISTENERS */
+
+window.addEventListener(changeNavBarColors);
 
 display
 margin
