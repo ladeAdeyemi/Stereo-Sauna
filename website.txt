@@ -58,7 +58,7 @@ Contact
 
         Email
 
-        Details
+        Message
 
         Submit
 

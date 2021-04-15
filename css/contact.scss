@@ -63,3 +63,51 @@
 h1 {
     @include headlineStyles;
 }
+
+/* Hero Image Section */
+
+
+div#contact-hero-image {
+    margin: 0;
+    background-image: url(../assets/godhead.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+// div#hero-image div.headline-container {
+//     margin: 0 auto;
+//     padding-top: 26%;
+// }
+
+// div#hero-image div.headline-container h1 {
+//     font-family: $blackFontStack;
+//     font-size: 110px;
+//     text-align: center;
+//     width: 100%;
+//     letter-spacing: -3px;
+//     line-height: 90px;
+//     color: $ghost;
+//     margin: 0;
+//     padding: 0;
+//     margin-bottom: 5px;
+// }
+
+// div#hero-image div.headline-container h2 {
+//     display: inline-block;
+//     margin: 0;
+//     margin-top: 7px;
+//     font-family: $boldFontStack;
+//     font-size: 30px;
+//     width: 100%;
+//     letter-spacing: -1px;
+//     color: $ghost;
+//     text-align: center;
+// }
+
+// div#hero-image div.headline-container h2 sup {
+//     font-size: 20px;
+// }

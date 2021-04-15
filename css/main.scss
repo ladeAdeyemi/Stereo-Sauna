@@ -29,6 +29,7 @@
     $goblin: #000;
     $ghoul: #1a1918;
     $saunaOrange: #ffa224;
+    $navGrey: rgba(211, 207, 207, 0.5);
 
 // MIXINS
 
@@ -74,26 +75,17 @@ body {
     align-items: center;
     padding: 10px 0;
     width: 100%;
-    // box-shadow: 2px 2px 10px lightgrey;
-    // position: fixed;
-    // top: 0;
-    // z-index: 1;
-    // background-color: $ghost;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 // Use JavaScript and CSS positioning to get the navBar to change color upon scroll down
 
-// #navigationWhite {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 10px 0;
-//     width: 100%;
-//     box-shadow: 2px 2px 10px lightgrey;
-//     position: fixed;
-//     z-index: 1;
-//     background-color: $ghost;
-// }
+#navigation .navigation-scroll {
+    background-color: $ghost;
+    box-shadow: 2px 2px 10px $navGrey;
+}
 
 #navigation div.logo-container {
     margin-left: 80px;
@@ -103,11 +95,17 @@ body {
     margin-right: 80px;
 }
 
-#navigation div.nav-links-container a {
+#navigation div.nav-links-container a.navbar-transparent {
+    @include navStyles;
+    font-family: $boldFontStack;
+    color: $ghost;
+    transition: 0.3s ease-in-out;
+}
+
+#navigation div.nav-links-container a.navbar-white {
     @include navStyles;
     font-family: $boldFontStack;
     color: $goblin;
-    // color: $ghost;
     transition: 0.3s ease-in-out;
 }
 
@@ -192,6 +190,7 @@ section#tri-card p.tri-card-para {
     color: $ghost;
     margin: 40px auto;
     max-width: 55%;
+    text-align: center;
 }
 
 section#tri-card div.tri-card-container {
@@ -206,6 +205,11 @@ section#tri-card div.tri-card-container div.card {
     padding: 10px;
     margin: 10px 15px;
 }
+
+// section#tri-card div.tri-card-container div.card:nth-child(2) {
+//     position: relative;
+//     top: 30px;
+// }
 
 section#tri-card div.tri-card-container div.card img.main-img {
     width: 100%;
@@ -262,6 +266,8 @@ section#amp div.text-container,
 section#mic div.text-container {
     padding: 20px;
     width: 40%;
+    // box-shadow: 3px 6px 20px lightgrey;
+    // border-radius: 4px;
   }
 
 section#amp div.image-container, 
@@ -453,10 +459,10 @@ section#newsletter button {
     transition: 0.3s ease-in-out;
 }
 
-#newsletter button:hover {
-    background-color: $saunaOrange;
-    color: $ghost;
-}
+// #newsletter button:hover {
+//     background-color: $saunaOrange;
+//     color: $ghost;
+// }
 
 /* Footer Section */
 

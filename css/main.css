@@ -29,6 +29,14 @@ body {
   align-items: center;
   padding: 10px 0;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#navigation .navigation-scroll {
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.5);
 }
 
 #navigation div.logo-container {
@@ -39,7 +47,15 @@ body {
   margin-right: 80px;
 }
 
-#navigation div.nav-links-container a {
+#navigation div.nav-links-container a.navbar-transparent {
+  margin: 5px 15px;
+  text-decoration: none;
+  font-family: "Inter Bold", "Arial Black";
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+#navigation div.nav-links-container a.navbar-white {
   margin: 5px 15px;
   text-decoration: none;
   font-family: "Inter Bold", "Arial Black";
@@ -127,6 +143,7 @@ section#tri-card p.tri-card-para {
   color: #fff;
   margin: 40px auto;
   max-width: 55%;
+  text-align: center;
 }
 
 section#tri-card div.tri-card-container {
@@ -372,11 +389,6 @@ section#newsletter button {
   cursor: pointer;
   font-size: 15px;
   transition: 0.3s ease-in-out;
-}
-
-#newsletter button:hover {
-  background-color: #ffa224;
-  color: #fff;
 }
 
 /* Footer Section */
