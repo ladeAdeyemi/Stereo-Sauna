@@ -2,6 +2,7 @@
 
 const navBar = document.querySelector('#navigation');
 const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
+const hamburger = document.querySelector('.hamburger-hidden');
 
 /* FUNCTIONS */
 
@@ -38,9 +39,14 @@ function changeNavLinksColor () {
     });
 }
 
+function showDropDown () {
+    
+}
+
 // Make sure to use the above functions for the burger nav menu as well
 
 /* EVENT LISTENERS */
 
 window.addEventListener('scroll', changeNavBarColor);
 window.addEventListener('scroll', changeNavLinksColor);
+hamburger.addEventListener('click', showDropDown);

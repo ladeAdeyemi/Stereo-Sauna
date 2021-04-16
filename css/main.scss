@@ -78,6 +78,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .navigationWhite {
@@ -117,6 +118,11 @@ body {
    display: none;
 }
 
+#navigation div.hamburger-hidden svg {
+   fill: rgba(255, 162, 36, 1);
+   stroke: rgba(255, 162, 36, 1);
+}
+
 
 /* Hero Image Section */
 
@@ -134,7 +140,7 @@ div#hero-image {
 
 div#hero-image div.headline-container {
     margin: 0 auto;
-    padding-top: 26%;
+    padding-top: 32.5%;
 }
 
 div#hero-image div.headline-container h1 {
@@ -251,40 +257,48 @@ section#tri-card span.tri-card-span a {
 
 /* Amp & Mic Section */
 
-section#amp, section#mic {
+section#guitar, section#amp, section#mic, section#picks {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 80px 0;
   }
 
-  section#mic {
+  section#amp, section#picks {
     flex-direction: row-reverse;
   }
   
+section#guitar div.text-container, 
 section#amp div.text-container, 
-section#mic div.text-container {
+section#mic div.text-container, 
+section#picks div.text-container {
     padding: 20px;
     width: 40%;
     // box-shadow: 3px 6px 20px lightgrey;
     // border-radius: 4px;
   }
 
+section#guitar div.image-container, 
 section#amp div.image-container, 
-section#mic div.image-container {
+section#mic div.image-container, 
+section#picks div.image-container {
     width: 40%;
     overflow: hidden;
   }
 
+section#guitar div.image-container img, 
 section#amp div.image-container img, 
-section#mic div.image-container img  {
+section#mic div.image-container img, 
+section#picks div.image-container img  {
     display: block;
     width: 100%;
     margin: 15px 0;
   }
 
+section#guitar h3.container-headline, 
 section#amp h3.container-headline, 
-section#mic h3.container-headline {
+section#mic h3.container-headline, 
+section#picks h3.container-headline {
     margin: 20px 0;
     margin-top: 30px;
     padding-top: 0px;
@@ -296,15 +310,19 @@ section#mic h3.container-headline {
     line-height: 60px;
 }
 
+section#guitar p.container-para, 
 section#amp p.container-para, 
-section#mic p.container-para {
+section#mic p.container-para, 
+section#picks p.container-para {
     @include paraStyles;
     color: $ghoul;
     padding-left: 10px;
 }
 
+section#guitar span.span a, 
 section#amp span.span a, 
-section#mic span.span a {
+section#mic span.span a, 
+section#picks span.span a {
     display: inline-block;
     margin: 20px 0;
     margin-top: 15px;
@@ -440,7 +458,7 @@ section#newsletter input {
     padding-left: 10px;
     border-radius: 4px;
     border: 1px solid $goblin;
-    width: 39%;
+    width: 40%;
     margin: 10px 30px;
     margin-right: 10px;
     font-family: $regularFontStack;
@@ -570,12 +588,24 @@ section#newsletter button {
 
 @media screen and (max-width: 1125px) {
     
+    div#hero-image div.headline-container {
+        padding-top: 38%;
+    }
+
+    section#guitar div.text-container, 
     section#amp div.text-container, 
-    section#mic div.text-container  {
+    section#mic div.text-container, 
+    section#picks div.text-container  {
         margin-left: 20px;
         margin-top: 20px;
         width: 50%;
       }
+
+
+    section#newsletter input {
+    width: 44%;
+}
+
 
       #footer-nav div.nav-column-container {
         margin-right: 100px;
@@ -583,10 +613,10 @@ section#newsletter button {
 
 }
 
-@media screen and (max-width: 1063px) {
+// @media screen and (max-width: 1063px) {
     
     
-}
+// }
 
 @media screen and (max-width: 1000px) {
 
@@ -605,7 +635,7 @@ section#newsletter button {
     }
 
     div#hero-image div.headline-container {
-        padding-top: 32%;
+        padding-top: 40.5%;
      } 
 
     div#hero-image div.headline-container h1 {
@@ -614,8 +644,14 @@ section#newsletter button {
         line-height: 80px;
     }
 
+    section#tri-card div.tri-card-container div.card {
+        max-width: 35%;
+    }
+
+    section#guitar
     section#amp, 
-    section#mic {
+    section#mic, 
+    section#picks {
         padding: 40px 0;
       }
 
@@ -624,7 +660,7 @@ section#newsletter button {
     }
 
     section#newsletter input {
-        width: 50%;
+        width: 55%;
     } 
     
     #footer-nav {
@@ -653,43 +689,63 @@ section#newsletter button {
         margin: 10px 20px;
     }
 
-    section#tri-card div.tri-card-container div.card {
-        max-width: 35%;
-    }
 
 }
 
 @media screen and (max-width: 916px) {
 
+    div#hero-image div.headline-container {
+        padding-top: 40.5%;
+     } 
+
+    section#guitar, 
     section#amp, 
-    section#mic {
+    section#mic, 
+    section#picks {
         display: block;
       }
 
+    section#guitar div.text-container,
     section#amp div.text-container,
-    section#mic div.text-container{
+    section#mic div.text-container,
+    section#picks div.text-container{
         margin: 0 auto;
         margin-top: 0;
         width: 65%;
-        box-shadow: 3px 6px 20px lightgrey;
+        box-shadow: 3px 6px 20px $navGrey;
         border-radius: 4px;
       }
 
+    section#guitar div.text-container h3.container-headline,
     section#amp div.text-container h3.container-headline,
-    section#mic div.text-container h3.container-headline{
+    section#mic div.text-container h3.container-headline,
+    section#picks div.text-container h3.container-headline{
         margin-top: 0;
+        font-size: 47px;
       }
 
+    section#guitar div.image-container,
     section#amp div.image-container,
-    section#mic div.image-container {
+    section#mic div.image-container,
+    section#picks div.image-container {
         margin: 0 auto;
         width: 65%;
     }
 
+    section#guitar div.image-container img,
     section#amp div.image-container img,
-    section#mic div.image-container img {
+    section#mic div.image-container img,
+    section#picks div.image-container img {
         margin: 0 auto;
         width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+
+    div#hero-image div.headline-container {
+       padding-top: 44%;
     }
 
 }
@@ -697,7 +753,7 @@ section#newsletter button {
 @media screen and (max-width: 789px) {
 
     div#hero-image div.headline-container {
-       padding-top: 45%;
+       padding-top: 48%;
     }
 
     div#hero-image div.headline-container h1 {
@@ -710,12 +766,16 @@ section#newsletter button {
     }
 
     section#newsletter input {
-        width: 70%;
+        width: 65%;
     } 
 
 }
 
 @media screen and (max-width: 700px) {
+
+    div#hero-image div.headline-container {
+        padding-top: 56%;
+     } 
 
     div#hero-image div.headline-container h1 {
         font-size: 75px;
@@ -727,7 +787,7 @@ section#newsletter button {
 @media screen and (max-width: 654px) {
 
     div#hero-image div.headline-container {
-        padding-top: 53%;
+        padding-top: 60%;
     }
 
     div#hero-image div.headline-container h1 {
@@ -735,16 +795,32 @@ section#newsletter button {
         line-height: 50px;
     }
 
+    section#guitar div.text-container,
     section#amp div.text-container,
-    section#mic div.text-container{
+    section#mic div.text-container,
+    section#picks div.text-container{
         width: 100%;
-        box-shadow: 3px 6px 20px lightgrey;
-        border-radius: none;
+        // box-shadow: 3px 6px 20px $navGrey;
+        // border-radius: none;
       }
 
+    section#guitar div.image-container,
     section#amp div.image-container,
-    section#mic div.image-container {
+    section#mic div.image-container,
+    section#picks div.image-container {
         width: 100%;
+    }
+
+    #footer p {
+        padding-left: 0;
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #footer div.notice p {
+        padding-right: 0;
+        text-align: center;
     }
 
 }
@@ -792,21 +868,11 @@ section#newsletter button {
     #footer-nav div.nav-column a {
         text-align: center;
     }
+
 }
 
 @media screen and (max-width: 500px) {
 
-    #footer p {
-        padding-left: 0;
-        margin-top: 20px;
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    #footer div.notice p {
-        padding-right: 0;
-        text-align: center;
-    }
 
 }
 
