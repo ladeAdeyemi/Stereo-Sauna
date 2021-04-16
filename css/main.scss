@@ -119,6 +119,8 @@ body {
 }
 
 #navigation div.hamburger-hidden svg {
+//    fill: rgba(211, 207, 207, 1);
+//    stroke: rgba(211, 207, 207, 1);
    fill: rgba(255, 162, 36, 1);
    stroke: rgba(255, 162, 36, 1);
 }
@@ -338,34 +340,26 @@ section#picks span.span a {
 /* SVG Section */
 
 section#svg-highlight {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-items: center;
     background-color: $ghost;
-    // background-color: #eee;
-    padding: 10px 0;
-    // padding-bottom: 120px;
+    padding: 100px 0;
 }
 
 section#svg-highlight h3 {
     @include headlineStyles;
-    // line-height: 55px;
     color: $goblin;
-    // margin: 30px auto;
-    margin-bottom: 0;
-    // max-width: 45%;
+    margin: 30px auto;
+    margin-bottom: 50px;
+    max-width: 90%;
     text-align: center;
-    // font-size: 70px;
+    font-size: 60px;
+    letter-spacing: -1.8px;
 }
 
 section#svg-highlight p {
     @include paraStyles;
-    // line-height: 55px;
     color: $goblin;
     margin: 30px 0;
     margin-bottom: 0;
-    // max-width: 70%;
     text-align: center;
 }
 
@@ -383,23 +377,16 @@ section#svg-highlight span.svg-span a {
 div#svg-card-collection {
     display: flex;
     flex-wrap: wrap;
-    // flex-direction: column;
     justify-content: center;
-    align-items: center;
-    // margin-top: 40px;
-    // background-color: $goblin;
+    align-items: stretch;
 }
 
 div#svg-card-collection div.svg-card {
     padding: 20px;
     margin: 20px;
-    max-width: 25%;
-    // min-height: 200px;
-    // min-width: 70%;
-    // max-width: 70%;
-    // background-color: $ghost;
-    // border-radius: 6px;
-    // border: 3px solid $saunaOrange;
+    width: 15%;
+    box-shadow: 3px 3px 10px $navGrey;
+    border-radius: 6px;
 }
 
 div#svg-card-collection div.svg-card img {
@@ -408,11 +395,6 @@ div#svg-card-collection div.svg-card img {
     width: 60px;
     height: 60px;
     text-align: center;
-    // min-height: 200px;
-    // min-width: 70%;
-    // max-width: 70%;
-    // background-color: $ghost;
-    // border-radius: 6px;
 }
 
 div#svg-card-collection div.svg-card p {
@@ -420,7 +402,7 @@ div#svg-card-collection div.svg-card p {
     color: $goblin;
     text-align: center;
     font-family: $boldFontStack;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* Newsletter Section */
@@ -746,6 +728,13 @@ section#newsletter button {
 
     div#hero-image div.headline-container {
        padding-top: 44%;
+    }
+
+    div#svg-card-collection div.svg-card {
+        padding: 20px;
+        margin: 20px;
+        max-width: none;
+        width: 40%;
     }
 
 }

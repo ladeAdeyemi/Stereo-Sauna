@@ -288,14 +288,18 @@ section#picks span.span a {
 /* SVG Section */
 section#svg-highlight {
   background-color: #fff;
-  padding: 10px 0;
+  padding: 100px 0;
 }
 
 section#svg-highlight h3 {
   font-family: "Inter Black", "Arial Black";
   color: #000;
-  margin-bottom: 0;
+  margin: 30px auto;
+  margin-bottom: 50px;
+  max-width: 90%;
   text-align: center;
+  font-size: 60px;
+  letter-spacing: -1.8px;
 }
 
 section#svg-highlight p {
@@ -326,13 +330,15 @@ div#svg-card-collection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 div#svg-card-collection div.svg-card {
   padding: 20px;
   margin: 20px;
-  max-width: 25%;
+  width: 15%;
+  box-shadow: 3px 3px 10px rgba(211, 207, 207, 0.5);
+  border-radius: 6px;
 }
 
 div#svg-card-collection div.svg-card img {
@@ -348,7 +354,7 @@ div#svg-card-collection div.svg-card p {
   color: #000;
   text-align: center;
   font-family: "Inter Bold", "Arial Black";
-  font-size: 17px;
+  font-size: 20px;
 }
 
 /* Newsletter Section */
@@ -652,6 +658,13 @@ section#picks div.image-container img {
 @media screen and (max-width: 880px) {
   div#hero-image div.headline-container {
     padding-top: 44%;
+  }
+
+  div#svg-card-collection div.svg-card {
+    padding: 20px;
+    margin: 20px;
+    max-width: none;
+    width: 40%;
   }
 }
 @media screen and (max-width: 789px) {
