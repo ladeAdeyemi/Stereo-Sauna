@@ -55,7 +55,9 @@
     letter-spacing: 0.3px;
 }
 
+
 /****** MAIN CSS ******/
+
 
 * {
     margin: 0;
@@ -67,7 +69,9 @@ body {
     background-color: $ghost;
 }
 
+
 /* Navigation Bar */
+
 
 #navigation {
     display: flex;
@@ -84,9 +88,7 @@ body {
 .navigationWhite {
     background-color: $ghost;
     box-shadow: 2px 2px 10px $navGrey;
-}
-
-// Use JavaScript and CSS positioning to get the navBar to change color upon scroll down
+} // Class added using JavaScript to get the navBar color to change when user scrolls down
 
 #navigation div.logo-container {
     margin-left: 80px;
@@ -175,55 +177,51 @@ div#hero-image div.headline-container h2 sup {
 }
 
 
-/* Guitar Tri-card Section */
+/* Intro Section */
 
 
-section#tri-card {
+section#intro {
+    display: flex;
+    align-items: center;
     padding: 80px 0;
     background-color: $goblin;
 }
 
-section#tri-card h3.tri-card-headline {
+section#intro div.intro-text-container{
+    width: 50%;
+}
+
+section#intro h3.intro-headline {
+    padding: 15px;
+    padding-bottom: 0;
     @include headlineStyles;
     margin: 40px auto;
-    max-width: 53%;
+    max-width: 75%;
     color: $ghost;
-    text-align: center;
-    font-size: 70px;
+    // text-align: center;
+    font-size: 60px;
     letter-spacing: -1.8px;
 }
 
-section#tri-card p.tri-card-para {
+section#intro p.intro-para {
     @include paraStyles;
+    padding: 15px;
+    padding-top: 0;
     color: $ghost;
     margin: 40px auto;
-    max-width: 55%;
-    text-align: center;
+    // padding-left: 0;
+    max-width: 75%;
 }
 
-section#tri-card div.tri-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
+section#intro div.intro-image-container {
+    width: 50%;
 }
 
-section#tri-card div.tri-card-container div.card {
-    max-width: 30%;
-    padding: 10px;
-    margin: 10px 15px;
-}
-
-// section#tri-card div.tri-card-container div.card:nth-child(2) {
-//     position: relative;
-//     top: 30px;
-// }
-
-section#tri-card div.tri-card-container div.card img.main-img {
+section#intro div.intro-image-container img {
     width: 100%;
 }
 
-section#tri-card h4.tri-card-headline-mini {
+section#intro h4.tri-card-headline-mini {
     @include miniheadlineStyles;
     margin: 10px 0;
     font-size: 22px;
@@ -232,32 +230,81 @@ section#tri-card h4.tri-card-headline-mini {
     letter-spacing: 0.1px;
 }
 
-section#tri-card p.tri-card-para-min {
-    margin: 20px 0;
-    color: $ghost;
-    line-height: 25px;
-    font-family: $regularFontStack;
-    font-size: 16px;
+
+/* SVG Section */
+
+
+section#svg-highlight {
+    background-color: $ghost;
+    padding: 40px 0;
+    padding-bottom: 10px;
 }
 
-section#tri-card hr.tri-card-rule {
-   border: 1px solid $ghoul;
-   border-bottom:none;
-   opacity: 0.2;
+section#svg-highlight h3 {
+    @include headlineStyles;
+    color: $goblin;
+    margin: 30px auto;
+    margin-bottom: 70px;
+    max-width: 90%;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: -1.8px;
 }
 
-section#tri-card span.tri-card-span a {
+section#svg-highlight p {
+    @include paraStyles;
+    color: $goblin;
+    margin: 30px 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+section#svg-highlight span.svg-span a {
     display: block;
-    margin-top: 40px;
-    padding-right: 100px;
     color: $saunaOrange;
     text-decoration: none;
     font-family: $boldFontStack;
     font-size: 20px;
     text-align: right;
+    margin: 30px 0;
+    margin-right: 80px;
 }
 
-/* Amp & Mic Section */
+div#svg-card-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+div#svg-card-collection div.svg-card {
+    padding: 20px;
+    margin: 20px;
+    width: 15%;
+    box-shadow: 3px 3px 10px $navGrey;
+    border-radius: 6px;
+}
+
+div#svg-card-collection div.svg-card img {
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+div#svg-card-collection div.svg-card p {
+    padding: 0;
+    color: $ghoul;
+    text-align: center;
+    font-family: $regularFontStack;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
+/* Guitar, Amp, Mic & Picks Sections */
+
 
 section#guitar, section#amp, section#mic, section#picks {
     display: flex;
@@ -276,7 +323,7 @@ section#mic div.text-container,
 section#picks div.text-container {
     padding: 20px;
     width: 40%;
-    // box-shadow: 3px 6px 20px lightgrey;
+    // box-shadow: 3px 6px 20px $navGrey;
     // border-radius: 4px;
   }
 
@@ -336,76 +383,10 @@ section#picks span.span a {
     cursor: pointer;
     text-decoration: none;
 }
-  
-/* SVG Section */
 
-section#svg-highlight {
-    background-color: $ghost;
-    padding: 100px 0;
-}
-
-section#svg-highlight h3 {
-    @include headlineStyles;
-    color: $goblin;
-    margin: 30px auto;
-    margin-bottom: 50px;
-    max-width: 90%;
-    text-align: center;
-    font-size: 60px;
-    letter-spacing: -1.8px;
-}
-
-section#svg-highlight p {
-    @include paraStyles;
-    color: $goblin;
-    margin: 30px 0;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-section#svg-highlight span.svg-span a {
-    display: block;
-    color: $saunaOrange;
-    text-decoration: none;
-    font-family: $boldFontStack;
-    font-size: 20px;
-    text-align: right;
-    margin: 30px 0;
-    margin-right: 80px;
-}
-
-div#svg-card-collection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-}
-
-div#svg-card-collection div.svg-card {
-    padding: 20px;
-    margin: 20px;
-    width: 15%;
-    box-shadow: 3px 3px 10px $navGrey;
-    border-radius: 6px;
-}
-
-div#svg-card-collection div.svg-card img {
-    display: block;
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-}
-
-div#svg-card-collection div.svg-card p {
-    padding: 0;
-    color: $goblin;
-    text-align: center;
-    font-family: $boldFontStack;
-    font-size: 20px;
-}
 
 /* Newsletter Section */
+
 
 section#newsletter {
     padding: 350px 0;
@@ -459,12 +440,14 @@ section#newsletter button {
     transition: 0.3s ease-in-out;
 }
 
-// #newsletter button:hover {
-//     background-color: $saunaOrange;
-//     color: $ghost;
-// }
+#newsletter button:hover {
+    background-color: $saunaOrange;
+    color: $ghost;
+}
+
 
 /* Footer Section */
+
 
 #footer {
     background-color: $goblin;
@@ -566,7 +549,9 @@ section#newsletter button {
     text-decoration: none;
 }
 
+
 /****** MEDIA QUERIES ******/
+
 
 @media screen and (max-width: 1125px) {
     
@@ -581,12 +566,15 @@ section#newsletter button {
         margin-left: 20px;
         margin-top: 20px;
         width: 50%;
-      }
+    }
 
+    div#svg-card-collection div.svg-card {
+        width: 17%;
+    }
 
     section#newsletter input {
     width: 44%;
-}
+    }
 
 
       #footer-nav div.nav-column-container {
@@ -595,10 +583,23 @@ section#newsletter button {
 
 }
 
-// @media screen and (max-width: 1063px) {
+@media screen and (max-width: 1063px) {
+
+    section#intro {
+        display: block;
+    }
     
+    section#intro div.intro-text-container, section#intro div.intro-image-container {
+        margin: 0 auto;
+        width: 60%;
+    }
     
-// }
+    section#intro h3.intro-headline, section#intro p.intro-para {
+        text-align: center;
+        max-width: 100%;
+    }
+
+}
 
 @media screen and (max-width: 1000px) {
 
@@ -635,7 +636,11 @@ section#newsletter button {
     section#mic, 
     section#picks {
         padding: 40px 0;
-      }
+    }
+    
+    div#svg-card-collection div.svg-card {
+        width: 19%;
+    }
 
     div#sign-up-container p.sign-up-para {
         width: 39%;
@@ -730,11 +735,13 @@ section#newsletter button {
        padding-top: 44%;
     }
 
+    section#intro div.intro-text-container, section#intro div.intro-image-container {
+        margin: 0 auto;
+        width: 80%;
+    }
+
     div#svg-card-collection div.svg-card {
-        padding: 20px;
-        margin: 20px;
-        max-width: none;
-        width: 40%;
+        width: 29%;
     }
 
 }
@@ -800,6 +807,14 @@ section#newsletter button {
         width: 100%;
     }
 
+    section#svg-highlight h3 {
+        font-size: 50px;
+    }
+    
+    div#svg-card-collection div.svg-card {
+        width: 50%;
+    }
+
     #footer p {
         padding-left: 0;
         margin-top: 20px;
@@ -810,6 +825,23 @@ section#newsletter button {
     #footer div.notice p {
         padding-right: 0;
         text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    div#hero-image div.headline-container {
+        padding-top: 83%;
+    }
+
+    div#hero-image div.headline-container h1 {
+        font-size: 53px;
+        line-height: 40px;
+    }
+
+    div#hero-image div.headline-container h2 {
+        font-size: 25px;
     }
 
 }
@@ -862,9 +894,14 @@ section#newsletter button {
 
 @media screen and (max-width: 500px) {
 
+    #navigation div.logo-container {
+        margin-left: 40px;
+    }
+
+    #navigation div.hamburger-hidden {
+        margin-right: 60px;
+    }
 
 }
-
-
 
 /* END OF ALL MEDIA QUERIES */

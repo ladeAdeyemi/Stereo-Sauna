@@ -123,53 +123,52 @@ div#hero-image div.headline-container h2 sup {
   font-size: 20px;
 }
 
-/* Guitar Tri-card Section */
-section#tri-card {
+/* Intro Section */
+section#intro {
+  display: flex;
+  align-items: center;
   padding: 80px 0;
   background-color: #000;
 }
 
-section#tri-card h3.tri-card-headline {
+section#intro div.intro-text-container {
+  width: 50%;
+}
+
+section#intro h3.intro-headline {
+  padding: 15px;
+  padding-bottom: 0;
   font-family: "Inter Black", "Arial Black";
   margin: 40px auto;
-  max-width: 53%;
+  max-width: 75%;
   color: #fff;
-  text-align: center;
-  font-size: 70px;
+  font-size: 60px;
   letter-spacing: -1.8px;
 }
 
-section#tri-card p.tri-card-para {
+section#intro p.intro-para {
   margin: 20px 0 15px 0;
   padding-left: 30px;
   font-size: 17px;
   font-family: "Inter", "Arial";
   line-height: 32px;
   letter-spacing: 0.3px;
+  padding: 15px;
+  padding-top: 0;
   color: #fff;
   margin: 40px auto;
-  max-width: 55%;
-  text-align: center;
+  max-width: 75%;
 }
 
-section#tri-card div.tri-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+section#intro div.intro-image-container {
+  width: 50%;
 }
 
-section#tri-card div.tri-card-container div.card {
-  max-width: 30%;
-  padding: 10px;
-  margin: 10px 15px;
-}
-
-section#tri-card div.tri-card-container div.card img.main-img {
+section#intro div.intro-image-container img {
   width: 100%;
 }
 
-section#tri-card h4.tri-card-headline-mini {
+section#intro h4.tri-card-headline-mini {
   font-family: "Inter Bold", "Arial Black";
   margin: 10px 0;
   font-size: 22px;
@@ -178,32 +177,81 @@ section#tri-card h4.tri-card-headline-mini {
   letter-spacing: 0.1px;
 }
 
-section#tri-card p.tri-card-para-min {
-  margin: 20px 0;
-  color: #fff;
-  line-height: 25px;
+/* SVG Section */
+section#svg-highlight {
+  background-color: #fff;
+  padding: 40px 0;
+  padding-bottom: 10px;
+}
+
+section#svg-highlight h3 {
+  font-family: "Inter Black", "Arial Black";
+  color: #000;
+  margin: 30px auto;
+  margin-bottom: 70px;
+  max-width: 90%;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: -1.8px;
+}
+
+section#svg-highlight p {
+  margin: 20px 0 15px 0;
+  padding-left: 30px;
+  font-size: 17px;
   font-family: "Inter", "Arial";
-  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.3px;
+  color: #000;
+  margin: 30px 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
-section#tri-card hr.tri-card-rule {
-  border: 1px solid #1a1918;
-  border-bottom: none;
-  opacity: 0.2;
-}
-
-section#tri-card span.tri-card-span a {
+section#svg-highlight span.svg-span a {
   display: block;
-  margin-top: 40px;
-  padding-right: 100px;
   color: #ffa224;
   text-decoration: none;
   font-family: "Inter Bold", "Arial Black";
   font-size: 20px;
   text-align: right;
+  margin: 30px 0;
+  margin-right: 80px;
 }
 
-/* Amp & Mic Section */
+div#svg-card-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+div#svg-card-collection div.svg-card {
+  padding: 20px;
+  margin: 20px;
+  width: 15%;
+  box-shadow: 3px 3px 10px rgba(211, 207, 207, 0.5);
+  border-radius: 6px;
+}
+
+div#svg-card-collection div.svg-card img {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+
+div#svg-card-collection div.svg-card p {
+  padding: 0;
+  color: #1a1918;
+  text-align: center;
+  font-family: "Inter", "Arial";
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* Guitar, Amp, Mic & Picks Sections */
 section#guitar, section#amp, section#mic, section#picks {
   display: flex;
   justify-content: space-evenly;
@@ -285,78 +333,6 @@ section#picks span.span a {
   text-decoration: none;
 }
 
-/* SVG Section */
-section#svg-highlight {
-  background-color: #fff;
-  padding: 100px 0;
-}
-
-section#svg-highlight h3 {
-  font-family: "Inter Black", "Arial Black";
-  color: #000;
-  margin: 30px auto;
-  margin-bottom: 50px;
-  max-width: 90%;
-  text-align: center;
-  font-size: 60px;
-  letter-spacing: -1.8px;
-}
-
-section#svg-highlight p {
-  margin: 20px 0 15px 0;
-  padding-left: 30px;
-  font-size: 17px;
-  font-family: "Inter", "Arial";
-  line-height: 32px;
-  letter-spacing: 0.3px;
-  color: #000;
-  margin: 30px 0;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-section#svg-highlight span.svg-span a {
-  display: block;
-  color: #ffa224;
-  text-decoration: none;
-  font-family: "Inter Bold", "Arial Black";
-  font-size: 20px;
-  text-align: right;
-  margin: 30px 0;
-  margin-right: 80px;
-}
-
-div#svg-card-collection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-}
-
-div#svg-card-collection div.svg-card {
-  padding: 20px;
-  margin: 20px;
-  width: 15%;
-  box-shadow: 3px 3px 10px rgba(211, 207, 207, 0.5);
-  border-radius: 6px;
-}
-
-div#svg-card-collection div.svg-card img {
-  display: block;
-  margin: 0 auto;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-}
-
-div#svg-card-collection div.svg-card p {
-  padding: 0;
-  color: #000;
-  text-align: center;
-  font-family: "Inter Bold", "Arial Black";
-  font-size: 20px;
-}
-
 /* Newsletter Section */
 section#newsletter {
   padding: 350px 0;
@@ -413,6 +389,11 @@ section#newsletter button {
   cursor: pointer;
   font-size: 15px;
   transition: 0.3s ease-in-out;
+}
+
+#newsletter button:hover {
+  background-color: #ffa224;
+  color: #fff;
 }
 
 /* Footer Section */
@@ -531,12 +512,31 @@ section#picks div.text-container {
     width: 50%;
   }
 
+  div#svg-card-collection div.svg-card {
+    width: 17%;
+  }
+
   section#newsletter input {
     width: 44%;
   }
 
   #footer-nav div.nav-column-container {
     margin-right: 100px;
+  }
+}
+@media screen and (max-width: 1063px) {
+  section#intro {
+    display: block;
+  }
+
+  section#intro div.intro-text-container, section#intro div.intro-image-container {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  section#intro h3.intro-headline, section#intro p.intro-para {
+    text-align: center;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -572,6 +572,10 @@ section#picks div.text-container {
 section#mic,
 section#picks {
     padding: 40px 0;
+  }
+
+  div#svg-card-collection div.svg-card {
+    width: 19%;
   }
 
   div#sign-up-container p.sign-up-para {
@@ -660,11 +664,13 @@ section#picks div.image-container img {
     padding-top: 44%;
   }
 
+  section#intro div.intro-text-container, section#intro div.intro-image-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
   div#svg-card-collection div.svg-card {
-    padding: 20px;
-    margin: 20px;
-    max-width: none;
-    width: 40%;
+    width: 29%;
   }
 }
 @media screen and (max-width: 789px) {
@@ -719,6 +725,14 @@ section#picks div.image-container {
     width: 100%;
   }
 
+  section#svg-highlight h3 {
+    font-size: 50px;
+  }
+
+  div#svg-card-collection div.svg-card {
+    width: 50%;
+  }
+
   #footer p {
     padding-left: 0;
     margin-top: 20px;
@@ -729,6 +743,20 @@ section#picks div.image-container {
   #footer div.notice p {
     padding-right: 0;
     text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  div#hero-image div.headline-container {
+    padding-top: 83%;
+  }
+
+  div#hero-image div.headline-container h1 {
+    font-size: 53px;
+    line-height: 40px;
+  }
+
+  div#hero-image div.headline-container h2 {
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 533px) {
@@ -772,6 +800,15 @@ section#picks div.image-container {
 
   #footer-nav div.nav-column a {
     text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #navigation div.logo-container {
+    margin-left: 40px;
+  }
+
+  #navigation div.hamburger-hidden {
+    margin-right: 60px;
   }
 }
 /* END OF ALL MEDIA QUERIES */
