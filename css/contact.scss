@@ -29,8 +29,19 @@
     $goblin: #000;
     $ghoul: #1a1918;
     $saunaOrange: #ffa224;
+    $navGrey: rgba(211, 207, 207, 0.5);
 
 // MIXINS
+
+@mixin heroStyles {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
 
 @mixin navStyles {
     margin: 5px 15px;
@@ -60,54 +71,220 @@
 
 /* MAIN CSS */
 
-h1 {
-    @include headlineStyles;
+/* NOTE: styling for the navigation bar and the footer can be found in main.scss/css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: $ghost;
+}
+
 
 /* Hero Image Section */
 
 
 div#contact-hero-image {
-    margin: 0;
     background-image: url(../assets/godhead.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 700px;
+    @include heroStyles;
+   
 }
 
-// div#hero-image div.headline-container {
-//     margin: 0 auto;
-//     padding-top: 26%;
+div#contact-hero-image div.contact-headline-container {
+    margin: 0 auto;
+    padding-top: 30.5%;
+}
+
+div#contact-hero-image div.contact-headline-container h1 {
+    font-family: $blackFontStack;
+    font-size: 110px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -3px;
+    line-height: 90px;
+    color: $ghost;
+    margin: 0;
+    padding: 0;
+    // padding-right: 60px;
+    margin-bottom: 5px;
+}
+
+/* Contact Form Section */
+
+
+section#contact-form {
+    padding: 40px 0;
+    padding-bottom: 100px;
+    background-color: $ghost;
+}
+
+section#contact-form h2 {
+    display: block;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    font-family: $blackFontStack;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+section#contact-form span {
+    display: block;
+    margin: 60px auto;
+    margin-top: 40px;
+    max-width: 60%;
+    text-align: center;
+    font-family: $regularFontStack;
+    font-size: 17.3px;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+    color: $ghoul;
+}
+
+section#contact-form form {
+    margin: 20px auto;
+    padding: 40px;
+    background-color: $ghost;
+    border-radius: 6px;
+    width: 50%;
+    box-shadow: 4px 4px 20px $navGrey;
+}
+
+section#contact-form form h3 {
+    display: block;
+    margin: 20px auto;
+    font-family: $boldFontStack;
+    font-size: 43px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+section#contact-form input {
+    display: block;
+    margin: 40px auto;
+    padding: 15px 0;
+    padding-left: 15px;
+    border-radius: 4px;
+    border: 1px solid $goblin;
+    width: 80%;
+    font-family: $regularFontStack;
+    font-size: 16px;
+}
+
+section#contact-form input#message {
+    // max-width: 80%;
+    padding-bottom: 150px;
+}
+
+section#contact-form button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    width: 80%;
+    background-color: $saunaOrange;
+    color: $ghost;
+    font-family: $boldFontStack;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+/****** MEDIA QUERIES ******/
+
+
+@media screen and (max-width: 1125px) {
+    
+
+    section#contact-form h2 {
+        font-size: 60px;
+    }
+
+    section#contact-form form {
+        width: 70%;
+        
+    }
+    
+    section#contact-form input {
+        width: 80%;
+       
+    }
+    
+    section#contact-form button {
+        width: 80%;
+    }
+    
+}
+
+// @media screen and (max-width: 1063px) {
+
 // }
 
-// div#hero-image div.headline-container h1 {
-//     font-family: $blackFontStack;
-//     font-size: 110px;
-//     text-align: center;
-//     width: 100%;
-//     letter-spacing: -3px;
-//     line-height: 90px;
-//     color: $ghost;
-//     margin: 0;
-//     padding: 0;
-//     margin-bottom: 5px;
+// @media screen and (max-width: 1000px) {
+
+
 // }
 
-// div#hero-image div.headline-container h2 {
-//     display: inline-block;
-//     margin: 0;
-//     margin-top: 7px;
-//     font-family: $boldFontStack;
-//     font-size: 30px;
-//     width: 100%;
-//     letter-spacing: -1px;
-//     color: $ghost;
-//     text-align: center;
+// @media screen and (max-width: 916px) {
+
 // }
 
-// div#hero-image div.headline-container h2 sup {
-//     font-size: 20px;
-// }
+@media screen and (max-width: 880px) {
+
+
+    section#contact-form h2 {
+        width: 70%;
+    }
+
+    section#contact-form form {
+        width: 80%;
+        
+    }
+    
+    section#contact-form input {
+        width: 80%;
+       
+    }
+    
+    section#contact-form button {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 654px) {
+
+    section#contact-form form {
+        width: 100%;
+        box-shadow: none;
+        
+    }
+    
+    section#contact-form input {
+        width: 95%;
+       
+    }
+    
+    section#contact-form button {
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+}
+
+@media screen and (max-width: 533px) {
+
+}
+
+@media screen and (max-width: 500px) {
+
+}
+
+/* END OF ALL MEDIA QUERIES */

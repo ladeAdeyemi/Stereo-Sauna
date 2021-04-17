@@ -1,28 +1,184 @@
-h1 {
-    font-family: "Inter Black", "Arial Black";
-    font-size: 58px;
-    letter-spacing: -2px;
-    line-height: 60px;
-    margin: 60px 0 30px 60px;
+/*** FONTS ***/
+@font-face {
+  src: url(../fonts/Inter-Black.ttf);
+  font-family: "Inter Black";
+}
+@font-face {
+  src: url(../fonts/Inter-Bold.ttf);
+  font-family: "Inter Bold";
+}
+@font-face {
+  src: url(../fonts/Inter-Regular.ttf);
+  font-family: "Inter";
+}
+/* MAIN CSS */
+/* NOTE: styling for the navigation bar and the footer can be found in main.scss/css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-    font-family: "Inter", "Arial";
-    margin: 20px 0 15px 30px;
-    padding-left: 30px;
-    font-size: 17.5px;
-    line-height: 32px;
-    letter-spacing: 0.3px;
-    color:#1a1918;
+body {
+  background-color: #fff;
 }
 
+/* Hero Image Section */
 div#contact-hero-image {
-    margin: 0;
-    background-image: url(../assets/godhead.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 700px;
+  background-image: url(../assets/godhead.jpg);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
 }
+
+div#contact-hero-image div.contact-headline-container {
+  margin: 0 auto;
+  padding-top: 30.5%;
+}
+
+div#contact-hero-image div.contact-headline-container h1 {
+  font-family: "Inter Black", "Arial Black";
+  font-size: 110px;
+  text-align: center;
+  width: 100%;
+  letter-spacing: -3px;
+  line-height: 90px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+/* Contact Form Section */
+section#contact-form {
+  padding: 40px 0;
+  padding-bottom: 100px;
+  background-color: #fff;
+}
+
+section#contact-form h2 {
+  display: block;
+  margin: 40px auto;
+  margin-bottom: 40px;
+  font-family: "Inter Black", "Arial Black";
+  font-size: 70px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+section#contact-form span {
+  display: block;
+  margin: 60px auto;
+  margin-top: 40px;
+  max-width: 60%;
+  text-align: center;
+  font-family: "Inter", "Arial";
+  font-size: 17.3px;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+  color: #1a1918;
+}
+
+section#contact-form form {
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 6px;
+  width: 50%;
+  box-shadow: 4px 4px 20px rgba(211, 207, 207, 0.5);
+}
+
+section#contact-form form h3 {
+  display: block;
+  margin: 20px auto;
+  font-family: "Inter Bold", "Arial Black";
+  font-size: 43px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+section#contact-form input {
+  display: block;
+  margin: 40px auto;
+  padding: 15px 0;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  width: 80%;
+  font-family: "Inter", "Arial";
+  font-size: 16px;
+}
+
+section#contact-form input#message {
+  padding-bottom: 150px;
+}
+
+section#contact-form button {
+  display: block;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+  width: 80%;
+  background-color: #ffa224;
+  color: #fff;
+  font-family: "Inter Bold", "Arial Black";
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+/****** MEDIA QUERIES ******/
+@media screen and (max-width: 1125px) {
+  section#contact-form h2 {
+    font-size: 60px;
+  }
+
+  section#contact-form form {
+    width: 70%;
+  }
+
+  section#contact-form input {
+    width: 80%;
+  }
+
+  section#contact-form button {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 880px) {
+  section#contact-form h2 {
+    width: 70%;
+  }
+
+  section#contact-form form {
+    width: 80%;
+  }
+
+  section#contact-form input {
+    width: 80%;
+  }
+
+  section#contact-form button {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 654px) {
+  section#contact-form form {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  section#contact-form input {
+    width: 95%;
+  }
+
+  section#contact-form button {
+    width: 95%;
+  }
+}
+/* END OF ALL MEDIA QUERIES */

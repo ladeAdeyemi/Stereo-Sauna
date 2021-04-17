@@ -79,8 +79,8 @@ body {
 
 /* Hero Image Section */
 div#hero-image {
-  margin: 0;
   background-image: url(../assets/concert.jpg);
+  margin: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -166,15 +166,6 @@ section#intro div.intro-image-container {
 
 section#intro div.intro-image-container img {
   width: 100%;
-}
-
-section#intro h4.tri-card-headline-mini {
-  font-family: "Inter Bold", "Arial Black";
-  margin: 10px 0;
-  font-size: 22px;
-  color: #fff;
-  text-align: center;
-  letter-spacing: 0.1px;
 }
 
 /* SVG Section */
@@ -297,7 +288,7 @@ section#picks h3.container-headline {
   padding-top: 0px;
   padding-left: 10px;
   color: #000;
-  font-family: "Inter Black", "Arial Black";
+  font-family: "Inter Bold", "Arial Black";
   font-size: 50px;
   letter-spacing: -1.8px;
   line-height: 60px;
@@ -352,7 +343,7 @@ div#sign-up-container h3.sign-up-headline {
   padding-top: 0px;
   padding-left: 30px;
   font-family: "Inter Black", "Arial Black";
-  font-size: 50px;
+  font-size: 60px;
   letter-spacing: -1.8px;
 }
 
@@ -804,7 +795,7 @@ section#picks div.image-container {
 }
 @media screen and (max-width: 500px) {
   #navigation div.logo-container {
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   #navigation div.hamburger-hidden {
