@@ -382,11 +382,6 @@ section#newsletter button {
   transition: 0.3s ease-in-out;
 }
 
-#newsletter button:hover {
-  background-color: #ffa224;
-  color: #fff;
-}
-
 /* Footer Section */
 #footer {
   background-color: #000;

@@ -6,6 +6,8 @@ const hamburger = document.querySelector('.hamburger-hidden');
 
 /* FUNCTIONS */
 
+// Homepage
+
 function changeNavBarColor () {
 
     if (window.scrollY >= 200 ) {
@@ -22,7 +24,7 @@ function changeNavBarColor () {
 
 function changeNavLinksColor () {
 
-    navBarLinks.forEach((link) => {
+    navBarLinks.forEach( (link) => {
 
         if (window.scrollY >= 200) {
 
@@ -41,7 +43,11 @@ function changeNavLinksColor () {
 
 function showDropDown () {
     
+
+
+
 }
+
 
 // Make sure to use the above functions for the burger nav menu as well
 
