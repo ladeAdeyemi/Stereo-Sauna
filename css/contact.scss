@@ -121,7 +121,7 @@ section#contact-form {
     background-color: $ghost;
 }
 
-section#contact-form h2 {
+section#contact-form h1 {
     display: block;
     margin: 40px auto;
     margin-bottom: 40px;
@@ -140,7 +140,7 @@ section#contact-form span {
     font-family: $regularFontStack;
     font-size: 17.3px;
     letter-spacing: 0.3px;
-    line-height: 30px;
+    line-height: 32px;
     color: $ghoul;
 }
 
@@ -153,13 +153,13 @@ section#contact-form form {
     box-shadow: 4px 4px 20px $navGrey;
 }
 
-section#contact-form form h3 {
+section#contact-form form h2 {
     display: block;
     margin: 20px auto;
     font-family: $boldFontStack;
     font-size: 43px;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 section#contact-form input {
@@ -200,7 +200,7 @@ section#contact-form button {
 @media screen and (max-width: 1125px) {
     
 
-    section#contact-form h2 {
+    section#contact-form h1 {
         font-size: 60px;
     }
 
@@ -236,7 +236,7 @@ section#contact-form button {
 @media screen and (max-width: 880px) {
 
 
-    section#contact-form h2 {
+    section#contact-form h1 {
         width: 70%;
     }
 
@@ -272,18 +272,6 @@ section#contact-form button {
     section#contact-form button {
         width: 95%;
     }
-
-}
-
-@media screen and (max-width: 550px) {
-
-}
-
-@media screen and (max-width: 533px) {
-
-}
-
-@media screen and (max-width: 500px) {
 
 }
 

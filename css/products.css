@@ -1,0 +1,83 @@
+/*** FONTS ***/
+@font-face {
+  src: url(../fonts/Inter-Black.ttf);
+  font-family: "Inter Black";
+}
+@font-face {
+  src: url(../fonts/Inter-Bold.ttf);
+  font-family: "Inter Bold";
+}
+@font-face {
+  src: url(../fonts/Inter-Regular.ttf);
+  font-family: "Inter";
+}
+/****** MAIN CSS ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Hero Image Section */
+div#guitars-hero-image {
+  background-image: url(../assets/guitar2.jpg);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+}
+
+/* Page title */
+div.page-title {
+  padding: 40px 0;
+  padding-bottom: 100px;
+  background-color: #fff;
+}
+
+div.page-title h1 {
+  display: block;
+  margin: 40px auto;
+  margin-bottom: 40px;
+  font-family: "Inter Black", "Arial Black";
+  font-size: 70px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+div.page-title span {
+  display: block;
+  margin: 60px auto;
+  margin-top: 40px;
+  max-width: 60%;
+  text-align: center;
+  font-family: "Inter", "Arial";
+  font-size: 17.3px;
+  letter-spacing: 0.3px;
+  line-height: 32px;
+  color: #1a1918;
+}
+
+/* Product grid section */
+section#product-grid {
+  background-color: #fff;
+}
+
+div.product-row {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+div.product-row ul {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+/****** MEDIA QUERIES ******/
+/* END OF ALL MEDIA QUERIES */

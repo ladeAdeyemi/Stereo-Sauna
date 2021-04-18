@@ -60,7 +60,7 @@ section#contact-form {
   background-color: #fff;
 }
 
-section#contact-form h2 {
+section#contact-form h1 {
   display: block;
   margin: 40px auto;
   margin-bottom: 40px;
@@ -79,7 +79,7 @@ section#contact-form span {
   font-family: "Inter", "Arial";
   font-size: 17.3px;
   letter-spacing: 0.3px;
-  line-height: 30px;
+  line-height: 32px;
   color: #1a1918;
 }
 
@@ -92,13 +92,13 @@ section#contact-form form {
   box-shadow: 4px 4px 20px rgba(211, 207, 207, 0.5);
 }
 
-section#contact-form form h3 {
+section#contact-form form h2 {
   display: block;
   margin: 20px auto;
   font-family: "Inter Bold", "Arial Black";
   font-size: 43px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 section#contact-form input {
@@ -134,7 +134,7 @@ section#contact-form button {
 
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
-  section#contact-form h2 {
+  section#contact-form h1 {
     font-size: 60px;
   }
 
@@ -151,7 +151,7 @@ section#contact-form button {
   }
 }
 @media screen and (max-width: 880px) {
-  section#contact-form h2 {
+  section#contact-form h1 {
     width: 70%;
   }
 

@@ -1,0 +1,187 @@
+/*** FONTS ***/
+
+@font-face {
+    src: url(../fonts/Inter-Black.ttf);
+    font-family: "Inter Black";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+    font-family: "Inter Bold";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+    font-family: "Inter";
+}
+
+// VARIABLES
+
+    // Font Stacks
+
+    $blackFontStack: "Inter Black", "Arial Black";
+    $boldFontStack: "Inter Bold", "Arial Black";
+    $regularFontStack: "Inter", "Arial";
+
+    // Colors
+
+    $ghost: #fff;
+    $goblin: #000;
+    $ghoul: #1a1918;
+    $saunaOrange: #ffa224;
+    $navGrey: rgba(211, 207, 207, 0.5);
+
+// MIXINS
+
+@mixin heroStyles {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+@mixin navStyles {
+    margin: 5px 15px;
+    text-decoration: none;
+}
+
+@mixin headlineStyles {
+    font-family: $blackFontStack;
+}
+
+@mixin miniheadlineStyles {
+    font-family: $boldFontStack;
+}
+
+@mixin paraStyles {
+    margin: 20px 0 15px 0;
+    padding-left: 30px;
+    font-size: 17px;
+    font-family: $regularFontStack;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+
+
+/****** MAIN CSS ******/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $ghost;
+}
+
+/* Hero Image Section */
+
+
+div#guitars-hero-image {
+    background-image: url(../assets/guitar2.jpg);
+   @include heroStyles;
+}
+
+/* Page title */
+
+
+div.page-title {
+    padding: 40px 0;
+    padding-bottom: 100px;
+    background-color: $ghost;
+}
+
+div.page-title h1 {
+    display: block;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    font-family: $blackFontStack;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+div.page-title span {
+    display: block;
+    margin: 60px auto;
+    margin-top: 40px;
+    max-width: 60%;
+    text-align: center;
+    font-family: $regularFontStack;
+    font-size: 17.3px;
+    letter-spacing: 0.3px;
+    line-height: 32px;
+    color: $ghoul;
+}
+
+/* Product grid section */
+
+section#product-grid {
+    background-color: $ghost;
+}
+
+div.product-row {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+div.product-row ul {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+
+
+/****** MEDIA QUERIES ******/
+
+
+@media screen and (max-width: 1125px) {
+    
+}
+
+@media screen and (max-width: 1063px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 916px) {
+
+}
+
+@media screen and (max-width: 880px) {
+
+}
+
+@media screen and (max-width: 789px) {
+
+}
+
+@media screen and (max-width: 700px) {
+
+} 
+
+@media screen and (max-width: 654px) {
+
+}
+
+@media screen and (max-width: 550px) {
+
+}
+
+@media screen and (max-width: 533px) {
+
+}
+
+@media screen and (max-width: 500px) {
+
+}
+
+/* END OF ALL MEDIA QUERIES */
