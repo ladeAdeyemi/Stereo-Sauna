@@ -37,14 +37,13 @@ div#guitars-hero-image {
 /* Page title */
 div.page-title {
   padding: 40px 0;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   background-color: #fff;
 }
 
 div.page-title h1 {
   display: block;
-  margin: 40px auto;
-  margin-bottom: 40px;
+  margin: 20px auto;
   font-family: "Inter Black", "Arial Black";
   font-size: 70px;
   text-align: center;
@@ -53,8 +52,7 @@ div.page-title h1 {
 
 div.page-title span {
   display: block;
-  margin: 60px auto;
-  margin-top: 40px;
+  margin: 20px auto;
   max-width: 60%;
   text-align: center;
   font-family: "Inter", "Arial";
@@ -66,18 +64,81 @@ div.page-title span {
 
 /* Product grid section */
 section#product-grid {
+  padding-bottom: 70px;
   background-color: #fff;
 }
 
-div.product-row {
-  margin: 10px auto;
-  padding: 20px;
+section#product-grid h2.category {
+  margin: 15px auto;
+  margin-left: 50px;
+  font-family: "Inter Black", "Arial Black";
+  font-size: 22px;
+  color: #1a1918;
 }
 
-div.product-row ul {
+ul.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   margin: 10px auto;
-  padding: 20px;
+  padding: 5px;
+  width: 100%;
+  list-style-type: none;
+}
+
+ul.product-row li.product-container {
+  margin: 0 5px;
+  padding: 5px;
+  display: inline-block;
+  width: 15%;
+  box-shadow: 3px 6px 20px rgba(211, 207, 207, 0.5);
+  border-radius: none;
+}
+
+ul.product-row li.product-container a {
+  text-decoration: none;
+  color: #1a1918;
+  transition: 0.5s ease-in-out;
+}
+
+ul.product-row li.product-container a img {
+  width: 100%;
+}
+
+ul.product-row li.product-container a h3 {
+  margin: 5px auto;
+  font-family: "Inter Bold", "Arial Black";
+  font-size: 16px;
+  text-align: center;
+  color: #1a1918;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+ul.product-row li.product-container a:hover h3 {
+  color: #ffa224;
 }
 
 /****** MEDIA QUERIES ******/
+@media screen and (max-width: 1125px) {
+  ul.product-row li.product-container {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1063px) {
+  ul.product-row li.product-container {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 700px) {
+  ul.product-row li.product-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  ul.product-row li.product-container {
+    width: 80%;
+  }
+}
 /* END OF ALL MEDIA QUERIES */
