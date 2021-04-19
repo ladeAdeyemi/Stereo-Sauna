@@ -1,0 +1,65 @@
+/*** FONTS ***/
+
+@font-face {
+    src: url(../fonts/Inter-Black.ttf);
+    font-family: "Inter Black";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+    font-family: "Inter Bold";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+    font-family: "Inter";
+}
+
+// VARIABLES
+
+    // Font Stacks
+
+    $blackFontStack: "Inter Black", "Arial Black";
+    $boldFontStack: "Inter Bold", "Arial Black";
+    $regularFontStack: "Inter", "Arial";
+
+    // Colors
+
+    $ghost: #fff;
+    $goblin: #000;
+    $ghoul: #1a1918;
+    $saunaOrange: #ffa224;
+    $navGrey: rgba(211, 207, 207, 0.5);
+
+// MIXINS
+
+@mixin headlineStyles {
+    font-family: $blackFontStack;
+}
+
+@mixin miniheadlineStyles {
+    font-family: $boldFontStack;
+}
+
+@mixin paraStyles {
+    margin: 20px 0 15px 0;
+    padding-left: 30px;
+    font-size: 17px;
+    font-family: $regularFontStack;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+
+
+/****** MAIN CSS ******/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $ghost;
+}

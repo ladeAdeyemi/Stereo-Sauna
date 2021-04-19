@@ -1,0 +1,171 @@
+/*** FONTS ***/
+
+@font-face {
+    src: url(../fonts/Inter-Black.ttf);
+    font-family: "Inter Black";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+    font-family: "Inter Bold";
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+    font-family: "Inter";
+}
+
+// VARIABLES
+
+    // Font Stacks
+
+    $blackFontStack: "Inter Black", "Arial Black";
+    $boldFontStack: "Inter Bold", "Arial Black";
+    $regularFontStack: "Inter", "Arial";
+
+    // Colors
+
+    $ghost: #fff;
+    $goblin: #000;
+    $ghoul: #1a1918;
+    $saunaOrange: #ffa224;
+    $navGrey: rgba(211, 207, 207, 0.5);
+
+// MIXINS
+
+@mixin headlineStyles {
+    font-family: $blackFontStack;
+}
+
+@mixin miniheadlineStyles {
+    font-family: $boldFontStack;
+}
+
+@mixin paraStyles {
+    margin: 20px 0 15px 0;
+    padding-left: 30px;
+    font-size: 17px;
+    font-family: $regularFontStack;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+
+
+/****** MAIN CSS ******/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $ghost;
+}
+
+/* Header Section */
+
+div.logo-container {
+    display: block;
+    margin:0 auto;
+    padding: 10px;
+    box-shadow: 2px 2px 10px $navGrey;
+}
+
+div.logo-container a img {
+    display: block;
+    margin: 10px auto;
+}
+
+section#privacy {
+    margin: 10px auto;
+    padding: 30px;
+    width: 60%;
+    // border: 1px solid $navGrey;
+    // border-radius: 6px;
+    // box-shadow: 3px 3px 10px $navGrey;
+}
+
+section#privacy h1 {
+    margin: 30px 10px;
+    font-family: $boldFontStack;
+    font-size: 35px;
+    letter-spacing: -1.8px;
+}
+
+section#privacy article {
+    margin: 40px auto;
+}
+
+section#privacy h2 {
+    margin: 30px;
+    margin-bottom: 5px;
+    font-family: $boldFontStack;
+    font-size: 22.5px;
+    letter-spacing: 0.1px;
+}
+
+section#privacy hr {
+    margin: 20px;
+    margin-top: 15px;
+    width: 90%;
+    border: 1px solid $navGrey;
+    border-bottom: 0;
+}
+
+section#privacy span.decor {
+    margin: 20px;
+    // padding: 3px;
+    font-family: $boldFontStack;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 25px;
+    // background-color: $ghoul;
+    color: $ghoul;
+    // border-radius: 50%;
+}
+
+section#privacy p {
+    margin: 20px;
+    font-family: $regularFontStack;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 25px;
+    color: $ghoul;
+}
+
+// section#privacy ul {
+//     margin: 30px;
+//     font-family: $regularFontStack;
+//     font-size: 14px;
+//     letter-spacing: 0.7px;
+//     line-height: 25px;
+//     color: $ghoul;
+// }
+
+section#privacy ul li {
+    margin: 15px;
+    margin-left: 80px;
+    font-family: $boldFontStack;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    color: $ghoul;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 880px) {
+
+    section#privacy {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 654px) {
+
+}
+
+/* END OF ALL MEDIA QUERIES */
