@@ -760,9 +760,13 @@ section#newsletter button {
         font-size: 80px;
         line-height: 60px;
     }
-    
-    section#tri-card div.tri-card-container div.card {
-        max-width: 70%;
+
+    section#newsletter {
+        padding: 350px 0;
+        background-image: url(../assets/guitar3-small.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     section#newsletter input {
@@ -772,7 +776,6 @@ section#newsletter button {
     div#sign-up-container p.sign-up-para {
         width: 60%;
     }
-
 
 }
 
