@@ -327,7 +327,7 @@ section#picks span.span a {
 /* Newsletter Section */
 section#newsletter {
   padding: 350px 0;
-  background-image: url(../assets/guitar1.jpg);
+  background-image: url(../assets/guitar3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -676,6 +676,10 @@ section#picks div.image-container img {
   section#newsletter input {
     width: 65%;
   }
+
+  div#sign-up-container p.sign-up-para {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 700px) {
   div#hero-image div.headline-container {
@@ -701,14 +705,15 @@ section#picks div.image-container img {
 section#amp div.text-container,
 section#mic div.text-container,
 section#picks div.text-container {
-    width: 100%;
+    width: 90%;
+    box-shadow: none;
   }
 
   section#guitar div.image-container,
 section#amp div.image-container,
 section#mic div.image-container,
 section#picks div.image-container {
-    width: 100%;
+    width: 90%;
   }
 
   section#svg-highlight h3 {
