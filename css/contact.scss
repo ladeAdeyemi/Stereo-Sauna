@@ -88,7 +88,7 @@ body {
 
 
 div#contact-hero-image {
-    background-image: url(../assets/godhead.jpg);
+    background-image: url(../assets/godhead-medium.jpg);
     @include heroStyles;
    
 }
@@ -181,6 +181,18 @@ section#contact-form input {
     font-size: 16px;
 }
 
+section#contact-form textarea {
+    display: block;
+    margin: 40px auto;
+    padding: 15px;
+    padding-left: 15px;
+    border-radius: 4px;
+    border: 1px solid $goblin;
+    width: 80%;
+    font-family: $regularFontStack;
+    font-size: 16px;
+}
+
 section#contact-form input#message {
     // max-width: 80%;
     padding-bottom: 150px;
@@ -261,5 +273,14 @@ section#contact-form button {
     }
 
 }
+
+@media screen and (max-width: 500px) {
+
+    div#contact-hero-image {
+        background-image: url(../assets/godhead-small.jpg);
+    }
+
+}
+
 
 /* END OF ALL MEDIA QUERIES */

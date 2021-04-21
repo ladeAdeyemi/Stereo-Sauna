@@ -1,12 +1,11 @@
 /* DOM SELECTIONS */
 
 const navBar = document.querySelector('#navigation');
+const navLinksContainer = document.querySelector('#navigation div.nav-links-container');
 const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
 const hamburger = document.querySelector('.hamburger-hidden');
 
 /* FUNCTIONS */
-
-// Homepage
 
 function changeNavBarColor () {
 
@@ -43,7 +42,7 @@ function changeNavLinksColor () {
 
 function showDropDown () {
     
-
+    navLinksContainer.classList.add('open');
 
 
 }

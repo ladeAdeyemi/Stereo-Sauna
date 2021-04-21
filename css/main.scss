@@ -137,12 +137,35 @@ body {
    stroke: rgba(255, 162, 36, 1);
 }
 
+// #navigation div.hamburger-hidden div.hamburger-links-modal{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: 100vh;
+//     width: 100vw;
+//     background-color: $ghoul;
+//     pointer-events: none;
+//     transition: 0.5s ease-in-out;
+//  }
+
+// #navigation div.hamburger-hidden div.hamburger-links-modal a.hamburger-link{
+//     display: block;
+//     margin: 0 auto;
+//     padding: 30px;
+//     color: $ghost;
+//     font-family: $boldFontStack;
+//     font-size: 20px;
+//     pointer-events: none;
+//     text-align: center;
+//     text-decoration: none;
+//  }
+
 
 /* Hero Image Section */
 
 
 div#hero-image {
-    background-image: url(../assets/concert.jpg);
+    background-image: url(../assets/concert-medium.jpg);
    @include heroStyles;
 }
 
@@ -393,6 +416,7 @@ section#picks span.span a {
 
 
 section#newsletter {
+    margin-top: 100px;
     padding: 350px 0;
     background-image: url(../assets/guitar3.jpg);
     background-repeat: no-repeat;
@@ -580,9 +604,8 @@ section#newsletter button {
     width: 44%;
     }
 
-
-      #footer-nav div.nav-column-container {
-        margin-right: 100px;
+    #footer-nav div.nav-column-container {
+    margin-right: 100px;
     }
 
 }
@@ -607,20 +630,6 @@ section#newsletter button {
 
 @media screen and (max-width: 1000px) {
 
-    #navigation {
-        justify-content: space-between;
-    }
-
-    #navigation div.nav-links-container {
-        display: none;
-    }
-
-    #navigation div.hamburger-hidden {
-        display: inline-block;
-        margin-right: 80px;
-        cursor: pointer;
-    }
-
     div#hero-image div.headline-container {
         padding-top: 40.5%;
      } 
@@ -629,10 +638,6 @@ section#newsletter button {
         font-size: 90px;
         letter-spacing: -2px;
         line-height: 80px;
-    }
-
-    section#tri-card div.tri-card-container div.card {
-        max-width: 35%;
     }
 
     section#guitar
@@ -679,7 +684,6 @@ section#newsletter button {
         display: inline-block;
         margin: 10px 20px;
     }
-
 
 }
 
@@ -751,6 +755,20 @@ section#newsletter button {
 }
 
 @media screen and (max-width: 789px) {
+
+    #navigation {
+        justify-content: space-between;
+    }
+
+    #navigation div.nav-links-container {
+        display: none;
+    }
+
+    #navigation div.hamburger-hidden {
+        display: inline-block;
+        margin-right: 80px;
+        cursor: pointer;
+    }
 
     div#hero-image div.headline-container {
        padding-top: 48%;
@@ -859,6 +877,10 @@ section#newsletter button {
 }
 
 @media screen and (max-width: 533px) {
+
+    div#hero-image {
+        background-image: url(../assets/concert-small.jpg);
+    }
 
     section#newsletter {
         background-position: right;

@@ -79,7 +79,7 @@ body {
 
 /* Hero Image Section */
 div#hero-image {
-  background-image: url(../assets/concert.jpg);
+  background-image: url(../assets/concert-medium.jpg);
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -326,6 +326,7 @@ section#picks span.span a {
 
 /* Newsletter Section */
 section#newsletter {
+  margin-top: 100px;
   padding: 350px 0;
   background-image: url(../assets/guitar3.jpg);
   background-repeat: no-repeat;
@@ -526,20 +527,6 @@ section#picks div.text-container {
   }
 }
 @media screen and (max-width: 1000px) {
-  #navigation {
-    justify-content: space-between;
-  }
-
-  #navigation div.nav-links-container {
-    display: none;
-  }
-
-  #navigation div.hamburger-hidden {
-    display: inline-block;
-    margin-right: 80px;
-    cursor: pointer;
-  }
-
   div#hero-image div.headline-container {
     padding-top: 40.5%;
   }
@@ -548,10 +535,6 @@ section#picks div.text-container {
     font-size: 90px;
     letter-spacing: -2px;
     line-height: 80px;
-  }
-
-  section#tri-card div.tri-card-container div.card {
-    max-width: 35%;
   }
 
   section#guitar section#amp,
@@ -660,6 +643,20 @@ section#picks div.image-container img {
   }
 }
 @media screen and (max-width: 789px) {
+  #navigation {
+    justify-content: space-between;
+  }
+
+  #navigation div.nav-links-container {
+    display: none;
+  }
+
+  #navigation div.hamburger-hidden {
+    display: inline-block;
+    margin-right: 80px;
+    cursor: pointer;
+  }
+
   div#hero-image div.headline-container {
     padding-top: 48%;
   }
@@ -669,8 +666,12 @@ section#picks div.image-container img {
     line-height: 60px;
   }
 
-  section#tri-card div.tri-card-container div.card {
-    max-width: 70%;
+  section#newsletter {
+    padding: 350px 0;
+    background-image: url(../assets/guitar3-small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   section#newsletter input {
@@ -751,6 +752,10 @@ section#picks div.image-container {
   }
 }
 @media screen and (max-width: 533px) {
+  div#hero-image {
+    background-image: url(../assets/concert-small.jpg);
+  }
+
   section#newsletter {
     background-position: right;
   }

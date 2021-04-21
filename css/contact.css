@@ -25,7 +25,7 @@ body {
 
 /* Hero Image Section */
 div#contact-hero-image {
-  background-image: url(../assets/godhead.jpg);
+  background-image: url(../assets/godhead-medium.jpg);
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -118,6 +118,18 @@ section#contact-form input {
   font-size: 16px;
 }
 
+section#contact-form textarea {
+  display: block;
+  margin: 40px auto;
+  padding: 15px;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  width: 80%;
+  font-family: "Inter", "Arial";
+  font-size: 16px;
+}
+
 section#contact-form input#message {
   padding-bottom: 150px;
 }
@@ -184,6 +196,11 @@ section#contact-form button {
 
   section#contact-form button {
     width: 95%;
+  }
+}
+@media screen and (max-width: 500px) {
+  div#contact-hero-image {
+    background-image: url(../assets/godhead-small.jpg);
   }
 }
 /* END OF ALL MEDIA QUERIES */
