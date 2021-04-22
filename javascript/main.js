@@ -44,10 +44,21 @@ function showDropDownMenu () {
 
         extraLinksContainer.classList.toggle('open');
 
-} // This code does not work for some reason. Fix later.
+} 
+
+function hideDropDown () {
+
+    if (window.innerWidth >= 790 && extraLinksContainer.classList.contains('open')) {
+
+        extraLinksContainer.classList.remove('open');
+
+    }
+
+}
 
 /* EVENT LISTENERS */
 
 window.addEventListener('scroll', changeNavBarColor);
 window.addEventListener('scroll', changeNavLinksColor);
+window.addEventListener('resize', hideDropDown);
 hamburger.addEventListener('click', showDropDownMenu);

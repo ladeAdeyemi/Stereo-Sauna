@@ -125,8 +125,6 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-/* Styles for the dropdown navigation */
-
 #navigation div.flex-nav-container div.nav-links-container a:hover{
     color: $saunaOrange;
 }
@@ -140,6 +138,8 @@ body {
    stroke: rgba(255, 162, 36, 1);
 }
 
+/* Styles for the dropdown navigation */
+
 #navigation div.extra-links-container {
     // margin-top: 20px;
     background-color: $ghost;
@@ -151,9 +151,7 @@ body {
 #navigation div.extra-links-container.open {
     padding-top: 60px;
     height: auto;
-} 
-
-/* The above class will be toggled when the burger nav is clicked */
+} /* The above class will be toggled when the burger nav is clicked */
 
 #navigation div.extra-links-container a {
     display: block;
@@ -170,7 +168,6 @@ body {
 
 #navigation div.extra-links-container a:nth-child(1) {
    
-    // padding-top: 20px;
     border-top: 1px solid $navGrey;
 } 
 
