@@ -84,9 +84,6 @@ body {
 
 
 #navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 0;
     width: 100%;
     position: fixed;
@@ -100,66 +97,88 @@ body {
     box-shadow: 2px 2px 10px $navGrey;
 } // Class added using JavaScript to get the navBar color to change when user scrolls down
 
-#navigation div.logo-container {
+#navigation div.flex-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigation div.flex-nav-container div.logo-container {
     margin-left: 80px;
 }
 
-#navigation div.nav-links-container {
+#navigation div.flex-nav-container div.nav-links-container {
     margin-right: 80px;
 }
 
-#navigation div.nav-links-container a.navbar-transparent {
+#navigation div.flex-nav-container div.nav-links-container a.navbar-transparent {
     @include navStyles;
     font-family: $boldFontStack;
     color: $ghost;
     transition: 0.3s ease-in-out;
 }
 
-#navigation div.nav-links-container a.navbar-opaque {
+#navigation div.flex-nav-container div.nav-links-container a.navbar-opaque {
     @include navStyles;
     font-family: $boldFontStack;
     color: $goblin;
     transition: 0.3s ease-in-out;
 }
 
-#navigation div.nav-links-container a:hover {
+/* Styles for the dropdown navigation */
+
+#navigation div.flex-nav-container div.nav-links-container a:hover,
+#navigation div.extra-links-container a:hover {
     color: $saunaOrange;
 }
 
-#navigation div.hamburger-hidden {
+#navigation div.flex-nav-container div.hamburger-hidden {
    display: none;
 }
 
-#navigation div.hamburger-hidden svg {
-//    fill: rgba(211, 207, 207, 1);
-//    stroke: rgba(211, 207, 207, 1);
+#navigation div.flex-nav-container div.hamburger-hidden svg {
    fill: rgba(255, 162, 36, 1);
    stroke: rgba(255, 162, 36, 1);
 }
 
-// #navigation div.hamburger-hidden div.hamburger-links-modal{
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     height: 100vh;
-//     width: 100vw;
-//     background-color: $ghoul;
-//     pointer-events: none;
-//     transition: 0.5s ease-in-out;
-//  }
+#navigation div.extra-links-container {
+    // margin-top: 20px;
+    background-color: $ghost;
+    overflow: hidden;
+    height: 0;
+    transition: 0.2s ease-in;
+}
 
-// #navigation div.hamburger-hidden div.hamburger-links-modal a.hamburger-link{
-//     display: block;
-//     margin: 0 auto;
-//     padding: 30px;
-//     color: $ghost;
-//     font-family: $boldFontStack;
-//     font-size: 20px;
-//     pointer-events: none;
-//     text-align: center;
-//     text-decoration: none;
-//  }
+#navigation div.extra-links-container.open {
+    padding-top: 20px;
+    height: auto;
+} 
 
+/* The above class will be toggled when the burger nav is clicked */
+
+#navigation div.extra-links-container a {
+    display: block;
+    margin: 0;
+    padding: 25px;
+    padding-left: 60px;
+    border-bottom: 1px solid $navGrey;
+    text-decoration: none;
+    font-family: $blackFontStack;
+    font-size: 30px;
+    color: $goblin;
+    transition: 0.3s ease-in-out;
+} 
+
+#navigation div.extra-links-container a:nth-child(1) {
+   
+    // padding-top: 20px;
+    border-top: 1px solid $navGrey;
+} 
+
+#navigation div.extra-links-container a:nth-child(4) {
+   
+    border-bottom: none;
+} 
 
 /* Hero Image Section */
 
@@ -758,13 +777,14 @@ section#newsletter button {
 
     #navigation {
         justify-content: space-between;
+        background-color: $ghost;
     }
 
-    #navigation div.nav-links-container {
+    #navigation div.flex-nav-container div.nav-links-container {
         display: none;
     }
 
-    #navigation div.hamburger-hidden {
+    #navigation div.flex-nav-container div.hamburger-hidden {
         display: inline-block;
         margin-right: 80px;
         cursor: pointer;
@@ -928,11 +948,11 @@ section#newsletter button {
 
 @media screen and (max-width: 500px) {
 
-    #navigation div.logo-container {
+    #navigation div.flex-nav-container div.logo-container {
         margin-left: 50px;
     }
 
-    #navigation div.hamburger-hidden {
+    #navigation div.flex-nav-container div.hamburger-hidden {
         margin-right: 60px;
     }
 

@@ -1,9 +1,9 @@
 /* DOM SELECTIONS */
 
 const navBar = document.querySelector('#navigation');
-const navLinksContainer = document.querySelector('#navigation div.nav-links-container');
+const extraLinksContainer = document.querySelector('#navigation div#extra-links-container');
 const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
-const hamburger = document.querySelector('.hamburger-hidden');
+const hamburger = document.querySelector('div.hamburger-hidden');
 
 /* FUNCTIONS */
 
@@ -40,18 +40,14 @@ function changeNavLinksColor () {
     });
 }
 
-function showDropDown () {
-    
-    navLinksContainer.classList.add('open');
+function showDropDownMenu () {
 
+        extraLinksContainer.classList.toggle('open');
 
-}
-
-
-// Make sure to use the above functions for the burger nav menu as well
+} // This code does not work for some reason. Fix later.
 
 /* EVENT LISTENERS */
 
 window.addEventListener('scroll', changeNavBarColor);
 window.addEventListener('scroll', changeNavLinksColor);
-hamburger.addEventListener('click', showDropDown);
+hamburger.addEventListener('click', showDropDownMenu);
