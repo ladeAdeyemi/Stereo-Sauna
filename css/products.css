@@ -124,26 +124,22 @@ ul.product-row li.product-container a:hover h3 {
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
   ul.product-row li.product-container {
-    width: 25%;
-  }
-}
-@media screen and (max-width: 1063px) {
-  ul.product-row li.product-container {
-    width: 35%;
+    width: 32.5%;
+    margin: 20px;
   }
 }
 @media screen and (max-width: 880px) {
   div.page-title h1 {
     font-size: 60px;
   }
-}
-@media screen and (max-width: 700px) {
+
   section#product-grid h2.category {
     display: block;
     margin: 15px auto;
     text-align: center;
   }
-
+}
+@media screen and (max-width: 700px) {
   ul.product-row li.product-container {
     width: 60%;
     margin-bottom: 40px;

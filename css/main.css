@@ -67,7 +67,6 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* Styles for the dropdown navigation */
 #navigation div.flex-nav-container div.nav-links-container a:hover {
   color: #ffa224;
 }
@@ -81,6 +80,7 @@ body {
   stroke: #ffa224;
 }
 
+/* Styles for the dropdown navigation */
 #navigation div.extra-links-container {
   background-color: #fff;
   overflow: hidden;
@@ -296,6 +296,10 @@ section#guitar, section#amp, section#mic, section#picks {
 
 section#amp, section#picks {
   flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -o-flex-direction: row-reverse;
 }
 
 section#guitar div.text-container,
@@ -723,6 +727,12 @@ section#amp div.image-container,
 section#mic div.image-container,
 section#picks div.image-container {
     width: 70%;
+  }
+
+  div#sign-up-container {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
   }
 
   section#newsletter input {
