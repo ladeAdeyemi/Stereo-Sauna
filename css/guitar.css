@@ -2,7 +2,7 @@
 
 
 div#products-hero-image {
-    background-image: url(../assets/guitar2.jpg);
+    background-image: url(../assets/guitar2-medium.jpg);
     margin: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,7 +14,7 @@ div#products-hero-image {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
 
     div#products-hero-image {
         background-image: url(../assets/guitar2-small.jpg);
@@ -27,4 +27,4 @@ div#products-hero-image {
         height: 700px;
     }
 
-}
+} */

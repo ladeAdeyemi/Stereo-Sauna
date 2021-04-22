@@ -127,8 +127,7 @@ body {
 
 /* Styles for the dropdown navigation */
 
-#navigation div.flex-nav-container div.nav-links-container a:hover,
-#navigation div.extra-links-container a:hover {
+#navigation div.flex-nav-container div.nav-links-container a:hover{
     color: $saunaOrange;
 }
 
@@ -150,7 +149,7 @@ body {
 }
 
 #navigation div.extra-links-container.open {
-    padding-top: 20px;
+    padding-top: 60px;
     height: auto;
 } 
 
@@ -180,11 +179,17 @@ body {
     border-bottom: none;
 } 
 
+#navigation div.extra-links-container a:hover {
+    color: $saunaOrange;
+    padding-left: 80px;
+    box-shadow: 3px 3px 10px $navGrey;
+}
+
 /* Hero Image Section */
 
 
 div#hero-image {
-    background-image: url(../assets/concert-medium.jpg);
+    background-image: url(../assets/concert.jpg);
    @include heroStyles;
 }
 
@@ -437,7 +442,7 @@ section#picks span.span a {
 section#newsletter {
     margin-top: 100px;
     padding: 350px 0;
-    background-image: url(../assets/guitar3.jpg);
+    background-image: url(../assets/guitar3-medium.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -799,12 +804,18 @@ section#newsletter button {
         line-height: 60px;
     }
 
-    section#newsletter {
-        padding: 350px 0;
-        background-image: url(../assets/guitar3-small.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    section#guitar div.text-container,
+    section#amp div.text-container,
+    section#mic div.text-container,
+    section#picks div.text-container{
+        width: 70%;
+      }
+
+    section#guitar div.image-container,
+    section#amp div.image-container,
+    section#mic div.image-container,
+    section#picks div.image-container {
+        width: 70%;
     }
 
     section#newsletter input {
@@ -827,6 +838,26 @@ section#newsletter button {
         font-size: 75px;
         line-height: 60px;
     }
+
+    section#intro h3.intro-headline {
+        font-size: 55px;
+    }
+
+    
+    section#guitar div.text-container,
+    section#amp div.text-container,
+    section#mic div.text-container,
+    section#picks div.text-container{
+        width: 80%;
+      }
+
+    section#guitar div.image-container,
+    section#amp div.image-container,
+    section#mic div.image-container,
+    section#picks div.image-container {
+        width: 80%;
+    }
+
 
 } 
 
@@ -898,10 +929,6 @@ section#newsletter button {
 
 @media screen and (max-width: 533px) {
 
-    div#hero-image {
-        background-image: url(../assets/concert-small.jpg);
-    }
-
     section#newsletter {
         background-position: right;
     }
@@ -955,6 +982,11 @@ section#newsletter button {
     #navigation div.flex-nav-container div.hamburger-hidden {
         margin-right: 60px;
     }
+
+    section#intro h3.intro-headline {
+        font-size: 45px;
+    }
+
 
 }
 
