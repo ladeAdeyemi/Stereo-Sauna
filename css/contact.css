@@ -194,13 +194,12 @@ section#contact-form button {
     width: 95%;
   }
 
-  section#contact-form button {
+  section#contact-form textarea {
     width: 95%;
   }
-}
-@media screen and (max-width: 500px) {
-  div#contact-hero-image {
-    background-image: url(../assets/godhead-small.jpg);
+
+  section#contact-form button {
+    width: 95%;
   }
 }
 /* END OF ALL MEDIA QUERIES */
