@@ -128,14 +128,14 @@ div#hero-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   height: 700px;
 }
 
 div#hero-image div.headline-container {
   margin: 0 auto;
-  padding-top: 32.5%;
+  padding-top: 34.5%;
 }
 
 div#hero-image div.headline-container h1 {
@@ -172,6 +172,7 @@ section#intro {
   display: flex;
   align-items: center;
   padding: 80px 0;
+  padding-top: 40px;
   background-color: #000;
 }
 
@@ -184,9 +185,9 @@ section#intro h3.intro-headline {
   padding-bottom: 0;
   font-family: "Inter Black", "Arial Black";
   margin: 40px auto;
-  max-width: 75%;
+  max-width: 80%;
   color: #fff;
-  font-size: 60px;
+  font-size: 62px;
   letter-spacing: -1.8px;
 }
 
@@ -201,7 +202,8 @@ section#intro p.intro-para {
   padding-top: 0;
   color: #fff;
   margin: 40px auto;
-  max-width: 75%;
+  max-width: 80%;
+  text-align: justify;
 }
 
 section#intro div.intro-image-container {
@@ -215,7 +217,7 @@ section#intro div.intro-image-container img {
 /* SVG Section */
 section#svg-highlight {
   background-color: #fff;
-  padding: 40px 0;
+  padding: 60px 0;
   padding-bottom: 10px;
 }
 
@@ -226,32 +228,8 @@ section#svg-highlight h3 {
   margin-bottom: 70px;
   max-width: 90%;
   text-align: center;
-  font-size: 60px;
+  font-size: 62px;
   letter-spacing: -1.8px;
-}
-
-section#svg-highlight p {
-  margin: 20px 0 15px 0;
-  padding-left: 30px;
-  font-size: 17px;
-  font-family: "Inter", "Arial";
-  line-height: 32px;
-  letter-spacing: 0.3px;
-  color: #000;
-  margin: 30px 0;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-section#svg-highlight span.svg-span a {
-  display: block;
-  color: #ffa224;
-  text-decoration: none;
-  font-family: "Inter Bold", "Arial Black";
-  font-size: 20px;
-  text-align: right;
-  margin: 30px 0;
-  margin-right: 80px;
 }
 
 div#svg-card-collection {
@@ -282,8 +260,11 @@ div#svg-card-collection div.svg-card p {
   color: #1a1918;
   text-align: center;
   font-family: "Inter", "Arial";
-  font-size: 15px;
+  font-size: 16px;
   line-height: 25px;
+  margin: 20px 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 /* Guitar, Amp, Mic & Picks Sections */
@@ -383,7 +364,7 @@ section#newsletter {
 }
 
 div#sign-up-container {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 0;
 }
 
@@ -404,7 +385,7 @@ div#sign-up-container p.sign-up-para {
   line-height: 32px;
   letter-spacing: 0.3px;
   color: #1a1918;
-  width: 42%;
+  width: 40%;
 }
 
 section#newsletter input {
@@ -535,7 +516,17 @@ section#newsletter button {
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
   div#hero-image div.headline-container {
-    padding-top: 38%;
+    padding-top: 42%;
+  }
+
+  section#intro h3.intro-headline {
+    font-size: 55px;
+    max-width: 85%;
+  }
+
+  section#intro p.intro-para {
+    text-align: left;
+    max-width: 85%;
   }
 
   section#guitar div.text-container,
@@ -560,6 +551,10 @@ section#picks div.text-container {
   }
 }
 @media screen and (max-width: 1063px) {
+  div#hero-image div.headline-container {
+    padding-top: 44%;
+  }
+
   section#intro {
     display: block;
   }
@@ -576,7 +571,7 @@ section#picks div.text-container {
 }
 @media screen and (max-width: 1000px) {
   div#hero-image div.headline-container {
-    padding-top: 40.5%;
+    padding-top: 46.5%;
   }
 
   div#hero-image div.headline-container h1 {
@@ -593,6 +588,10 @@ section#picks {
 
   div#svg-card-collection div.svg-card {
     width: 19%;
+  }
+
+  div#sign-up-container h3.sign-up-headline {
+    max-width: 50%;
   }
 
   div#sign-up-container p.sign-up-para {
@@ -631,7 +630,11 @@ section#picks {
 }
 @media screen and (max-width: 916px) {
   div#hero-image div.headline-container {
-    padding-top: 40.5%;
+    padding-top: 52%;
+  }
+
+  section#svg-highlight h3 {
+    font-size: 50px;
   }
 
   section#guitar,
@@ -641,23 +644,22 @@ section#picks {
     display: block;
   }
 
+  section#guitar div.text-container h3.container-headline,
+section#amp div.text-container h3.container-headline,
+section#mic div.text-container h3.container-headline,
+section#picks div.text-container h3.container-headline {
+    margin-top: 0;
+    font-size: 50px;
+  }
+
   section#guitar div.text-container,
 section#amp div.text-container,
 section#mic div.text-container,
 section#picks div.text-container {
     margin: 0 auto;
     margin-top: 0;
-    width: 65%;
-    box-shadow: 3px 6px 20px rgba(211, 207, 207, 0.5);
-    border-radius: 4px;
-  }
-
-  section#guitar div.text-container h3.container-headline,
-section#amp div.text-container h3.container-headline,
-section#mic div.text-container h3.container-headline,
-section#picks div.text-container h3.container-headline {
-    margin-top: 0;
-    font-size: 47px;
+    width: 70%;
+    padding: 30px 5px;
   }
 
   section#guitar div.image-container,
@@ -665,7 +667,22 @@ section#amp div.image-container,
 section#mic div.image-container,
 section#picks div.image-container {
     margin: 0 auto;
-    width: 65%;
+    margin-top: 0;
+    width: 70%;
+  }
+
+  section#guitar h3.container-headline,
+section#amp h3.container-headline,
+section#mic h3.container-headline,
+section#picks h3.container-headline {
+    padding-left: 0;
+  }
+
+  section#guitar p.container-para,
+section#amp p.container-para,
+section#mic p.container-para,
+section#picks p.container-para {
+    padding-left: 0;
   }
 
   section#guitar div.image-container img,
@@ -675,10 +692,17 @@ section#picks div.image-container img {
     margin: 0 auto;
     width: 100%;
   }
+
+  section#guitar span.span a,
+section#amp span.span a,
+section#mic span.span a,
+section#picks span.span a {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 880px) {
   div#hero-image div.headline-container {
-    padding-top: 44%;
+    padding-top: 54%;
   }
 
   section#intro div.intro-text-container, section#intro div.intro-image-container {
@@ -707,7 +731,7 @@ section#picks div.image-container img {
   }
 
   div#hero-image div.headline-container {
-    padding-top: 48%;
+    padding-top: 63%;
   }
 
   div#hero-image div.headline-container h1 {
@@ -715,18 +739,12 @@ section#picks div.image-container img {
     line-height: 60px;
   }
 
-  section#guitar div.text-container,
-section#amp div.text-container,
-section#mic div.text-container,
-section#picks div.text-container {
-    width: 70%;
+  section#intro h3.intro-headline {
+    font-size: 50px;
   }
 
-  section#guitar div.image-container,
-section#amp div.image-container,
-section#mic div.image-container,
-section#picks div.image-container {
-    width: 70%;
+  section#svg-highlight h3 {
+    font-size: 50px;
   }
 
   div#sign-up-container {
@@ -735,17 +753,21 @@ section#picks div.image-container {
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  section#newsletter input {
-    width: 65%;
+  div#sign-up-container h3.sign-up-headline {
+    max-width: 100%;
   }
 
   div#sign-up-container p.sign-up-para {
-    width: 60%;
+    width: 100%;
+  }
+
+  section#newsletter input {
+    width: 65%;
   }
 }
 @media screen and (max-width: 700px) {
   div#hero-image div.headline-container {
-    padding-top: 56%;
+    padding-top: 70%;
   }
 
   div#hero-image div.headline-container h1 {
@@ -755,6 +777,14 @@ section#picks div.image-container {
 
   section#intro h3.intro-headline {
     font-size: 55px;
+  }
+
+  section#guitar div.text-container h3.container-headline,
+section#amp div.text-container h3.container-headline,
+section#mic div.text-container h3.container-headline,
+section#picks div.text-container h3.container-headline {
+    margin-top: 0;
+    font-size: 43px;
   }
 
   section#guitar div.text-container,
@@ -773,7 +803,7 @@ section#picks div.image-container {
 }
 @media screen and (max-width: 654px) {
   div#hero-image div.headline-container {
-    padding-top: 60%;
+    padding-top: 76%;
   }
 
   div#hero-image div.headline-container h1 {
@@ -781,12 +811,15 @@ section#picks div.image-container {
     line-height: 50px;
   }
 
+  section#intro h3.intro-headline {
+    font-size: 45px;
+  }
+
   section#guitar div.text-container,
 section#amp div.text-container,
 section#mic div.text-container,
 section#picks div.text-container {
     width: 90%;
-    box-shadow: none;
   }
 
   section#guitar div.image-container,
@@ -801,7 +834,7 @@ section#picks div.image-container {
   }
 
   div#svg-card-collection div.svg-card {
-    width: 50%;
+    width: 40%;
   }
 
   #footer p {
@@ -818,7 +851,7 @@ section#picks div.image-container {
 }
 @media screen and (max-width: 550px) {
   div#hero-image div.headline-container {
-    padding-top: 83%;
+    padding-top: 90%;
   }
 
   div#hero-image div.headline-container h1 {
@@ -850,7 +883,7 @@ section#picks div.image-container {
 
   section#newsletter input {
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 80%;
   }
 
@@ -884,6 +917,14 @@ section#picks div.image-container {
 
   section#intro h3.intro-headline {
     font-size: 45px;
+  }
+
+  section#svg-highlight h3 {
+    font-size: 45px;
+  }
+
+  div#svg-card-collection div.svg-card {
+    width: 50%;
   }
 }
 /* END OF ALL MEDIA QUERIES */

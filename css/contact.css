@@ -30,7 +30,7 @@ div#contact-hero-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   height: 700px;
 }
@@ -38,19 +38,6 @@ div#contact-hero-image {
 div#contact-hero-image div.contact-headline-container {
   margin: 0 auto;
   padding-top: 30.5%;
-}
-
-div#contact-hero-image div.contact-headline-container h1 {
-  font-family: "Inter Black", "Arial Black";
-  font-size: 110px;
-  text-align: center;
-  width: 100%;
-  letter-spacing: -3px;
-  line-height: 90px;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 5px;
 }
 
 /* Contact Form Section */
@@ -70,7 +57,7 @@ section#contact-form h1 {
   margin: 40px auto;
   margin-bottom: 40px;
   font-family: "Inter Black", "Arial Black";
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   letter-spacing: -2px;
 }
