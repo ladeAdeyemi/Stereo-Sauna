@@ -37,6 +37,7 @@ body {
   box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.5);
 }
 
+/* The above class will be added using JavaScript to get the navBar color to change when user scrolls down */
 #navigation div.flex-nav-container {
   display: flex;
   justify-content: space-between;
@@ -238,7 +239,7 @@ section#svg-highlight p {
   letter-spacing: 0.2px;
   color: #4a4540;
   margin: 40px auto;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   max-width: 80%;
   text-align: center;
 }
