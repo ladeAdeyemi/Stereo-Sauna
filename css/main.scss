@@ -27,9 +27,11 @@
 
     $ghost: #fff;
     $goblin: #000;
-    $ghoul: #1a1918;
+    $ghoul: #4a4540;
     $saunaOrange: #ffa224;
+    $saunaOrangeFaint: rgba(255, 162, 36, 0.7);
     $navGrey: rgba(211, 207, 207, 0.5);
+    $navGreyFull: rgba(211, 207, 207, 1);
 
 // MIXINS
 
@@ -62,7 +64,7 @@
     font-size: 17px;
     font-family: $regularFontStack;
     line-height: 32px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 
 
@@ -95,7 +97,9 @@ body {
 .navigationWhite {
     background-color: $ghost;
     box-shadow: 2px 2px 10px $navGrey;
-} // Class added using JavaScript to get the navBar color to change when user scrolls down
+} 
+
+/* The above class will be added using JavaScript to get the navBar color to change when user scrolls down */
 
 #navigation div.flex-nav-container {
     display: flex;
@@ -200,7 +204,7 @@ div#hero-image div.headline-container h1 {
     font-size: 110px;
     text-align: center;
     width: 100%;
-    letter-spacing: -3px;
+    letter-spacing: -4px;
     line-height: 90px;
     color: $ghost;
     margin: 0;
@@ -247,20 +251,22 @@ section#intro h3.intro-headline {
     margin: 40px auto;
     max-width: 80%;
     color: $ghost;
-    // text-align: center;
-    font-size: 62px;
+    text-align: center;
+    font-size: 58px;
     letter-spacing: -1.8px;
 }
 
 section#intro p.intro-para {
-    @include paraStyles;
     padding: 15px;
     padding-top: 0;
+    font-size: 19px;
+    font-family: $regularFontStack;
+    line-height: 32px;
+    letter-spacing: 0.2px;
     color: $ghost;
     margin: 40px auto;
-    // padding-left: 0;
     max-width: 80%;
-    text-align: justify;
+    text-align: center;
 }
 
 section#intro div.intro-image-container {
@@ -270,16 +276,6 @@ section#intro div.intro-image-container {
 section#intro div.intro-image-container img {
     width: 100%;
 }
-
-// section#intro h4.tri-card-headline-mini {
-//     @include miniheadlineStyles;
-//     margin: 10px 0;
-//     font-size: 22px;
-//     color: $ghost;
-//     text-align: center;
-//     letter-spacing: 0.1px;
-// }
-
 
 /* SVG Section */
 
@@ -294,11 +290,23 @@ section#svg-highlight h3 {
     @include headlineStyles;
     color: $goblin;
     margin: 30px auto;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     max-width: 90%;
     text-align: center;
     font-size: 62px;
-    letter-spacing: -1.8px;
+    letter-spacing: -2px;
+}
+
+section#svg-highlight p {
+    font-family: $regularFontStack;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: $ghoul;
+    margin: 40px auto;
+    margin-bottom: 10px;
+    max-width: 80%;
+    text-align: center;
 }
 
 div#svg-card-collection {
@@ -309,18 +317,16 @@ div#svg-card-collection {
 }
 
 div#svg-card-collection div.svg-card {
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
     width: 15%;
-    box-shadow: 3px 3px 10px $navGrey;
     border-radius: 6px;
 }
 
 div#svg-card-collection div.svg-card img {
     display: block;
     margin: 0 auto;
-    width: 70px;
-    height: 70px;
+    width: 30%;
     text-align: center;
 }
 
@@ -331,7 +337,7 @@ div#svg-card-collection div.svg-card p {
     font-family: $regularFontStack;
     font-size: 16px;
     line-height: 25px;
-    margin: 20px 0;
+    margin: 20px auto;
     margin-bottom: 0;
     text-align: center;
 }
@@ -344,15 +350,11 @@ section#guitar, section#amp, section#mic, section#picks {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   section#amp, section#picks {
     flex-direction: row-reverse;
-    -webkit-flex-direction: row-reverse;
-    -moz-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    -o-flex-direction: row-reverse;
   }
   
 section#guitar div.text-container, 
@@ -361,8 +363,6 @@ section#mic div.text-container,
 section#picks div.text-container {
     padding: 20px;
     width: 40%;
-    // box-shadow: 3px 6px 20px $navGrey;
-    // border-radius: 4px;
   }
 
 section#guitar div.image-container, 
@@ -423,6 +423,62 @@ section#picks span.span a {
 }
 
 
+/* Brands Section */
+
+
+section#brands {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+section#brands div.section-headline {
+    margin: 10px auto;
+}
+
+section#brands div.section-headline h3 {
+    font-family: $blackFontStack;
+    font-size: 62px;
+    color: $goblin;
+    margin: 10px auto;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+section#brands div.brands-grid {
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+section#brands div.brands-grid ul.brands-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    list-style-type: none;
+}
+
+section#brands div.brands-grid ul.brands-row li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 20px;
+    max-width: 15%;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 4px 4px 8px $navGrey;
+    background-color: $ghost;
+}
+
+section#brands div.brands-grid ul.brands-row li img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+
 /* Newsletter Section */
 
 
@@ -436,7 +492,7 @@ section#newsletter {
 }
 
 div#sign-up-container {
-    margin-left: 50px;
+    margin-left: 70px;
     padding: 0;
 }   
 
@@ -478,11 +534,6 @@ section#newsletter button {
     font-size: 15px;
     transition: 0.3s ease-in-out;
 }
-
-// #newsletter button:hover {
-//     background-color: $saunaOrange;
-//     color: $ghost;
-// }
 
 
 /* Footer Section */
@@ -608,6 +659,10 @@ section#newsletter button {
         max-width: 85%;
     }
 
+    section#guitar, section#amp, section#mic, section#picks {
+        padding: 30px 0;
+      }    
+
     section#guitar div.text-container, 
     section#amp div.text-container, 
     section#mic div.text-container, 
@@ -621,6 +676,35 @@ section#newsletter button {
         width: 17%;
     }
 
+    section#brands {
+        display: block;
+    }
+    
+    section#brands div.section-headline {
+        margin: 10px auto;
+        width: 100%;
+    }
+    
+    section#brands div.section-headline h3 {
+        text-align: center;
+    }
+    
+    section#brands div.brands-grid {
+        width: 100%;
+    }
+    
+    section#brands div.brands-grid ul.brands-row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    section#brands div.brands-grid ul.brands-row li {
+        max-width: none;
+        max-height: none;
+        width: 18%;
+    }
+    
     section#newsletter input {
     width: 44%;
     }
@@ -650,13 +734,6 @@ section#newsletter button {
         text-align: center;
         max-width: 100%;
     }
-
-    // section#guitar
-    // section#amp, 
-    // section#mic, 
-    // section#picks {
-    //     padding: 20px 0;
-    // }
 
 }
 
@@ -754,7 +831,7 @@ section#newsletter button {
     section#picks div.text-container{
         margin: 0 auto;
         margin-top: 0;
-        width: 70%;
+        width: 75%;
         padding: 30px 5px;
       }
 
@@ -764,13 +841,14 @@ section#newsletter button {
     section#picks div.image-container {
         margin: 0 auto;
         margin-top: 0;
-        width: 70%;
+        width: 75%;
     }
 
-    section#guitar h3.container-headline, 
-    section#amp h3.container-headline, 
-    section#mic h3.container-headline, 
-    section#picks h3.container-headline {
+    section#guitar div.text-container h3.container-headline, 
+    section#amp div.text-container h3.container-headline, 
+    section#mic div.text-container h3.container-headline, 
+    section#picks div.text-container h3.container-headline {
+        font-size: 47px;
         padding-left: 0;
     }
 
@@ -794,7 +872,10 @@ section#newsletter button {
     section#mic span.span a, 
     section#picks span.span a {
         padding-left: 0;
- 
+    }
+
+    section#brands div.section-headline h3 {
+        font-size: 50px;
     }
 
 }
@@ -811,7 +892,17 @@ section#newsletter button {
     }
 
     div#svg-card-collection div.svg-card {
-        width: 29%;
+        width: 20%;
+    }
+
+    div#svg-card-collection div.svg-card img {
+        width: 30%;
+    }
+
+    section#brands div.brands-grid ul.brands-row {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
     }
 
 }
@@ -850,6 +941,18 @@ section#newsletter button {
         font-size: 50px;
     }
 
+    section#brands div.brands-grid ul.brands-row {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    section#brands div.brands-grid ul.brands-row li {
+        display: inline-block;
+        margin: 20px;
+        width:40%;
+    }
+
     div#sign-up-container {
         margin: 10px 0;
         padding: 15px;
@@ -879,10 +982,6 @@ section#newsletter button {
     div#hero-image div.headline-container h1 {
         font-size: 75px;
         line-height: 60px;
-    }
-
-    section#intro h3.intro-headline {
-        font-size: 55px;
     }
 
     section#guitar div.text-container h3.container-headline,
@@ -960,6 +1059,15 @@ section#newsletter button {
 
 }
 
+@media screen and (max-width: 580px) {
+
+    section#brands div.brands-grid ul.brands-row li {
+        width:35%;
+    }
+
+}
+
+
 @media screen and (max-width: 550px) {
 
     div#hero-image div.headline-container {
@@ -974,7 +1082,6 @@ section#newsletter button {
     div#hero-image div.headline-container h2 {
         font-size: 25px;
     }
-
 
 }
 
@@ -1045,8 +1152,6 @@ section#newsletter button {
     div#svg-card-collection div.svg-card {
         width: 50%;
     }
-
-
 
 }
 

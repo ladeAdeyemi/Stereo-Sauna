@@ -143,7 +143,7 @@ div#hero-image div.headline-container h1 {
   font-size: 110px;
   text-align: center;
   width: 100%;
-  letter-spacing: -3px;
+  letter-spacing: -4px;
   line-height: 90px;
   color: #fff;
   margin: 0;
@@ -187,23 +187,22 @@ section#intro h3.intro-headline {
   margin: 40px auto;
   max-width: 80%;
   color: #fff;
-  font-size: 62px;
+  text-align: center;
+  font-size: 58px;
   letter-spacing: -1.8px;
 }
 
 section#intro p.intro-para {
-  margin: 20px 0 15px 0;
-  padding-left: 30px;
-  font-size: 17px;
-  font-family: "Inter", "Arial";
-  line-height: 32px;
-  letter-spacing: 0.3px;
   padding: 15px;
   padding-top: 0;
+  font-size: 19px;
+  font-family: "Inter", "Arial";
+  line-height: 32px;
+  letter-spacing: 0.2px;
   color: #fff;
   margin: 40px auto;
   max-width: 80%;
-  text-align: justify;
+  text-align: center;
 }
 
 section#intro div.intro-image-container {
@@ -225,11 +224,23 @@ section#svg-highlight h3 {
   font-family: "Inter Black", "Arial Black";
   color: #000;
   margin: 30px auto;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   max-width: 90%;
   text-align: center;
   font-size: 62px;
-  letter-spacing: -1.8px;
+  letter-spacing: -2px;
+}
+
+section#svg-highlight p {
+  font-family: "Inter", "Arial";
+  font-size: 17px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  color: #4a4540;
+  margin: 40px auto;
+  margin-bottom: 10px;
+  max-width: 80%;
+  text-align: center;
 }
 
 div#svg-card-collection {
@@ -240,29 +251,27 @@ div#svg-card-collection {
 }
 
 div#svg-card-collection div.svg-card {
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
   width: 15%;
-  box-shadow: 3px 3px 10px rgba(211, 207, 207, 0.5);
   border-radius: 6px;
 }
 
 div#svg-card-collection div.svg-card img {
   display: block;
   margin: 0 auto;
-  width: 70px;
-  height: 70px;
+  width: 30%;
   text-align: center;
 }
 
 div#svg-card-collection div.svg-card p {
   padding: 0;
-  color: #1a1918;
+  color: #4a4540;
   text-align: center;
   font-family: "Inter", "Arial";
   font-size: 16px;
   line-height: 25px;
-  margin: 20px 0;
+  margin: 20px auto;
   margin-bottom: 0;
   text-align: center;
 }
@@ -272,15 +281,11 @@ section#guitar, section#amp, section#mic, section#picks {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 section#amp, section#picks {
   flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
-  -moz-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  -o-flex-direction: row-reverse;
 }
 
 section#guitar div.text-container,
@@ -332,8 +337,8 @@ section#picks p.container-para {
   font-size: 17px;
   font-family: "Inter", "Arial";
   line-height: 32px;
-  letter-spacing: 0.3px;
-  color: #1a1918;
+  letter-spacing: 0.2px;
+  color: #4a4540;
   padding-left: 10px;
 }
 
@@ -353,6 +358,59 @@ section#picks span.span a {
   text-decoration: none;
 }
 
+/* Brands Section */
+section#brands {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+section#brands div.section-headline {
+  margin: 10px auto;
+}
+
+section#brands div.section-headline h3 {
+  font-family: "Inter Black", "Arial Black";
+  font-size: 62px;
+  color: #000;
+  margin: 10px auto;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+section#brands div.brands-grid {
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+section#brands div.brands-grid ul.brands-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 20px auto;
+  list-style-type: none;
+}
+
+section#brands div.brands-grid ul.brands-row li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 20px;
+  max-width: 15%;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
+  background-color: #fff;
+}
+
+section#brands div.brands-grid ul.brands-row li img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
 /* Newsletter Section */
 section#newsletter {
   margin-top: 100px;
@@ -364,7 +422,7 @@ section#newsletter {
 }
 
 div#sign-up-container {
-  margin-left: 50px;
+  margin-left: 70px;
   padding: 0;
 }
 
@@ -383,8 +441,8 @@ div#sign-up-container p.sign-up-para {
   font-size: 17px;
   font-family: "Inter", "Arial";
   line-height: 32px;
-  letter-spacing: 0.3px;
-  color: #1a1918;
+  letter-spacing: 0.2px;
+  color: #4a4540;
   width: 40%;
 }
 
@@ -529,6 +587,10 @@ section#newsletter button {
     max-width: 85%;
   }
 
+  section#guitar, section#amp, section#mic, section#picks {
+    padding: 30px 0;
+  }
+
   section#guitar div.text-container,
 section#amp div.text-container,
 section#mic div.text-container,
@@ -540,6 +602,35 @@ section#picks div.text-container {
 
   div#svg-card-collection div.svg-card {
     width: 17%;
+  }
+
+  section#brands {
+    display: block;
+  }
+
+  section#brands div.section-headline {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  section#brands div.section-headline h3 {
+    text-align: center;
+  }
+
+  section#brands div.brands-grid {
+    width: 100%;
+  }
+
+  section#brands div.brands-grid ul.brands-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  section#brands div.brands-grid ul.brands-row li {
+    max-width: none;
+    max-height: none;
+    width: 18%;
   }
 
   section#newsletter input {
@@ -658,7 +749,7 @@ section#mic div.text-container,
 section#picks div.text-container {
     margin: 0 auto;
     margin-top: 0;
-    width: 70%;
+    width: 75%;
     padding: 30px 5px;
   }
 
@@ -668,13 +759,14 @@ section#mic div.image-container,
 section#picks div.image-container {
     margin: 0 auto;
     margin-top: 0;
-    width: 70%;
+    width: 75%;
   }
 
-  section#guitar h3.container-headline,
-section#amp h3.container-headline,
-section#mic h3.container-headline,
-section#picks h3.container-headline {
+  section#guitar div.text-container h3.container-headline,
+section#amp div.text-container h3.container-headline,
+section#mic div.text-container h3.container-headline,
+section#picks div.text-container h3.container-headline {
+    font-size: 47px;
     padding-left: 0;
   }
 
@@ -699,6 +791,10 @@ section#mic span.span a,
 section#picks span.span a {
     padding-left: 0;
   }
+
+  section#brands div.section-headline h3 {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 880px) {
   div#hero-image div.headline-container {
@@ -711,7 +807,17 @@ section#picks span.span a {
   }
 
   div#svg-card-collection div.svg-card {
-    width: 29%;
+    width: 20%;
+  }
+
+  div#svg-card-collection div.svg-card img {
+    width: 30%;
+  }
+
+  section#brands div.brands-grid ul.brands-row {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
   }
 }
 @media screen and (max-width: 789px) {
@@ -747,6 +853,18 @@ section#picks span.span a {
     font-size: 50px;
   }
 
+  section#brands div.brands-grid ul.brands-row {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  section#brands div.brands-grid ul.brands-row li {
+    display: inline-block;
+    margin: 20px;
+    width: 40%;
+  }
+
   div#sign-up-container {
     margin: 10px 0;
     padding: 15px;
@@ -773,10 +891,6 @@ section#picks span.span a {
   div#hero-image div.headline-container h1 {
     font-size: 75px;
     line-height: 60px;
-  }
-
-  section#intro h3.intro-headline {
-    font-size: 55px;
   }
 
   section#guitar div.text-container h3.container-headline,
@@ -847,6 +961,11 @@ section#picks div.image-container {
   #footer div.notice p {
     padding-right: 0;
     text-align: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  section#brands div.brands-grid ul.brands-row li {
+    width: 35%;
   }
 }
 @media screen and (max-width: 550px) {
