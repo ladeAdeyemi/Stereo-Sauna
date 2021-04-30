@@ -305,7 +305,7 @@ section#svg-highlight p {
     color: $ghoul;
     margin: 40px auto;
     margin-bottom: 30px;
-    max-width: 80%;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -332,11 +332,12 @@ div#svg-card-collection div.svg-card img {
 
 div#svg-card-collection div.svg-card p {
     padding: 0;
-    color: $ghoul;
+    color: $saunaOrange;
     text-align: center;
-    font-family: $regularFontStack;
-    font-size: 16px;
+    font-family: $boldFontStack;
+    font-size: 17.5px;
     line-height: 25px;
+    letter-spacing: 0.1px;
     margin: 20px auto;
     margin-bottom: 0;
     text-align: center;
@@ -391,7 +392,7 @@ section#picks h3.container-headline {
     padding-top: 0px;
     padding-left: 10px;
     color: $goblin;
-    @include miniheadlineStyles;
+    @include headlineStyles;
     font-size: 50px;
     letter-spacing: -1.8px;
     line-height: 60px;
@@ -466,7 +467,7 @@ section#brands div.brands-grid ul.brands-row li {
     display: inline-block;
     margin: 20px;
     max-width: 15%;
-    border-radius: 50%;
+    // border-radius: 50%;
     padding: 5px;
     box-shadow: 4px 4px 8px $navGrey;
     background-color: $ghost;
