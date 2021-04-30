@@ -256,6 +256,7 @@ div#svg-card-collection div.svg-card {
   margin: 10px;
   width: 15%;
   border-radius: 6px;
+  box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
 }
 
 div#svg-card-collection div.svg-card img {
