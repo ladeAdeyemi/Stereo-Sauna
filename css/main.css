@@ -218,7 +218,7 @@ section#intro div.intro-image-container img {
 section#svg-highlight {
   background-color: #fff;
   padding: 60px 0;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 section#svg-highlight h3 {
@@ -257,6 +257,15 @@ div#svg-card-collection div.svg-card {
   width: 15%;
   border-radius: 6px;
   box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
+  transition: 0.3s ease-in;
+  position: relative;
+  top: 20px;
+}
+
+div#svg-card-collection div.hide {
+  opacity: 0;
+  position: relative;
+  top: 5px;
 }
 
 div#svg-card-collection div.svg-card img {
@@ -314,6 +323,14 @@ section#picks div.image-container img {
   display: block;
   width: 100%;
   margin: 15px 0;
+  transition: 0.5s ease-in;
+}
+
+section#guitar div.image-container.low-opacity img,
+section#amp div.image-container.low-opacity img,
+section#mic div.image-container.low-opacity img,
+section#picks div.image-container.low-opacity img {
+  opacity: 0.1;
 }
 
 section#guitar h3.container-headline,
@@ -426,6 +443,12 @@ section#newsletter {
 div#sign-up-container {
   margin-left: 70px;
   padding: 0;
+  transition: 0.5s ease-in-out;
+}
+
+div#sign-up-container.hidden {
+  margin-left: 0px;
+  opacity: 0;
 }
 
 div#sign-up-container h3.sign-up-headline {
