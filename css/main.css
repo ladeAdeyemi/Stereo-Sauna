@@ -179,6 +179,11 @@ section#intro {
 
 section#intro div.intro-text-container {
   width: 50%;
+  transition: 1s ease-in;
+}
+
+section#intro div.intro-text-hidden {
+  opacity: 0;
 }
 
 section#intro h3.intro-headline {
@@ -240,7 +245,7 @@ section#svg-highlight p {
   color: #4a4540;
   margin: 40px auto;
   margin-bottom: 30px;
-  max-width: 100%;
+  max-width: 80%;
   text-align: center;
 }
 
@@ -253,7 +258,7 @@ div#svg-card-collection {
 
 div#svg-card-collection div.svg-card {
   padding: 30px;
-  margin: 10px;
+  margin: 5px;
   width: 15%;
   border-radius: 6px;
   box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
@@ -268,6 +273,7 @@ div#svg-card-collection div.hide {
   top: 5px;
 }
 
+/* The above class will be toggled by JavaScript */
 div#svg-card-collection div.svg-card img {
   display: block;
   margin: 0 auto;
@@ -333,6 +339,7 @@ section#picks div.image-container.low-opacity img {
   opacity: 0.1;
 }
 
+/* The above class will be removed by JavaScript */
 section#guitar h3.container-headline,
 section#amp h3.container-headline,
 section#mic h3.container-headline,
@@ -419,9 +426,14 @@ section#brands div.brands-grid ul.brands-row li {
   display: inline-block;
   margin: 20px;
   max-width: 15%;
+  border-radius: 2%;
   padding: 5px;
-  box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
   background-color: #fff;
+  transition: 1.7s ease-in-out;
+}
+
+section#brands div.brands-grid ul.brands-row.raised li {
+  box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
 }
 
 section#brands div.brands-grid ul.brands-row li img {
@@ -441,7 +453,7 @@ section#newsletter {
 }
 
 div#sign-up-container {
-  margin-left: 70px;
+  margin-left: 60px;
   padding: 0;
   transition: 0.5s ease-in-out;
 }
@@ -451,6 +463,7 @@ div#sign-up-container.hidden {
   opacity: 0;
 }
 
+/* The above rule will be removed by JavaScript */
 div#sign-up-container h3.sign-up-headline {
   margin: 10px 0 20px 0;
   padding-top: 0px;
@@ -469,6 +482,26 @@ div#sign-up-container p.sign-up-para {
   letter-spacing: 0.2px;
   color: #4a4540;
   width: 40%;
+}
+
+div#sign-up-container form {
+  position: relative;
+}
+
+/* The div.messageContainer below will be inserted into the DOM when validating the form */
+div.messageContainer {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px auto;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px rgba(211, 207, 207, 0.5);
+  font-family: "Inter", "Arial";
+  font-size: 12px;
+  color: #4a4540;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  z-index: 1;
 }
 
 section#newsletter input {
@@ -682,7 +715,17 @@ section#picks div.text-container {
 
   section#intro h3.intro-headline, section#intro p.intro-para {
     text-align: center;
-    max-width: 100%;
+  }
+
+  div#sign-up-container p.sign-up-para {
+    margin: 20px 0 15px 0;
+    padding-left: 30px;
+    font-size: 17px;
+    font-family: "Inter", "Arial";
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #4a4540;
+    width: 35%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -711,7 +754,7 @@ section#picks {
   }
 
   div#sign-up-container p.sign-up-para {
-    width: 39%;
+    width: 33%;
   }
 
   section#newsletter input {
@@ -840,9 +883,14 @@ section#picks span.span a {
   }
 
   section#brands div.brands-grid ul.brands-row {
-    display: block;
     margin: 20px auto;
     width: 80%;
+  }
+
+  section#brands div.brands-grid ul.brands-row li {
+    margin: 20px;
+    max-width: 35%;
+    width: 35%;
   }
 }
 @media screen and (max-width: 789px) {
@@ -876,18 +924,6 @@ section#picks span.span a {
 
   section#svg-highlight h3 {
     font-size: 50px;
-  }
-
-  section#brands div.brands-grid ul.brands-row {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-  }
-
-  section#brands div.brands-grid ul.brands-row li {
-    display: inline-block;
-    margin: 20px;
-    width: 40%;
   }
 
   div#sign-up-container {
@@ -990,7 +1026,8 @@ section#picks div.image-container {
 }
 @media screen and (max-width: 580px) {
   section#brands div.brands-grid ul.brands-row li {
-    width: 35%;
+    max-width: 50%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 550px) {
