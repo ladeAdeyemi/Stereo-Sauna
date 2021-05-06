@@ -69,7 +69,7 @@ function changeNavLinksColor () {
 
 function showDropDownMenu () {
 
-        extraLinksContainer.classList.toggle('open');
+    extraLinksContainer.classList.toggle('open');
 
 } 
 
@@ -90,10 +90,16 @@ function hideDropDown () {
 function revealIntroText () {
 
     if (window.scrollY >= 600) {
+
         introTextContainer.classList.remove('intro-text-hidden');
-    } else {
-        introTextContainer.classList.add('intro-text-hidden');
-    }
+
+    } 
+    
+    // else {
+
+    //     introTextContainer.classList.add('intro-text-hidden');
+
+    // }
 
 }
 
@@ -157,9 +163,7 @@ function addBoxShadow () {
 
     if (window.scrollY >= 4100) {
        
-        brandsUls.forEach((ul) => {
-            ul.classList.add('raised');
-        });
+        brandsUls.forEach((ul) => ul.classList.add('raised'));
 
     } else {
 
@@ -180,7 +184,9 @@ function signUpSlideOut () {
         signUpContainer.classList.remove('hidden');
 
     } else {
+
         signUpContainer.classList.add('hidden');
+
     }
 
 }

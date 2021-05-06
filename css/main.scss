@@ -324,7 +324,7 @@ div#svg-card-collection {
 div#svg-card-collection div.svg-card {
     padding: 30px;
     margin: 5px;
-    width: 15%;
+    width: 17%;
     border-radius: 6px;
     box-shadow: 4px 4px 8px $navGrey;
     transition: 0.3s ease-in;
@@ -341,7 +341,7 @@ div#svg-card-collection div.hide {
 div#svg-card-collection div.svg-card img {
     display: block;
     margin: 0 auto;
-    width: 30%;
+    width: 40%;
     text-align: center;
 }
 
@@ -350,7 +350,7 @@ div#svg-card-collection div.svg-card p {
     color: $saunaOrange;
     text-align: center;
     font-family: $boldFontStack;
-    font-size: 17.5px;
+    font-size: 17px;
     line-height: 25px;
     letter-spacing: 0.1px;
     margin: 20px auto;
@@ -494,7 +494,7 @@ section#brands div.brands-grid ul.brands-row li {
     border-radius: 2%;
     padding: 5px;
     background-color: $ghost;
-    transition: 1.7s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 section#brands div.brands-grid ul.brands-row.raised li {
@@ -702,6 +702,11 @@ section#newsletter button {
     
     div#hero-image div.headline-container {
         padding-top: 42%;
+    }
+
+    div#hero-image div.headline-container h2 {
+        line-height: 30px;
+        margin-top: 0;
     }
 
     section#intro h3.intro-headline {
@@ -956,10 +961,6 @@ section#newsletter button {
         width: 20%;
     }
 
-    div#svg-card-collection div.svg-card img {
-        width: 30%;
-    }
-
     section#brands div.brands-grid ul.brands-row {
         // display: block;
         margin: 20px auto;
@@ -1100,6 +1101,10 @@ section#newsletter button {
         width: 40%;
     }
 
+    div#svg-card-collection div.svg-card img {
+        width: 40%;
+    }
+
     #footer p {
         padding-left: 0;
         margin-top: 20px;
@@ -1115,6 +1120,11 @@ section#newsletter button {
 }
 
 @media screen and (max-width: 580px) {
+
+    section#intro div.intro-text-container, section#intro div.intro-image-container {
+        margin: 0 auto;
+        width: 100%;
+    }
 
     section#brands div.brands-grid ul.brands-row li {
         max-width: 50%;
@@ -1207,6 +1217,83 @@ section#newsletter button {
 
     div#svg-card-collection div.svg-card {
         width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 435px) {
+    
+    div#hero-image div.headline-container {
+        margin: 0 auto;
+        padding-top: 110%;
+    }
+    
+    div#hero-image div.headline-container h1 {
+        font-size: 48px;
+    }
+    
+    div#hero-image div.headline-container h2 {
+        font-size: 20px;
+        line-height: 10px;
+        margin-top: 0;
+    }
+
+    div#hero-image div.headline-container h2 sup {
+        font-size: 10px;
+    }
+
+    section#intro {
+        padding-top: 10px;
+    }
+
+    section#intro h3.intro-headline {
+        font-size: 40px;
+    }
+
+    section#intro p.intro-para {
+        font-size: 17px;
+    }
+
+    section#svg-highlight h3 {
+        font-size: 45px;
+    }
+
+    section#svg-highlight p {
+        margin-bottom: 5px;
+    }
+
+    div#svg-card-collection div.svg-card {
+        margin: 20px;
+    }
+
+    section#guitar div.text-container h3.container-headline, 
+    section#amp div.text-container h3.container-headline, 
+    section#mic div.text-container h3.container-headline, 
+    section#picks div.text-container h3.container-headline {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    section#guitar div.text-container p.container-para, 
+    section#amp div.text-container p.container-para, 
+    section#mic div.text-container p.container-para, 
+    section#picks div.text-container p.container-para {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    section#brands div.section-headline h3 {
+        font-size: 45px;
+    }
+
+    section#brands div.brands-grid ul.brands-row li {
+        max-width: 100%;
+        width: 60%;
+    }
+
+    div#sign-up-container h3.sign-up-headline {
+        font-size: 45px;
+        margin-bottom: 0;
     }
 
 }
