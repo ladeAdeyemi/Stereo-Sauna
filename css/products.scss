@@ -159,10 +159,13 @@ ul.product-row li.product-container {
     padding: 5px;
     display: inline-block;
     max-width: 16%;
-    // box-shadow: 3px 6px 20px $navGrey;
     border-radius: none;
     // background-color: $goblin;
 }
+
+// ul.product-row li.product-container:hover {
+//     box-shadow: 3px 6px 20px $navGrey;
+// }
 
 ul.product-row li.product-container a {
     text-decoration: none;
@@ -187,6 +190,7 @@ ul.product-row li.product-container a h3 {
 
 ul.product-row li.product-container a:hover h3 {
     color: $saunaOrange;
+    
 }
 
 /****** MEDIA QUERIES ******/

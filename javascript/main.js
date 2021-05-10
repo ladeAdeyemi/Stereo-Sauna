@@ -161,13 +161,13 @@ function increaseImgOpacity () {
 
 function addBoxShadow () {
 
-    if (window.scrollY >= 4100) {
+    if (window.scrollY >= 4150) {
        
-        brandsUls.forEach((ul) => ul.classList.add('raised'));
+        brandsUls.forEach((ul) => ul.classList.add('morph'));
 
     } else {
 
-        brandsUls.forEach((ul) => ul.classList.remove('raised'));
+        brandsUls.forEach((ul) => ul.classList.remove('morph'));
 
     }
 

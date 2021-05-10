@@ -6,6 +6,11 @@
 }
 
 @font-face {
+    src: url(../fonts/Inter-ExtraBold.ttf);
+    font-family: "Inter Extrabold";
+}
+
+@font-face {
     src: url(../fonts/Inter-Bold.ttf);
     font-family: "Inter Bold";
 }
@@ -21,6 +26,7 @@
 
     $blackFontStack: "Inter Black", "Arial Black";
     $boldFontStack: "Inter Bold", "Arial Black";
+    $extraBoldFontStack: "Inter Extrabold", "Arial Black";
     $regularFontStack: "Inter", "Arial";
 
     // Colors
@@ -55,7 +61,7 @@
 }
 
 @mixin miniheadlineStyles {
-    font-family: $boldFontStack;
+    font-family: $extraBoldFontStack;
 }
 
 @mixin paraStyles {
@@ -117,14 +123,14 @@ body {
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-transparent {
     @include navStyles;
-    font-family: $boldFontStack;
+    font-family: $extraBoldFontStack;
     color: $ghost;
     transition: 0.3s ease-in-out;
 }
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-opaque {
     @include navStyles;
-    font-family: $boldFontStack;
+    font-family: $extraBoldFontStack;
     color: $goblin;
     transition: 0.3s ease-in-out;
 }
@@ -153,19 +159,20 @@ body {
 }
 
 #navigation div.extra-links-container.open {
-    padding-top: 60px;
+    padding-top: 10px;
     height: auto;
 } /* The above class will be toggled when the burger nav is clicked */
 
 #navigation div.extra-links-container a {
     display: block;
     margin: 0;
-    padding: 25px;
+    padding: 15px;
+    // padding: 25px;
     padding-left: 60px;
     border-bottom: 1px solid $navGrey;
     text-decoration: none;
     font-family: $blackFontStack;
-    font-size: 30px;
+    font-size: 20px;
     color: $goblin;
     transition: 0.3s ease-in-out;
 } 
@@ -288,7 +295,7 @@ section#intro div.intro-image-container img {
 section#svg-highlight {
     background-color: $ghost;
     padding: 60px 0;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 }
 
 section#svg-highlight h3 {
@@ -324,9 +331,10 @@ div#svg-card-collection {
 div#svg-card-collection div.svg-card {
     padding: 30px;
     margin: 5px;
-    width: 17%;
+    width: 15%;
     border-radius: 6px;
     box-shadow: 4px 4px 8px $navGrey;
+    // box-shadow: 4px 4px 8px $navGrey;
     transition: 0.3s ease-in;
     position: relative;
     top: 20px;
@@ -341,7 +349,7 @@ div#svg-card-collection div.hide {
 div#svg-card-collection div.svg-card img {
     display: block;
     margin: 0 auto;
-    width: 40%;
+    width: 45%;
     text-align: center;
 }
 
@@ -415,7 +423,7 @@ section#picks h3.container-headline {
     padding-top: 0px;
     padding-left: 10px;
     color: $goblin;
-    @include headlineStyles;
+    @include miniheadlineStyles;
     font-size: 50px;
     letter-spacing: -1.8px;
     line-height: 60px;
@@ -491,14 +499,15 @@ section#brands div.brands-grid ul.brands-row li {
     display: inline-block;
     margin: 20px;
     max-width: 15%;
-    border-radius: 2%;
+    border-radius: 50%;
     padding: 5px;
     background-color: $ghost;
+    box-shadow: 4px 4px 8px $navGrey;
     transition: 1s ease-in-out;
 }
 
-section#brands div.brands-grid ul.brands-row.raised li {
-    box-shadow: 4px 4px 8px $navGrey;
+section#brands div.brands-grid ul.brands-row.morph li {
+    border-radius: 2%;
 }
 
 section#brands div.brands-grid ul.brands-row li img{
@@ -873,7 +882,7 @@ section#newsletter button {
      } 
 
     section#svg-highlight h3 {
-        font-size: 50px;
+        font-size: 58px;
     }
 
     section#guitar, 
@@ -1006,7 +1015,7 @@ section#newsletter button {
     }
 
     section#svg-highlight h3 {
-        font-size: 50px;
+        font-size: 55px;
     }
 
     div#sign-up-container {
@@ -1102,7 +1111,7 @@ section#newsletter button {
     }
 
     div#svg-card-collection div.svg-card img {
-        width: 40%;
+        width: 35%;
     }
 
     #footer p {
