@@ -103,6 +103,11 @@ section#contact-form input {
   width: 80%;
   font-family: "Inter", "Arial";
   font-size: 16px;
+  outline: none;
+}
+
+section#contact-form input:focus {
+  border: 1px solid #ffa224;
 }
 
 section#contact-form textarea {
@@ -115,6 +120,11 @@ section#contact-form textarea {
   width: 80%;
   font-family: "Inter", "Arial";
   font-size: 16px;
+  outline: none;
+}
+
+section#contact-form textarea:focus {
+  border: 1px solid #ffa224;
 }
 
 section#contact-form input#message {
