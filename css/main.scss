@@ -295,7 +295,7 @@ section#intro div.intro-image-container img {
 section#svg-highlight {
     background-color: $ghost;
     padding: 60px 0;
-    // padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 section#svg-highlight h3 {
@@ -331,9 +331,8 @@ div#svg-card-collection {
 div#svg-card-collection div.svg-card {
     padding: 30px;
     margin: 5px;
-    width: 15%;
+    width: 17%;
     border-radius: 6px;
-    box-shadow: 4px 4px 8px $navGrey;
     // box-shadow: 4px 4px 8px $navGrey;
     transition: 0.3s ease-in;
     position: relative;
@@ -349,7 +348,7 @@ div#svg-card-collection div.hide {
 div#svg-card-collection div.svg-card img {
     display: block;
     margin: 0 auto;
-    width: 45%;
+    width: 40%;
     text-align: center;
 }
 
@@ -586,6 +585,11 @@ section#newsletter input {
     margin-right: 10px;
     font-family: $regularFontStack;
     font-size: 16px;
+    outline: none;
+}
+
+section#newsletter input:focus {
+    border: 1px solid $saunaOrange;
 }
 
 section#newsletter button {
@@ -742,7 +746,7 @@ section#newsletter button {
     }
 
     div#svg-card-collection div.svg-card {
-        width: 17%;
+        width: 20%;
     }
 
     section#brands {
@@ -832,7 +836,11 @@ section#newsletter button {
     }
     
     div#svg-card-collection div.svg-card {
-        width: 19%;
+        width: 40%;
+    }
+    
+    div#svg-card-collection div.svg-card img {
+        width: 25%;
     }
 
     div#sign-up-container h3.sign-up-headline {
@@ -964,10 +972,6 @@ section#newsletter button {
     section#intro div.intro-text-container, section#intro div.intro-image-container {
         margin: 0 auto;
         width: 80%;
-    }
-
-    div#svg-card-collection div.svg-card {
-        width: 20%;
     }
 
     section#brands div.brands-grid ul.brands-row {
