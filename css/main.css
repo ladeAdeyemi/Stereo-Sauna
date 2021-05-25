@@ -1205,4 +1205,13 @@ section#picks div.text-container p.container-para {
     margin-bottom: 0;
   }
 }
+@media screen and (max-width: 420px) {
+  div#hero-image div.headline-container {
+    padding-top: 115%;
+  }
+
+  div#hero-image div.headline-container h1 {
+    width: 90%;
+  }
+}
 /* END OF ALL MEDIA QUERIES */

@@ -30,6 +30,7 @@ div.logo-container {
   display: block;
   margin: 0 auto;
   padding: 10px;
+  padding-top: 2px;
   box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.5);
 }
 
@@ -41,6 +42,7 @@ div.logo-container a img {
 section#privacy {
   margin: 10px auto;
   padding: 30px;
+  padding-bottom: 150px;
   width: 60%;
 }
 
@@ -97,6 +99,21 @@ section#privacy ul li {
   letter-spacing: 0.7px;
   line-height: 20px;
   color: #1a1918;
+}
+
+section#privacy a#portal {
+  display: block;
+  text-align: right;
+  margin-right: 22px;
+  font-family: "Inter Extrabold";
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
+
+section#privacy a#portal:hover {
+  color: #ffa224;
 }
 
 /* MEDIA QUERIES */

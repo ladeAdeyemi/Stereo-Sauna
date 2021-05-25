@@ -1315,4 +1315,17 @@ section#newsletter button {
 
 }
 
+@media screen and (max-width: 420px) {
+
+    div#hero-image div.headline-container {
+        padding-top: 115%;
+    }
+    
+    div#hero-image div.headline-container h1 {
+        width: 90%;
+        // font-size: 46px;
+    }
+
+}
+
 /* END OF ALL MEDIA QUERIES */

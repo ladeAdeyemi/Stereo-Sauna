@@ -60,7 +60,7 @@ section#contact-form h1 {
   margin: 40px auto;
   margin-bottom: 40px;
   font-family: "Inter Black", "Arial Black";
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
   letter-spacing: -2px;
 }
@@ -151,10 +151,6 @@ section#contact-form button {
 
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
-  section#contact-form h1 {
-    font-size: 60px;
-  }
-
   section#contact-form form {
     width: 70%;
   }
@@ -170,6 +166,7 @@ section#contact-form button {
 @media screen and (max-width: 880px) {
   section#contact-form h1 {
     width: 70%;
+    font-size: 50px;
   }
 
   section#contact-form form {

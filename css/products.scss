@@ -101,7 +101,7 @@ div.page-title h1 {
     margin: 20px auto;
     // margin-bottom: 40px;
     font-family: $blackFontStack;
-    font-size: 60px;
+    font-size: 55px;
     text-align: center;
     letter-spacing: -2px;
 }
@@ -226,7 +226,7 @@ ul.product-row li.product-container a:hover h3 {
 @media screen and (max-width: 880px) {
 
     div.page-title h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
 } 
@@ -254,6 +254,15 @@ ul.product-row li.product-container a:hover h3 {
     ul.product-row li.product-container {
         width: 80%;
     } 
+
+}
+
+@media screen and (max-width: 377px) {
+
+    div.page-title h1 {
+        font-size: 48px;
+    }
+
 
 }
 

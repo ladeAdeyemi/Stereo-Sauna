@@ -38,7 +38,7 @@ div.page-title h1 {
   display: block;
   margin: 20px auto;
   font-family: "Inter Black", "Arial Black";
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
   letter-spacing: -2px;
 }
@@ -144,7 +144,7 @@ ul.product-row li.product-container a:hover h3 {
 }
 @media screen and (max-width: 880px) {
   div.page-title h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 826px) {
@@ -161,6 +161,11 @@ ul.product-row li.product-container a:hover h3 {
 @media screen and (max-width: 500px) {
   ul.product-row li.product-container {
     width: 80%;
+  }
+}
+@media screen and (max-width: 377px) {
+  div.page-title h1 {
+    font-size: 48px;
   }
 }
 /* END OF ALL MEDIA QUERIES */
