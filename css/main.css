@@ -61,7 +61,7 @@ body {
 }
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-transparent {
-  margin: 5px 15px;
+  margin: 5px 30px;
   text-decoration: none;
   font-family: "Inter Extrabold", "Arial Black";
   color: #fff;
@@ -70,8 +70,8 @@ body {
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-opaque {
   margin: 5px 15px;
-  text-decoration: none;
   font-family: "Inter Extrabold", "Arial Black";
+  text-decoration: none;
   color: #000;
   transition: 0.3s ease-in-out;
 }
@@ -85,6 +85,8 @@ body {
 }
 
 #navigation div.flex-nav-container div.hamburger-hidden svg {
+  position: relative;
+  top: 5px;
   fill: #ffa224;
   stroke: #ffa224;
 }
@@ -764,11 +766,11 @@ section#picks {
   }
 
   div#svg-card-collection div.svg-card {
-    width: 40%;
+    width: 20%;
   }
 
   div#svg-card-collection div.svg-card img {
-    width: 25%;
+    width: 50%;
   }
 
   div#sign-up-container h3.sign-up-headline {
@@ -938,6 +940,14 @@ section#picks span.span a {
 
   section#svg-highlight h3 {
     font-size: 55px;
+  }
+
+  div#svg-card-collection div.svg-card {
+    width: 30%;
+  }
+
+  div#svg-card-collection div.svg-card img {
+    width: 35%;
   }
 
   div#sign-up-container {
@@ -1173,6 +1183,7 @@ section#picks div.image-container {
 
   div#svg-card-collection div.svg-card {
     margin: 20px;
+    width: 60%;
   }
 
   section#guitar div.text-container h3.container-headline,
