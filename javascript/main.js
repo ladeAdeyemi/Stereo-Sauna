@@ -3,6 +3,7 @@
 
 const navBar = document.querySelector('#navigation');
 const extraLinksContainer = document.querySelector('#navigation div#extra-links-container');
+const navBarLinksContainer = document.querySelector('#navigation div.nav-links-container');
 const navBarLinks = document.querySelectorAll('#navigation div.nav-links-container a');
 const hamburger = document.querySelector('div.hamburger-hidden');
 const introTextContainer = document.querySelector('div.intro-text-container');
