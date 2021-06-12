@@ -127,14 +127,14 @@ body {
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-transparent {
     @include navStyles;
-    font-family: $extraBoldFontStack;
+    font-family: $boldFontStack;
     color: $ghost;
     transition: 0.3s ease-in-out;
 }
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-opaque {
     margin: 5px 15px;
-    font-family: $extraBoldFontStack;
+    font-family: $boldFontStack;
     text-decoration: none;
     color: $goblin;
     transition: 0.3s ease-in-out;
@@ -280,6 +280,7 @@ section#intro p.intro-para {
     padding-top: 0;
     font-size: 19px;
     font-family: $regularFontStack;
+    font-weight: normal;
     line-height: 32px;
     letter-spacing: 0.2px;
     color: $ghost;
@@ -657,7 +658,7 @@ section#newsletter button {
 #footer-nav div.nav-column a{
     display: block;
     padding: 0;
-    margin: 15px 0;
+    margin: 10px 0;
     color: $ghost;
     text-decoration: none;
     font-family: $boldFontStack;
@@ -672,7 +673,7 @@ section#newsletter button {
 
 #footer p {
     color: $ghost;
-    font-size: 13px;
+    font-size: 12px;
     padding-left: 70px;
     font-family: $boldFontStack;
     margin-top: 20px;

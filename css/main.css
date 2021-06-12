@@ -1,21 +1,21 @@
 /*** FONTS ***/
 @font-face {
-  src: url(../fonts/Inter-Black.ttf) format('truetype');
+  src: url(../fonts/Inter-Black.ttf) format("truetype");
   font-family: "Inter Black";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-ExtraBold.ttf) format('truetype');
+  src: url(../fonts/Inter-ExtraBold.ttf) format("truetype");
   font-family: "Inter Extrabold";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Bold.ttf) format('truetype');
+  src: url(../fonts/Inter-Bold.ttf) format("truetype");
   font-family: "Inter Bold";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Regular.ttf) format('truetype');
+  src: url(../fonts/Inter-Regular.ttf) format("truetype");
   font-family: "Inter";
   font-display: block;
 }
@@ -63,14 +63,14 @@ body {
 #navigation div.flex-nav-container div.nav-links-container a.navbar-transparent {
   margin: 5px 30px;
   text-decoration: none;
-  font-family: "Inter Extrabold", "Arial Black";
+  font-family: "Inter Bold", "Arial Black";
   color: #fff;
   transition: 0.3s ease-in-out;
 }
 
 #navigation div.flex-nav-container div.nav-links-container a.navbar-opaque {
   margin: 5px 15px;
-  font-family: "Inter Extrabold", "Arial Black";
+  font-family: "Inter Bold", "Arial Black";
   text-decoration: none;
   color: #000;
   transition: 0.3s ease-in-out;
@@ -213,6 +213,7 @@ section#intro p.intro-para {
   padding-top: 0;
   font-size: 19px;
   font-family: "Inter", "Arial";
+  font-weight: normal;
   line-height: 32px;
   letter-spacing: 0.2px;
   color: #fff;
@@ -587,7 +588,7 @@ section#newsletter button {
 #footer-nav div.nav-column a {
   display: block;
   padding: 0;
-  margin: 15px 0;
+  margin: 10px 0;
   color: #fff;
   text-decoration: none;
   font-family: "Inter Bold", "Arial Black";
@@ -602,7 +603,7 @@ section#newsletter button {
 
 #footer p {
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   padding-left: 70px;
   font-family: "Inter Bold", "Arial Black";
   margin-top: 20px;
