@@ -142,11 +142,16 @@ div#hero-image {
   background-attachment: scroll;
   width: 100%;
   height: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 div#hero-image div.headline-container {
+  grid-column: 1/5;
+  grid-row: 4/4;
   margin: 0 auto;
-  padding-top: 34.5%;
+  padding-bottom: 90px;
 }
 
 div#hero-image div.headline-container h1 {
@@ -155,7 +160,7 @@ div#hero-image div.headline-container h1 {
   text-align: center;
   width: 100%;
   letter-spacing: -4px;
-  line-height: 90px;
+  line-height: 75px;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -204,7 +209,7 @@ section#intro h3.intro-headline {
   max-width: 80%;
   color: #fff;
   text-align: center;
-  font-size: 58px;
+  font-size: 55px;
   letter-spacing: -1.8px;
 }
 
@@ -233,8 +238,8 @@ section#intro div.intro-image-container img {
 /* SVG Section */
 section#svg-highlight {
   background-color: #fff;
-  padding: 60px 0;
-  padding-bottom: 30px;
+  padding: 100px 0;
+  padding-bottom: 40px;
 }
 
 section#svg-highlight h3 {
@@ -255,7 +260,7 @@ section#svg-highlight p {
   letter-spacing: 0.2px;
   color: #4a4540;
   margin: 40px auto;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   max-width: 80%;
   text-align: center;
 }
@@ -647,10 +652,6 @@ section#newsletter button {
 
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
-  div#hero-image div.headline-container {
-    padding-top: 42%;
-  }
-
   div#hero-image div.headline-container h2 {
     line-height: 30px;
     margin-top: 0;
@@ -662,7 +663,6 @@ section#newsletter button {
   }
 
   section#intro p.intro-para {
-    text-align: left;
     max-width: 85%;
   }
 
@@ -721,10 +721,6 @@ section#picks div.text-container {
   }
 }
 @media screen and (max-width: 1063px) {
-  div#hero-image div.headline-container {
-    padding-top: 44%;
-  }
-
   section#intro {
     display: block;
   }
@@ -751,13 +747,12 @@ section#picks div.text-container {
 }
 @media screen and (max-width: 1000px) {
   div#hero-image div.headline-container {
-    padding-top: 46.5%;
+    padding-bottom: 120px;
   }
 
   div#hero-image div.headline-container h1 {
     font-size: 90px;
     letter-spacing: -2px;
-    line-height: 80px;
   }
 
   section#guitar section#amp,
@@ -812,11 +807,12 @@ section#picks {
     margin: 10px 20px;
   }
 }
-@media screen and (max-width: 916px) {
-  div#hero-image div.headline-container {
-    padding-top: 52%;
+@media screen and (max-width: 995px) {
+  div#hero-image div.headline-container h1 {
+    line-height: 60px;
   }
-
+}
+@media screen and (max-width: 916px) {
   section#svg-highlight h3 {
     font-size: 58px;
   }
@@ -890,10 +886,6 @@ section#picks span.span a {
   }
 }
 @media screen and (max-width: 880px) {
-  div#hero-image div.headline-container {
-    padding-top: 54%;
-  }
-
   section#intro div.intro-text-container, section#intro div.intro-image-container {
     margin: 0 auto;
     width: 80%;
@@ -927,12 +919,16 @@ section#picks span.span a {
   }
 
   div#hero-image div.headline-container {
-    padding-top: 63%;
+    padding-bottom: 130px;
   }
 
   div#hero-image div.headline-container h1 {
     font-size: 80px;
     line-height: 60px;
+  }
+
+  div#hero-image div.headline-container h2 {
+    line-height: 14px;
   }
 
   section#intro h3.intro-headline {
@@ -970,10 +966,6 @@ section#picks span.span a {
   }
 }
 @media screen and (max-width: 700px) {
-  div#hero-image div.headline-container {
-    padding-top: 70%;
-  }
-
   div#hero-image div.headline-container h1 {
     font-size: 75px;
     line-height: 60px;
@@ -1002,10 +994,6 @@ section#picks div.image-container {
   }
 }
 @media screen and (max-width: 654px) {
-  div#hero-image div.headline-container {
-    padding-top: 76%;
-  }
-
   div#hero-image div.headline-container h1 {
     font-size: 65px;
     line-height: 50px;
@@ -1065,10 +1053,6 @@ section#picks div.image-container {
   }
 }
 @media screen and (max-width: 550px) {
-  div#hero-image div.headline-container {
-    padding-top: 90%;
-  }
-
   div#hero-image div.headline-container h1 {
     font-size: 53px;
     line-height: 40px;
@@ -1143,11 +1127,6 @@ section#picks div.image-container {
   }
 }
 @media screen and (max-width: 435px) {
-  div#hero-image div.headline-container {
-    margin: 0 auto;
-    padding-top: 110%;
-  }
-
   div#hero-image div.headline-container h1 {
     font-size: 48px;
   }
@@ -1218,12 +1197,7 @@ section#picks div.text-container p.container-para {
   }
 }
 @media screen and (max-width: 420px) {
-  div#hero-image div.headline-container {
-    padding-top: 115%;
-  }
-
   div#hero-image div.headline-container h1 {
-    width: 90%;
+    width: 100%;
   }
 }
-/* END OF ALL MEDIA QUERIES */

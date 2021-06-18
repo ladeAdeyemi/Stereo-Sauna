@@ -1,16 +1,16 @@
 /*** FONTS ***/
 @font-face {
-  src: url(../fonts/Inter-Black.ttf) format('truetype');
+  src: url(../fonts/Inter-Black.ttf) format("truetype");
   font-family: "Inter Black";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Bold.ttf) format('truetype');
+  src: url(../fonts/Inter-Bold.ttf) format("truetype");
   font-family: "Inter Bold";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Regular.ttf) format('truetype');
+  src: url(../fonts/Inter-Regular.ttf) format("truetype");
   font-family: "Inter";
   font-display: block;
 }
@@ -79,12 +79,12 @@ section#contact-form span {
 
 section#contact-form form {
   margin: 20px auto;
-  margin-top: 80px;
+  margin-top: 100px;
   padding: 40px;
   background-color: #fff;
   border-radius: 6px;
   width: 50%;
-  box-shadow: 4px 4px 20px rgba(211, 207, 207, 0.5);
+  box-shadow: 1px 2px 8px #d3cfcf;
 }
 
 section#contact-form form h2 {

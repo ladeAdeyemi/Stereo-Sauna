@@ -33,6 +33,7 @@
     $ghoul: #1a1918;
     $saunaOrange: #ffa224;
     $navGrey: rgba(211, 207, 207, 0.5);
+    $navGreyFull: rgba(211, 207, 207, 1);
 
 // MIXINS
 
@@ -141,12 +142,12 @@ section#contact-form span {
 
 section#contact-form form {
     margin: 20px auto;
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 40px;
     background-color: $ghost;
     border-radius: 6px;
     width: 50%;
-    box-shadow: 4px 4px 20px $navGrey;
+    box-shadow: 1px 2px 8px $navGreyFull;
 }
 
 section#contact-form form h2 {

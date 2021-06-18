@@ -1,16 +1,16 @@
 /*** FONTS ***/
 @font-face {
-  src: url(../fonts/Inter-Black.ttf) format('truetype');
+  src: url(../fonts/Inter-Black.ttf) format("truetype");
   font-family: "Inter Black";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Bold.ttf) format('truetype');
+  src: url(../fonts/Inter-Bold.ttf) format("truetype");
   font-family: "Inter Bold";
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/Inter-Regular.ttf) format('truetype');
+  src: url(../fonts/Inter-Regular.ttf) format("truetype");
   font-family: "Inter";
   font-display: block;
 }
@@ -125,6 +125,14 @@ ul.product-row li.product-container a:hover h3 {
 
 /****** MEDIA QUERIES ******/
 @media screen and (max-width: 1125px) {
+  div.page-title span {
+    max-width: 70%;
+  }
+
+  hr.rule {
+    width: 75%;
+  }
+
   section#product-grid h2.category {
     display: block;
     margin: 15px auto;

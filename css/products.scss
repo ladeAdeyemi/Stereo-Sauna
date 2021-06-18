@@ -201,6 +201,14 @@ ul.product-row li.product-container a:hover h3 {
 
 @media screen and (max-width: 1125px) {
 
+    div.page-title span {
+        max-width: 70%;
+    }
+
+    hr.rule {
+        width: 75%;
+    }
+    
     section#product-grid h2.category {
         display: block;
         margin: 15px auto;
