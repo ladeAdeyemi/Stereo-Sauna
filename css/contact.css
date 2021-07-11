@@ -84,7 +84,7 @@ section#contact-form form {
   background-color: #fff;
   border-radius: 6px;
   width: 50%;
-  box-shadow: 1px 2px 8px #d3cfcf;
+  box-shadow: 1px 8px 24px 2px #d3cfcf;
 }
 
 section#contact-form form h2 {
